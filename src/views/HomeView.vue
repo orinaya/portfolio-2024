@@ -1,7 +1,13 @@
-<script setup></script>
+<script setup>
+import HomeSkills from "../components/home/HomeSkills.vue"
+import HomeCurrent from "../components/home/HomeCurrent.vue"
+import HomeProjects from "@/components/home/HomeProjects.vue"
+</script>
 
 <template>
   <main>
-    <h1 class="text-3xl font-bold underline">Accueil</h1>
+    <HomeSkills />
+    <HomeCurrent />
+    <HomeProjects />
   </main>
 </template>

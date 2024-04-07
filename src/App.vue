@@ -1,15 +1,17 @@
 <script setup>
 import {RouterLink, RouterView} from "vue-router"
+import Hero from "./components/layout/Hero.vue"
 </script>
 
 <template>
   <header>
-    <div class="wrapper">
-      <RouterLink to="/">Accueil</RouterLink>
+    <div class="w-full">
+      <Hero />
+      <!-- <RouterLink to="/">Accueil</RouterLink>
       <RouterLink to="/profil">Profil</RouterLink>
       <RouterLink to="/projets">Projets</RouterLink>
       <RouterLink to="/projets">Projets details</RouterLink>
-      <RouterLink to="/contact">Contact</RouterLink>
+      <RouterLink to="/contact">Contact</RouterLink> -->
     </div>
   </header>
 

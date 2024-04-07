@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./base.css";
 
 a,
 .green {
@@ -8,6 +9,53 @@ a,
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
   padding: 3px;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: #000;
+  background: #faf7f4;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1280px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 760px) {
+    max-width: 300px;
+  }
+
+  @media (min-width: 760px) and (max-width: 980px) {
+    max-width: 660px;
+  }
+
+  @media (min-width: 980px) and (max-width: 1440px) {
+    max-width: 990px;
+  }
+}
+
+p,
+li,
+ul,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 @media (hover: hover) {
