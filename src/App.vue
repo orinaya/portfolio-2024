@@ -1,35 +1,31 @@
 <script setup>
 import {RouterLink, RouterView} from "vue-router"
 import Hero from "./components/layout/Hero.vue"
+import Navbar from "./components/layout/Navbar.vue"
 </script>
 
 <template>
-  <header>
-    <div class="w-full">
-      <Hero />
-      <!-- <RouterLink to="/">Accueil</RouterLink>
+  <Navbar />
+  <!-- <RouterLink to="/">Accueil</RouterLink>
       <RouterLink to="/profil">Profil</RouterLink>
       <RouterLink to="/projets">Projets</RouterLink>
       <RouterLink to="/projets">Projets details</RouterLink>
       <RouterLink to="/contact">Contact</RouterLink> -->
-    </div>
-  </header>
-
   <RouterView />
 </template>
 
 <style scoped>
-header {
+/* header {
   line-height: 1.5;
   max-height: 100vh;
-}
+} */
 
-nav {
+/* nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
-}
+} */
 
 nav a.router-link-exact-active {
   color: var(--color-text);
@@ -50,29 +46,29 @@ nav a:first-of-type {
 }
 
 @media (min-width: 1024px) {
-  header {
+  /* header {
     display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
-  }
+  } */
 
   .logo {
     margin: 0 2rem 0 0;
   }
 
-  header .wrapper {
+  /* header .wrapper {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
-  }
+  } */
 
-  nav {
+  /* nav {
     text-align: left;
     margin-left: -1rem;
     font-size: 1rem;
 
     padding: 1rem 0;
     margin-top: 1rem;
-  }
+  } */
 }
 </style>

@@ -4,3 +4,16 @@
   font-family: "Neue Kaine";
   src: url("../assets/fonts/neue-kaine-variable.ttf") format("truetype");
 }
+
+:root {
+  --melon-500: hsl(7, 64%, 50%);
+  --melon-900: hsl(7, 64%, 87%);
+
+  --mint-300: hsl(176, 31%, 30%);
+  --mint-500: hsl(176, 31%, 50%);
+  --mint-800: hsl(176, 31%, 80%);
+
+  --olive-200: hsl(150, 9%, 18%);
+  --olive-500: hsl(150, 9%, 50%);
+  --olive-1000: hsl(150, 9%, 100%);
+}
