@@ -2,6 +2,7 @@
 import {RouterLink, RouterView} from "vue-router"
 import Hero from "./components/layout/Hero.vue"
 import Navbar from "./components/layout/Navbar.vue"
+import Footer from "./components/layout/Footer.vue"
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import Navbar from "./components/layout/Navbar.vue"
       <RouterLink to="/projets">Projets details</RouterLink>
       <RouterLink to="/contact">Contact</RouterLink> -->
   <RouterView />
+  <Footer />
 </template>
 
 <style scoped>

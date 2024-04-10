@@ -11,7 +11,7 @@ export const navbarItems = [
     title: "Mes projets",
     link: "/projets",
   },
-];
+]
 
 export const currentItems = [
   {
@@ -28,7 +28,7 @@ export const currentItems = [
     place: "MyDigitalSchool, 44800 Saint Herblain",
     date: "Depuis septembre 2022",
   },
-];
+]
 
 export const timelineItems = [
   {
@@ -37,14 +37,7 @@ export const timelineItems = [
     school: "Studio Floax",
     city: "Vertou",
     date: "2023-2024",
-    skills: [
-      "Vue.js",
-      "Sass",
-      "GetCockpit",
-      "Strapi",
-      "GraphQL",
-      "Angular",
-    ],
+    skills: ["Vue.js", "Sass", "GetCockpit", "Strapi", "GraphQL", "Angular"],
   },
 
   {
@@ -60,7 +53,7 @@ export const timelineItems = [
       "Design Graphique",
       "Marketing Digital",
       "Communication digitale",
-      "Motion Design", 
+      "Motion Design",
       "Photo/Vidéo",
     ],
   },
@@ -101,7 +94,7 @@ export const timelineItems = [
     date: "2018-2019",
     skills: [
       "Anatomie",
-      "Biologie cellulaire", 
+      "Biologie cellulaire",
       "Chimie-Biochimie",
       "Histologie-Embryologie",
       "Biostatistiques-Probabilités",
@@ -114,12 +107,7 @@ export const timelineItems = [
     school: "Institution Sainte-Claire",
     city: "Lille",
     date: "2014-2018",
-    skills: [
-      "Spécialité SVT",
-      "Anglais LV1",
-      "Allemand LV2",
-      "Italien LV3",
-    ],
+    skills: ["Spécialité SVT", "Anglais LV1", "Allemand LV2", "Italien LV3"],
   },
   {
     img: "trace-logo.svg",
@@ -133,7 +121,7 @@ export const timelineItems = [
       "Création de maquette de maisons et bâtiments",
     ],
   },
-];
+]
 
 export const worksItems = [
   {
@@ -488,7 +476,7 @@ export const worksItems = [
     },
     gallery: ["plantopia-1.jpg", "plantopia-1.jpg", "plantopia-1.jpg", "plantopia-1.jpg"],
   },
-];
+]
 
 export const passionItems = [
   {
@@ -521,7 +509,7 @@ export const passionItems = [
     tags: ["One Piece", "Berserk", "Jojo's Bizarre Adventure"],
     color: "color-f1",
   },
-];
+]
 
 export const persosItems = [
   {
@@ -545,7 +533,7 @@ export const persosItems = [
       },
     ],
   },
-];
+]
 
 export const contactItems = [
   {
@@ -564,7 +552,7 @@ export const contactItems = [
       },
     ],
   },
-];
+]
 
 export const devItems = [
   {
@@ -588,6 +576,11 @@ export const devItems = [
     title: "Vue.js",
   },
   {
+    color: "#F7E2D4",
+    image: "sql.svg",
+    title: "SQL",
+  },
+  {
     color: "#F2D9E5",
     image: "sass.svg",
     title: "Sass",
@@ -601,6 +594,11 @@ export const devItems = [
     color: "#CFEAFC",
     image: "vscode.svg",
     title: "VS Code",
+  },
+  {
+    color: "#FCD6CF",
+    image: "git.svg",
+    title: "Git",
   },
   {
     color: "#FFCCD8",
@@ -620,7 +618,13 @@ export const devItems = [
     title: "Godot",
     inProgress: true,
   },
-];
+  {
+    color: "#E6E0FF",
+    image: "strapi.svg",
+    title: "Strapi",
+    inProgress: true,
+  },
+]
 
 export const designItems = [
   {
@@ -654,7 +658,7 @@ export const designItems = [
     image: "aseprite.svg",
     title: "Aseprite",
   },
-];
+]
 
 export const othersItems = [
   {
@@ -683,28 +687,7 @@ export const othersItems = [
     image: "elementor.svg",
     title: "Elementor",
   },
-  {
-    color: "#D3D2F9",
-    image: "cockpit.svg",
-    title: "GetCockpit",
-  },
-  {
-    color: "#D6D0FB",
-    image: "mailjet.svg",
-    title: "Mailjet",
-  },
-
-  {
-    color: "#F9DBD2",
-    image: "sketchbook.svg",
-    title: "Sketchbook",
-  },
-  {
-    color: "#FCD6CF",
-    image: "git.svg",
-    title: "Git",
-  },
-];
+]
 
 export const languagesItems = [
   {
@@ -717,4 +700,4 @@ export const languagesItems = [
     image: "english-flag.svg",
     title: "Niveau",
   },
-];
+]

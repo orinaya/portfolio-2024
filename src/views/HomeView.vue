@@ -8,8 +8,10 @@ import Hero from "@/components/layout/Hero.vue"
 <template>
   <main>
     <Hero />
-    <HomeCurrent />
-    <HomeSkills />
-    <HomeProjects />
+    <div class="flex flex-col gap-28">
+      <HomeCurrent />
+      <HomeSkills />
+      <HomeProjects />
+    </div>
   </main>
 </template>
