@@ -37,7 +37,7 @@ export const timelineItems = [
     school: "Studio Floax",
     city: "Vertou",
     date: "2023-2024",
-    skills: ["Vue.js", "Sass", "GetCockpit", "Strapi", "GraphQL", "Angular"],
+    skills: ["Vue.js", "Sass", "Strapi", "GraphQL", "Angular"],
   },
 
   {
@@ -64,11 +64,11 @@ export const timelineItems = [
     city: "Bruxelles",
     date: "2021",
     skills: [
-      "Soins infirmiers post-partum",
-      "Conseils à l'allaitement",
-      "Gestion dossiers patients informatisés",
-      "Distribution des repas",
+      "Soins post-partum",
+      "Conseils allaitement",
       "Accompagnement soin bébés",
+      "Gestion dossiers patients",
+      "Distribution repas",
     ],
   },
   {
@@ -78,12 +78,11 @@ export const timelineItems = [
     city: "Bruxelles",
     date: "2019-2021",
     skills: [
-      "Physiologie de la grossesse et de l’accouchement",
+      "Physiologie de la grossesse",
       "Puériculture",
       "Premiers secours",
-      "Soins infirmiers",
-      "Nutrition et Diététique",
       "Hygiène et Prophylaxie",
+      "Soins infirmiers",
     ],
   },
   {
@@ -94,11 +93,11 @@ export const timelineItems = [
     date: "2018-2019",
     skills: [
       "Anatomie",
-      "Biologie cellulaire",
-      "Chimie-Biochimie",
-      "Histologie-Embryologie",
-      "Biostatistiques-Probabilités",
       "Sciences humaines et sociales",
+      "Biologie cellulaire",
+      "Histologie-Embryologie",
+      "Chimie/Biochimie",
+      "Biostatistiques",
     ],
   },
   {
@@ -115,11 +114,7 @@ export const timelineItems = [
     school: "Trace architectes",
     city: "Hem",
     date: "2014-2018",
-    skills: [
-      "Réalisation de plan",
-      "Visite de chantier",
-      "Création de maquette de maisons et bâtiments",
-    ],
+    skills: ["Réalisation de plan", "Visite de chantier", "Création de maquette de bâtiments"],
   },
 ]
 

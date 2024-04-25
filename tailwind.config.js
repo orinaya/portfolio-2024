@@ -9,6 +9,9 @@ export default {
       },
     },
     colors: {
+      white: {
+        998: "#fff",
+      },
       darkOlive: {
         100: "hsl(150,8,10)",
         200: "hsl(150,8,20)",
