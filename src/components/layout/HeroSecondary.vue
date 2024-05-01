@@ -1,5 +1,10 @@
 <script setup>
 import LinkParticle from "../particles/LinkParticle.vue"
+
+defineProps({
+  uptitle: String,
+  profil: Boolean,
+})
 </script>
 <template>
   <section class="bg-darkOlive-200 hero">
@@ -10,11 +15,18 @@ import LinkParticle from "../particles/LinkParticle.vue"
           <div>
             <div class="flex gap-2">
               <!-- <img :src="getImageUrl(icon)" /> -->
-              <p class="uppercase text-melon-700 text-xl font-medium">Mon profil</p>
+              <p class="uppercase text-melon-700 text-xl font-medium">{{ uptitle }}</p>
             </div>
-            <h1 class="font-neueKaine font-extrabold text-4xl">
-              Comprendre mon <span>univers</span> et mes <span>valeurs</span>
-            </h1>
+            <template v-if="profil">
+              <h1 class="font-neueKaine font-extrabold text-4xl">
+                Comprendre mon <span>univers</span> et mes <span>valeurs</span>
+              </h1>
+            </template>
+            <template v-else>
+              <h1 class="font-neueKaine font-extrabold text-4xl">
+                Découvrir mes compétences à travers des <span>projets concrets</span>
+              </h1>
+            </template>
           </div>
         </div>
         <div>

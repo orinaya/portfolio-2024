@@ -7,7 +7,7 @@ import ProfilePassion from "../components/profile/ProfilePassion.vue"
 
 <template>
   <main>
-    <HeroSecondary />
+    <HeroSecondary uptitle="Mon profil" profil />
 
     <div class="flex flex-col gap-28">
       <ProfileInfos />
