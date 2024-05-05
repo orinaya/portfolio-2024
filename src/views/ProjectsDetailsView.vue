@@ -183,7 +183,7 @@ span.hashtag {
 }
 
 .project-subtitle {
-  color: var(--mint-200);
+  color: var(--verdigris-200);
   font-size: 24px;
   text-align: center;
   margin-top: -24px;
@@ -216,6 +216,6 @@ span.hashtag {
 p.chart-title {
   font-size: 20px;
   font-weight: 700;
-  color: var(--mint-200);
+  color: var(--verdigris-200);
 }
 </style>

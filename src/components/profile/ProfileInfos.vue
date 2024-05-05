@@ -2,6 +2,7 @@
 import H2Particle from "../particles/H2Particle.vue"
 import InformationsParticle from "../particles/InformationParticle.vue"
 import {persosItems, contactItems} from "@/services/datas"
+import LinkParticle from "../particles/LinkParticle.vue"
 </script>
 
 <template>
@@ -16,6 +17,7 @@ import {persosItems, contactItems} from "@/services/datas"
       <div class="flex flex-col gap-8">
         <H2Particle uptitle="Contact & réseaux" title="Me contacter" />
         <InformationsParticle v-for="item in contactItems" :infos="item.data" :key="item.title" />
+        <LinkParticle to="/contact" title="Me contacter" color="melon" />
       </div>
     </div>
   </section>

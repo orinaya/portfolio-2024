@@ -7,11 +7,6 @@ import Footer from "./components/layout/Footer.vue"
 
 <template>
   <Navbar />
-  <!-- <RouterLink to="/">Accueil</RouterLink>
-      <RouterLink to="/profil">Profil</RouterLink>
-      <RouterLink to="/projets">Projets</RouterLink>
-      <RouterLink to="/projets">Projets details</RouterLink>
-      <RouterLink to="/contact">Contact</RouterLink> -->
   <RouterView />
   <Footer />
 </template>

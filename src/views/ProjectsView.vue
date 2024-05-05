@@ -103,9 +103,9 @@ select {
 }
 
 span {
-  background-color: var(--mint-700);
-  color: var(--mint-300);
-  font-weight: 700;
+  background-color: var(--verdigris-900);
+  color: var(--verdigris-400);
+  font-weight: 600;
   width: fit-content;
   padding: 2px 10px;
   border-radius: 4px;

@@ -71,7 +71,7 @@
             exclusivement dans le cadre de ma demande
           </p>
         </div>
-        <!-- <ButtonParticle title="Valider" type="submit" color="mint" /> -->
+        <!-- <ButtonParticle title="Valider" type="submit" color="verdigris" /> -->
       </form>
     </div>
   </section>
@@ -130,7 +130,7 @@ h2:last-child {
 
   &:focus {
     outline: none;
-    box-shadow: inset 0 0 0 2px var(--mint-600);
+    box-shadow: inset 0 0 0 2px var(--verdigris-600);
   }
 }
 
@@ -160,7 +160,7 @@ h2:last-child {
 
 .form-item_input:focus {
   outline: none;
-  box-shadow: inset 0 0 0 2px var(--mint-600);
+  box-shadow: inset 0 0 0 2px var(--verdigris-600);
 }
 
 .form-checkbox {
@@ -172,7 +172,7 @@ h2:last-child {
 
 h2 {
   font-size: 32px;
-  color: var(--mint-300);
+  color: var(--verdigris-300);
 }
 
 h2:last-child {

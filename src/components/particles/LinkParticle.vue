@@ -83,14 +83,14 @@ const getIconUrl = (image) => {
   }
 }
 
-.color-mint {
-  color: var(--mint-300);
-  box-shadow: inset 0 0 0 0 var(--mint-500);
-  background-color: var(--mint-800);
+.color-verdigris {
+  color: var(--verdigris-300);
+  box-shadow: inset 0 0 0 0 var(--verdigris-500);
+  background-color: var(--verdigris-800);
 
   &:hover {
     color: white;
-    box-shadow: inset 200px 0 0 0 var(--mint-300);
+    box-shadow: inset 200px 0 0 0 var(--verdigris-300);
   }
 }
 
@@ -102,6 +102,17 @@ const getIconUrl = (image) => {
   &:hover {
     color: white;
     box-shadow: inset 200px 0 0 0 var(--olive-500);
+  }
+}
+
+.color-darkolive {
+  color: var(--verdigris-700);
+  background-color: var(--olive-230);
+  /* box-shadow: inset 0 0 0 0 var(--olive-1000); */
+
+  &:hover {
+    color: var(--verdigris-300);
+    box-shadow: inset 200px 0 0 0 var(--verdigris-800);
   }
 }
 </style>

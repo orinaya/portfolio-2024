@@ -48,7 +48,7 @@ defineProps({
 }
 
 .hero {
-  margin-bottom: 200px;
+  margin-bottom: 180px;
   padding-bottom: 160px;
 }
 </style>

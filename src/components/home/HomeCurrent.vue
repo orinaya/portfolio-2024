@@ -1,5 +1,6 @@
 <script setup>
 import H2Particle from "../particles/H2Particle.vue"
+import LinkParticle from "../particles/LinkParticle.vue"
 
 const getImageUrl = (image) => {
   return new URL(`/src/assets/img/${image}`, import.meta.url).href
@@ -53,6 +54,7 @@ const currentHome = [
           <p>{{ item.text }}</p>
         </div>
       </div>
+      <LinkParticle to="/projets" title="Télécharger mon CV" color="melon" level="secondary" />
     </div>
   </section>
 </template>
