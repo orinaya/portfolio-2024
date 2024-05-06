@@ -121,6 +121,7 @@ export const timelineItems = [
 export const worksItems = [
   {
     id: "0",
+    category: ["DEVELOPPEMENT", "WEBDESIGN"],
     title: "Equinox",
     description: "Création d’un jeu vidéo",
     image: "equinox.jpg",
@@ -145,6 +146,7 @@ export const worksItems = [
   },
   {
     id: "1",
+    category: ["DEVELOPPEMENT", "WEBDESIGN"],
     title: "Plantopia",
     description: "Site e-commerce de plantes",
     image: "plantopia-2.jpg",
@@ -169,6 +171,7 @@ export const worksItems = [
   {
     id: "2",
     title: "Pause Connect",
+    category: ["DEVELOPPEMENT", "WEBDESIGN"],
     description: "Site de sensibilisation addiction",
     image: "pause-connect-2.jpg",
     softwares: ["figma.svg", "html.svg", "css.svg", "vue.svg"],
@@ -191,6 +194,7 @@ export const worksItems = [
   {
     id: "3",
     title: "Le Dédale",
+    category: ["DEVELOPPEMENT", "WEBDESIGN"],
     description: "Site boutique-café d'un client",
     image: "dedale-banner.jpg",
     softwares: ["figma.svg", "wordpress.svg", "elementor.svg"],
@@ -214,6 +218,7 @@ export const worksItems = [
   {
     id: "4",
     title: "MaPeach",
+    category: ["DEVELOPPEMENT", "WEBDESIGN"],
     description: "Application de dates en couple",
     image: "ghibli-2.jpg",
     softwares: ["figma.svg", "html.svg", "css.svg", "vue.svg"],
@@ -237,6 +242,7 @@ export const worksItems = [
   {
     id: "4",
     title: "Ghibli",
+    category: ["DEVELOPPEMENT"],
     description: "Site de films",
     image: "ghibli-2.jpg",
     softwares: ["figma.svg", "html.svg", "css.svg", "vue.svg"],
@@ -282,6 +288,7 @@ export const worksItems = [
   // },
   {
     id: "6",
+    category: ["DESIGN"],
     title: "Magdiel Lopez",
     description: "Inspiration d'un artiste",
     image: "equinox.jpg",
@@ -305,6 +312,7 @@ export const worksItems = [
   },
   {
     id: "7",
+    category: ["DESIGN"],
     title: "Auto portrait",
     description: "Auto portrait vectoriel",
     image: "autoportrait.jpg",
@@ -328,6 +336,7 @@ export const worksItems = [
   },
   {
     id: "8",
+    category: ["DESIGN"],
     title: "Nike x Takashi",
     description: "Collab et affiches",
     image: "takashi-1.jpg",
@@ -400,6 +409,7 @@ export const worksItems = [
   // },
   {
     id: "11",
+    category: ["DESIGN"],
     title: "Violence envers les femmes",
     description: "Campagne de sensibilisation",
     image: "creative-lab-banner.jpg",
@@ -422,30 +432,30 @@ export const worksItems = [
     },
     gallery: ["plantopia-1.jpg", "plantopia-1.jpg", "plantopia-1.jpg", "plantopia-1.jpg"],
   },
-  {
-    id: "12",
-    title: "Affiches JO",
-    description: "Affiches pour sports",
-    image: "equinox.jpg",
-    softwares: ["photoshop.svg", "illustrator.svg"],
-    banner: "pause-connect-banner.jpg",
-    hashtag: "#IntégrationWeb #Maquettage",
-    big_description:
-      "Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web.",
-    first_image: "plantopia-1.jpg",
-    second_image: "plantopia-1.jpg",
-    details: {
-      softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
-      role: ["Travail d’équipe", "Développement web", "Maquettage"],
-      team: ["Erwann Michaud de Perier"],
-      school_year: "Bachelor Cycle Web et Multimédia - Année 2",
-    },
-    graphic_chart: {
-      logo: "plantopia-logo.svg",
-      colors: ["#397539", "#214521", "#EAD0C2", "#EFDDCF"],
-    },
-    gallery: ["plantopia-1.jpg", "plantopia-1.jpg", "plantopia-1.jpg", "plantopia-1.jpg"],
-  },
+  // {
+  //   id: "12",
+  //   title: "Affiches JO",
+  //   description: "Affiches pour sports",
+  //   image: "equinox.jpg",
+  //   softwares: ["photoshop.svg", "illustrator.svg"],
+  //   banner: "pause-connect-banner.jpg",
+  //   hashtag: "#IntégrationWeb #Maquettage",
+  //   big_description:
+  //     "Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web.",
+  //   first_image: "plantopia-1.jpg",
+  //   second_image: "plantopia-1.jpg",
+  //   details: {
+  //     softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
+  //     role: ["Travail d’équipe", "Développement web", "Maquettage"],
+  //     team: ["Erwann Michaud de Perier"],
+  //     school_year: "Bachelor Cycle Web et Multimédia - Année 2",
+  //   },
+  //   graphic_chart: {
+  //     logo: "plantopia-logo.svg",
+  //     colors: ["#397539", "#214521", "#EAD0C2", "#EFDDCF"],
+  //   },
+  //   gallery: ["plantopia-1.jpg", "plantopia-1.jpg", "plantopia-1.jpg", "plantopia-1.jpg"],
+  // },
   // {
   //   id: "13",
   //   title: "Seventees",
