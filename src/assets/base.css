@@ -7,7 +7,9 @@
 
 :root {
   --melon-500: hsl(7, 64%, 50%);
+  --melon-600: hsl(7, 64%, 60%);
   --melon-900: hsl(7, 64%, 87%);
+  --melon-940: hsl(7, 64%, 94%);
 
   --verdigris-300: hsl(176, 31%, 30%);
   --verdigris-400: hsl(176, 31%, 40%);

@@ -2,8 +2,7 @@
 import {useRouter} from "vue-router"
 import {worksItems} from "@/services/datas"
 import H1Particle from "@/components/particles/H1Particle.vue"
-// import TitleParticle from "@/components/particles/TitleParticle.vue"
-// import BreadcrumbParticle from "@/components/particles/BreadcrumbParticle.vue"
+import LinkParticle from "@/components/particles/LinkParticle.vue"
 
 const getImageUrl = (image) => {
   return new URL(`/src/assets/works/${image}`, import.meta.url).href
@@ -14,21 +13,51 @@ const getIconUrl = (image) => {
 }
 
 const router = useRouter()
-const userRoute = router.currentRoute.value.params.id
+const userRoute = router.currentRoute.value.params.id.toString()
+console.log(router)
+
 const works = worksItems[userRoute]
+console.log("works", works.id)
 </script>
 
 <template>
   <!-- <BreadcrumbParticle :pageName="works.title" class="container" /> -->
-  <div class="container">
-    <!-- <TitleParticle :title="works.title" h1 /> -->
-    <H1Particle :title="works.title" />
-    <p class="project-subtitle">{{ works.description }}</p>
-    <div class="project-banner" :style="'background-image: url(' + getImageUrl(works.banner) + ')'">
-      <span class="hashtag">{{ works.hashtag }}</span>
+  <div class="container mt-24">
+    <H1Particle :title="works.title" center />
+    <p class="text-verdigris-200 text-2xl text-center -mt-3">
+      {{ works.description }}
+    </p>
+    <div
+      class="banner w-full bg-bottom bg-no-repeat rounded-xl my-16 mx-auto relative"
+      :style="'background-image: url(' + getImageUrl(works.banner) + ')'"
+    >
+      <span class="rounded-md py-1 px-2 absolute top-4 left-4 font-semibold">{{
+        works.hashtag
+      }}</span>
+      <div class="flex gap-8 absolute bottom-12 left-12" v-if="userRoute === '0'">
+        <LinkParticle
+          to="https://drive.google.com/file/d/19FkXkmaV2Hkk7GgopbbjmTyPvm3tKm9f/view?usp=drive_link"
+          target="_blank"
+          title="Découvrir le pitchdeck"
+          color="melon"
+        />
+        <LinkParticle
+          to="https://drive.google.com/file/d/1mYL3IomDkpCqO149OKBrTT7fnApnJJHR/view?usp=drive_link"
+          target="_blank"
+          title="Regarder le trailer"
+          color="verdigris"
+        />
+      </div>
+
+      <div class="flex gap-8 absolute bottom-12 left-12" v-if="userRoute === '1'">
+        <LinkParticle to="/" title="Regarder le trailer" color="melon" />
+        <!-- <LinkParticle to="/" title="Regarder le trailer" color="verdigris" /> -->
+      </div>
+
+      <div v-else></div>
     </div>
-    <div class="project-first_line">
-      <div class="project-description">
+    <div class="flex justify-between my-16 mx-auto">
+      <div class="description rounded-xl p-8 bg-white-998">
         <TitleParticle
           title="Comprendre les enjeux et la finalité"
           uptitle="Description du projet"
@@ -37,45 +66,54 @@ const works = worksItems[userRoute]
         />
         <p>{{ works.big_description }}</p>
       </div>
+
+      <video controls class="h-96 image" v-if="userRoute === '0'">
+        <source src="../assets/works/Equinox_trailer.mp4" type="video/mp4" />
+      </video>
+      <video controls class="h-96 image" v-if="userRoute === '1'">
+        <source src="../assets/works/MaPeach-trailer.mp4" type="video/mp4" />
+      </video>
       <div
-        class="first-project_image"
-        :style="'background-image: url(' + getImageUrl(works.first_image) + ')'"
+        v-else
+        class="image h-96 bg-cover bg-no-repeat rounded-xl"
+        :style="{backgroundImage: 'url(' + getImageUrl(works.first_image) + ')'}"
       ></div>
     </div>
 
-    <div class="project-second_line">
+    <div class="flex justify-between my-16 mx-auto">
       <div
-        class="first-project_image"
-        :style="'background-image: url(' + getImageUrl(works.second_image) + ')'"
+        class="image h-96 bg-cover bg-no-repeat rounded-xl"
+        :style="{backgroundImage: 'url(' + getImageUrl(works.second_image) + ')'}"
       ></div>
-      <div class="project-details">
+      <div class="details rounded-xl p-8 bg-white-998">
         <TitleParticle title="Autour du projet" uptitle="Détails" h2 icon="icon-search.svg" />
-        <div class="prout">
-          <div>
-            <div class="prout-details">
-              <p>Logiciels et langages</p>
-              <img v-for="item in works.details.softwares" :src="getIconUrl(item)" />
-              <!-- <p v-for="item in works.details.softwares">{{ item }}</p> -->
+        <div class="flex flex-col gap-6 mt-5">
+          <div class="flex justify-between">
+            <div>
+              <p class="text-base font-semibold">Logiciels et langages</p>
+              <div class="flex gap-2">
+                <img v-for="item in works.details.softwares" :key="item" :src="getIconUrl(item)" />
+              </div>
             </div>
-            <div class="prout-details">
-              <p>Mon rôle</p>
-              <p v-for="item in works.details.role">{{ item }}</p>
+            <div>
+              <p class="text-base font-semibold">Mon rôle</p>
+              <p class="w-52" v-for="item in works.details.role" :key="item">{{ item }}</p>
             </div>
           </div>
-          <div>
-            <div class="prout-details">
-              <p>Équipe sur le projet</p>
-              <p v-for="item in works.details.team">{{ item }}</p>
+          <div class="flex justify-between">
+            <div>
+              <p class="text-base font-semibold">Équipe sur le projet</p>
+              <p class="w-52" v-for="item in works.details.team" :key="item">{{ item }}</p>
             </div>
-            <div class="prout-details">
-              <p>Années d’étude</p>
-              <p>{{ works.details.school_year }}</p>
+            <div>
+              <p class="text-base font-semibold">Années d’étude</p>
+              <p class="w-52">{{ works.details.school_year }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div>
+    <!-- <div>
       <TitleParticle
         title="L'univers du projet"
         uptitle="Charte graphique"
@@ -97,35 +135,35 @@ const works = worksItems[userRoute]
         </div>
       </div>
       <p>{{ item }}</p>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <style scoped>
-.prout {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-top: 20px;
+span {
+  background-color: hsl(0, 0%, 100%, 0.6);
+}
+.banner {
+  height: 425px;
+  background-size: 100%;
 }
 
-.prout > div {
-  display: flex;
-  justify-content: space-between;
-}
-.prout-details > p:first-child {
-  font-size: 16px;
-  font-weight: 600;
+.description,
+.details,
+.image {
+  width: 47%;
 }
 
-.prout-details:last-child > p:last-child {
-  width: 200px;
-}
+/* p.chart-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--verdigris-200);
+} */
 
+/* 
 .chart-logo > img {
   margin-top: 40px;
-  /* height: fit-content;
-  width: inherit; */
+ 
 }
 .chart-group {
   height: 220px;
@@ -138,7 +176,7 @@ const works = worksItems[userRoute]
   width: 200px;
   height: 100%;
   display: flex;
-  /* justify-content: space-between; */
+
   align-items: left;
   flex-direction: column;
   padding: 20px;
@@ -161,61 +199,5 @@ const works = worksItems[userRoute]
   width: 80px;
   border-radius: 20px;
   display: flex;
-}
-span.hashtag {
-  background-color: hsl(0, 0%, 100%, 0.6);
-  border-radius: 4px;
-  padding: 4px 10px;
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  font-weight: 600;
-}
-.project-banner {
-  height: 425px;
-  width: 100%;
-  background-position: bottom;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  margin: 66px auto;
-  position: relative;
-}
-
-.project-subtitle {
-  color: var(--verdigris-200);
-  font-size: 24px;
-  text-align: center;
-  margin-top: -24px;
-}
-
-.first-project_image {
-  height: 370px;
-  width: 47%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-}
-
-.project-description,
-.project-details {
-  border-radius: 10px;
-  background-color: hsl(40, 20%, 97%, 0.8);
-  /* border: solid 2px white; */
-  padding: 31px;
-  width: 42%;
-}
-
-.project-first_line,
-.project-second_line {
-  display: flex;
-  justify-content: space-between;
-  margin: 66px auto;
-}
-
-p.chart-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--verdigris-200);
-}
+} */
 </style>

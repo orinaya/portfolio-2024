@@ -15,71 +15,42 @@ const getProjectDetails = (id) => {
 
 <template>
   <HeroSecondary uptitle="Mes projets" />
+  <div class="container">
+    <div class="flex justify-between items-center">
+      <div class="flex gap-8 py-12 px-0">
+        <button><img src="../assets/icons/icon-grid.svg" />Tous mes travaux</button>
+        <button><img src="../assets/icons/icon-dev.svg" />Développement</button>
+        <button><img src="../assets/icons/icon-design.svg" />Design</button>
+        <button><img src="" />Marketing</button>
+      </div>
+      <div class="flex gap-2 items-center">
+        <select class="bg-white-998 rounded-md">
+          <option value="default">Trier par</option>
+          <option value="default">Date ASC</option>
+          <option value="default">Date DESC</option>
+        </select>
+        <span class="bg-verdigris-900 text-verdigris-400 font-semibold w-fit px-3 rounded"
+          >{{ worksItems.length }} resultats</span
+        >
+      </div>
+    </div>
 
-  <div class="filter-container container">
-    <div class="filter">
-      <button><img src="../assets/icons/icon-grid.svg" />Tous mes travaux</button>
-      <button><img src="../assets/icons/icon-dev.svg" />Développement</button>
-      <button><img src="../assets/icons/icon-design.svg" />Design</button>
-      <button><img src="" />Marketing</button>
+    <div class="flex flex-wrap justify-between gap-12">
+      <CardParticle
+        v-for="item in worksItems"
+        :id="item.id"
+        :title="item.title"
+        :description="item.description"
+        :image="getImageUrl(item.image)"
+        :softwares="item.softwares"
+        :price="item.price"
+        @send-project-id="getProjectDetails"
+      />
     </div>
-    <div>
-      <select>
-        <option value="default">Trier par</option>
-        <option value="default">Date ASC</option>
-        <option value="default">Date DESC</option>
-      </select>
-      <span class="container">{{ worksItems.length }} resultats</span>
-    </div>
-  </div>
-  <div class="all-works container">
-    <CardParticle
-      v-for="item in worksItems"
-      :id="item.id"
-      :title="item.title"
-      :description="item.description"
-      :image="getImageUrl(item.image)"
-      :softwares="item.softwares"
-      :price="item.price"
-      @send-project-id="getProjectDetails"
-    />
-    <!-- <CardParticle
-      v-for="item in worksItems"
-      :id="item.id"
-      :title="item.title"
-      :description="item.description"
-      :image="getImageUrl(item.image)"
-      :softwares="item.softwares"
-      :price="item.price"
-      @send-project-id="getProjectDetails"
-    /> -->
   </div>
 </template>
 
 <style scoped>
-.all-works {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 48px;
-}
-
-.filter {
-  display: flex;
-  gap: 32px;
-  padding: 48px 0;
-}
-
-.filter-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.filter-container > div:last-child {
-  display: flex;
-  gap: 8px;
-}
 button {
   color: hsl(176, 31%, 20%);
   font-weight: 300;
@@ -97,17 +68,8 @@ button {
   }
 }
 
-select {
-  height: fit-content;
-  width: fit-content;
-}
-
+select,
 span {
-  background-color: var(--verdigris-900);
-  color: var(--verdigris-400);
-  font-weight: 600;
-  width: fit-content;
-  padding: 2px 10px;
-  border-radius: 4px;
+  padding: 3px 12px;
 }
 </style>

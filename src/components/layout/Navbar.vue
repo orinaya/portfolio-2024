@@ -13,7 +13,12 @@ import LinkParticle from "../particles/LinkParticle.vue"
         <div class="flex gap-8">
           <RouterLink to="/profil" class="py-2 px-4 rounded-lg">Mon profil</RouterLink>
           <RouterLink to="/projets" class="py-2 px-4 rounded-lg">Mes projets</RouterLink>
-          <LinkParticle to="/contact" title="Télécharger mon CV" color="darkolive" />
+          <LinkParticle
+            to="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=drive_link"
+            target="_blank"
+            title="Télécharger mon CV"
+            color="darkolive"
+          />
           <LinkParticle to="/contact" title="Me contacter" color="verdigris" />
         </div>
       </div>
