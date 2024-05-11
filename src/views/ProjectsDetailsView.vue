@@ -2,7 +2,13 @@
 import {useRouter} from "vue-router"
 import {worksItems} from "@/services/datas"
 import H1Particle from "@/components/particles/H1Particle.vue"
+import ExternalLinkParticle from "@/components/particles/ExternalLinkParticle.vue"
 import LinkParticle from "@/components/particles/LinkParticle.vue"
+import FirstMedia from "@/components/projects/FirstMedia.vue"
+import PdfFrame from "@/components/projects/PdfFrame.vue"
+import Buttons from "@/components/projects/Buttons.vue"
+import Poster from "@/components/projects/Poster.vue"
+import BreadcrumbParticle from "@/components/particles/BreadcrumbParticle.vue"
 
 const getImageUrl = (image) => {
   return new URL(`/src/assets/works/${image}`, import.meta.url).href
@@ -18,15 +24,66 @@ console.log(router)
 
 const works = worksItems[userRoute]
 console.log("works", works.id)
+
+const previousPages = [
+  {
+    path: "/projets",
+    name: "Projets",
+  },
+]
+
+const getNextProjectRoute = () => {
+  const nextRoute = parseInt(userRoute) + 1
+  return nextRoute < worksItems.length ? `${nextRoute}` : null
+}
+
+const getPreviousProjectRoute = () => {
+  const previousRoute = parseInt(userRoute) - 1
+  return previousRoute >= 0 ? `${previousRoute}` : null
+}
 </script>
 
 <template>
-  <!-- <BreadcrumbParticle :pageName="works.title" class="container" /> -->
-  <div class="container mt-24">
+  <BreadcrumbParticle :pageName="works.title" :previousPages="previousPages" class="container" />
+  <div class="container mt-18" relative>
+    <img
+      src="../assets/works/equinox/nox-angel-jump.gif"
+      class="absolute h-36 left-96 top-32"
+      v-if="userRoute === '0'"
+    />
+    <img
+      src="../assets/works/equinox/arbre_en_feu.gif"
+      class="absolute h-40 right-96 top-32"
+      v-if="userRoute === '0'"
+    />
+
     <H1Particle :title="works.title" center />
+
     <p class="text-verdigris-200 text-2xl text-center -mt-3">
       {{ works.description }}
     </p>
+    <div class="container mt-4">
+      <div
+        :class="{
+          'flex justify-end': !getPreviousProjectRoute(),
+          'flex justify-between': getPreviousProjectRoute() && getNextProjectRoute(),
+          'flex justify-start': !getNextProjectRoute(),
+        }"
+      >
+        <ExternalLinkParticle
+          v-if="getPreviousProjectRoute()"
+          :href="getPreviousProjectRoute()"
+          title="Projet précedent"
+          color="melon"
+        />
+        <ExternalLinkParticle
+          v-if="getNextProjectRoute()"
+          :href="getNextProjectRoute()"
+          title="Projet suivant"
+          color="melon"
+        />
+      </div>
+    </div>
     <div
       class="banner w-full bg-bottom bg-no-repeat rounded-xl my-16 mx-auto relative"
       :style="'background-image: url(' + getImageUrl(works.banner) + ')'"
@@ -34,27 +91,15 @@ console.log("works", works.id)
       <span class="rounded-md py-1 px-2 absolute top-4 left-4 font-semibold">{{
         works.hashtag
       }}</span>
-      <div class="flex gap-8 absolute bottom-12 left-12" v-if="userRoute === '0'">
-        <LinkParticle
-          to="https://drive.google.com/file/d/19FkXkmaV2Hkk7GgopbbjmTyPvm3tKm9f/view?usp=drive_link"
+      <div class="flex gap-8 absolute bottom-12 left-12">
+        <ExternalLinkParticle
+          v-for="item in works.buttons"
+          :href="item.href"
           target="_blank"
-          title="Découvrir le pitchdeck"
-          color="melon"
-        />
-        <LinkParticle
-          to="https://drive.google.com/file/d/1mYL3IomDkpCqO149OKBrTT7fnApnJJHR/view?usp=drive_link"
-          target="_blank"
-          title="Regarder le trailer"
-          color="verdigris"
+          :title="item.title"
+          :color="item.color"
         />
       </div>
-
-      <div class="flex gap-8 absolute bottom-12 left-12" v-if="userRoute === '1'">
-        <LinkParticle to="/" title="Regarder le trailer" color="melon" />
-        <!-- <LinkParticle to="/" title="Regarder le trailer" color="verdigris" /> -->
-      </div>
-
-      <div v-else></div>
     </div>
     <div class="flex justify-between my-16 mx-auto">
       <div class="description rounded-xl p-8 bg-white-998">
@@ -66,18 +111,46 @@ console.log("works", works.id)
         />
         <p>{{ works.big_description }}</p>
       </div>
-
-      <video controls class="h-96 image" v-if="userRoute === '0'">
-        <source src="../assets/works/Equinox_trailer.mp4" type="video/mp4" />
-      </video>
-      <video controls class="h-96 image" v-if="userRoute === '1'">
-        <source src="../assets/works/MaPeach-trailer.mp4" type="video/mp4" />
-      </video>
-      <div
-        v-else
-        class="image h-96 bg-cover bg-no-repeat rounded-xl"
-        :style="{backgroundImage: 'url(' + getImageUrl(works.first_image) + ')'}"
-      ></div>
+      <FirstMedia>
+        <template v-slot:equinox v-if="userRoute === '0'">
+          <div
+            class="bg-white-998 flex flex-col gap-2 justify-center items-center h-96 image rounded-xl"
+          >
+            <video
+              controls
+              autoplay
+              loop
+              muted
+              poster="../assets/works/equinox/equinox-trailer-cover.jpg"
+              class="w-11/12 rounded-md"
+            >
+              <source src="../assets/works/equinox/Equinox_trailer.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </template>
+        <template v-slot:mapeach v-if="userRoute === '1'">
+          <div
+            class="bg-white-998 flex flex-col gap-2 justify-center items-center h-96 image rounded-xl"
+          >
+            <video
+              controls
+              autoplay
+              loop
+              muted
+              poster="../assets/works/mapeach/mapeach-trailer-cover.jpg"
+              class="w-11/12 rounded-md"
+            >
+              <source src="../assets/works/mapeach/MaPeach-trailer.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </template>
+        <template v-slot:simple v-if="userRoute !== '1' && userRoute !== '0'">
+          <div
+            class="image h-96 bg-cover bg-no-repeat rounded-xl"
+            :style="{backgroundImage: 'url(' + getImageUrl(works.first_image) + ')'}"
+          ></div>
+        </template>
+      </FirstMedia>
     </div>
 
     <div class="flex justify-between my-16 mx-auto">
@@ -113,29 +186,52 @@ console.log("works", works.id)
         </div>
       </div>
     </div>
-    <!-- <div>
-      <TitleParticle
-        title="L'univers du projet"
-        uptitle="Charte graphique"
-        h2
-        icon="icon-design.svg"
+
+    <Poster class="my-16" v-if="userRoute === '1'">
+      <template v-slot:mapeach>
+        <img src="../assets/works/mapeach/mapeach-poster-2.jpg" class="h-full" />
+        <img src="../assets/works/mapeach/mapeach-poster-3.jpg" class="h-full" />
+        <img src="../assets/works/mapeach/mapeach-poster-1.jpg" class="h-full" />
+        <img src="../assets/works/mapeach/mapeach-poster-4.jpg" class="h-full" />
+      </template>
+    </Poster>
+    <PdfFrame class="my-16">
+      <template v-slot:equinox v-if="userRoute === '0'">
+        <iframe
+          src="/src/assets/works/equinox/Equinox_Pitch_Deck_Nantes.pdf"
+          width="100%"
+          height="700px"
+        >
+        </iframe>
+      </template>
+      <template v-slot:mapeach v-if="userRoute === '1'">
+        <iframe src="/src/assets/works/mapeach/MaPeach_Pitch.pdf" width="100%" height="700px">
+        </iframe>
+      </template>
+    </PdfFrame>
+  </div>
+
+  <div class="container mt-4">
+    <div
+      :class="{
+        'flex justify-end': !getPreviousProjectRoute(),
+        'flex justify-between': getPreviousProjectRoute() && getNextProjectRoute(),
+        'flex justify-start': !getNextProjectRoute(),
+      }"
+    >
+      <ExternalLinkParticle
+        v-if="getPreviousProjectRoute()"
+        :href="getPreviousProjectRoute()"
+        title="Projet précedent"
+        color="melon"
       />
-      <div class="chart-group">
-        <div class="chart-logo">
-          <p class="chart-title">Logo</p>
-          <img class="" :src="getImageUrl(works.graphic_chart.logo)" />
-        </div>
-        <div class="color-group">
-          <p class="chart-title">Couleurs</p>
-          <span
-            v-for="color in works.graphic_chart.colors"
-            class="chart_color"
-            :style="'background-color:' + color + ';'"
-          ></span>
-        </div>
-      </div>
-      <p>{{ item }}</p>
-    </div> -->
+      <ExternalLinkParticle
+        v-if="getNextProjectRoute()"
+        :href="getNextProjectRoute()"
+        title="Projet suivant"
+        color="melon"
+      />
+    </div>
   </div>
 </template>
 
@@ -153,51 +249,4 @@ span {
 .image {
   width: 47%;
 }
-
-/* p.chart-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--verdigris-200);
-} */
-
-/* 
-.chart-logo > img {
-  margin-top: 40px;
- 
-}
-.chart-group {
-  height: 220px;
-  display: flex;
-  gap: 32px;
-  margin-top: 32px;
-}
-.chart-logo {
-  background-color: #f7f5f2;
-  width: 200px;
-  height: 100%;
-  display: flex;
-
-  align-items: left;
-  flex-direction: column;
-  padding: 20px;
-  border-radius: 10px;
-}
-.color-group {
-  flex-direction: column;
-  gap: 16px;
-  background-color: #f7f5f2;
-  width: 120px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  padding: 20px;
-}
-.chart_color {
-  height: 30px;
-  width: 80px;
-  border-radius: 20px;
-  display: flex;
-} */
 </style>

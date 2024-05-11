@@ -125,25 +125,28 @@ export const worksItems = [
     category: ["DEVELOPPEMENT", "WEBDESIGN"],
     title: "Equinox",
     description: "Création d’un jeu vidéo",
-    image: "equinox.jpg",
+    image: "equinox/equinox.jpg",
     softwares: ["godot.svg", "aseprite.svg"],
-    banner: "equinox-banner.jpg",
-    hashtag: "#Jeu vidéo #Pitchdeck",
+    banner: "equinox/equinox-banner.jpg",
+    hashtag: "#Game Jam #Pitch",
     price: "Award de la Direction Artistique",
     big_description:
       "En janvier 2024, Atlangames nous proposaient une Game Jam sur le thème “𝗳𝗿𝗼𝗻𝘁𝗶𝗲̀𝗿𝗲𝘀”. Le but ? Créer un jeu vidéo et en faire sa promotion en 4 jours, le tout en concurrence avec 17 autres écoles. 🐱 Après une matinée de brainstorming, est né “𝗘𝗾𝘂𝗶𝗻𝗼𝘅”, notre jeu de plateforme 2D. Il met en scène 𝗡𝗼𝘅, un petit chat décédé qui essaie de récupérer ses 8 vies restantes en traversant la frontière entre paradis et enfer.🏆 Entre #marketing, #design et #développement (et café), la semaine fut très rude mais il y a une bonne nouvelle. Nous continuons la lignée de prix gagnés par MyDigitalSchool Nantes, en remportant l’𝗔𝘄𝗮𝗿𝗱 𝗱𝗲 𝗹𝗮 𝗠𝗲𝗶𝗹𝗹𝗲𝘂𝗿𝗲 𝗗𝗶𝗿𝗲𝗰𝘁𝗶𝗼𝗻 𝗔𝗿𝘁𝗶𝘀𝘁𝗶𝗾𝘂𝗲 ! 🎮 Je vous laisse le lien pour 𝘁𝗲𝘀𝘁𝗲𝗿 𝗻𝗼𝘁𝗿𝗲 𝗷𝗲𝘂, à vous de jouer : https://lnkd.in/erJVwE9p",
-    first_image: "equinox-banner.jpg",
-    second_image: "equinox-banner.jpg",
+    first_image: "",
+    second_image: "equinox/equinox-2.jpg",
     details: {
       softwares: ["godot.svg", "aseprite.svg"],
       role: ["Responsable Pitch Deck", "Design"],
       team: ["Erwan Duchêne", "Erwann Michaud de Perier", "Matilin Noël"],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
-    graphic_chart: {
-      logo: "equinox-logo.svg",
-      colors: ["#f33329", "#f5d60a", "#8b94d3", "#cebfb1"],
-    },
+    buttons: [
+      {
+        href: "https://margouillat.itch.io/equinox",
+        title: "Tester le jeu",
+        color: "melon",
+      },
+    ],
   },
   // MAPEACH
   {
@@ -151,25 +154,33 @@ export const worksItems = [
     category: ["DEVELOPPEMENT", "WEBDESIGN"],
     title: "MaPeach",
     description: "Application de rendez-vous en couple",
-    image: "mapeach.jpg",
+    image: "mapeach/mapeach.jpg",
     softwares: ["figma.svg", "wordpress.svg"],
-    banner: "equinox-banner.jpg",
+    banner: "mapeach/mapeach-banner.jpg",
     hashtag: "#IntégrationWeb #Maquettage",
     price: "Award de la Direction Artistique",
     big_description:
       "En janvier 2024, Atlangames nous proposaient une Game Jam sur le thème “𝗳𝗿𝗼𝗻𝘁𝗶𝗲̀𝗿𝗲𝘀”. Le but ? Créer un jeu vidéo et en faire sa promotion en 4 jours, le tout en concurrence avec 17 autres écoles. 🐱 Après une matinée de brainstorming, est né “𝗘𝗾𝘂𝗶𝗻𝗼𝘅”, notre jeu de plateforme 2D. Il met en scène 𝗡𝗼𝘅, un petit chat décédé qui essaie de récupérer ses 8 vies restantes en traversant la frontière entre paradis et enfer.🏆 Entre #marketing, #design et #développement (et café), la semaine fut très rude mais il y a une bonne nouvelle. Nous continuons la lignée de prix gagnés par MyDigitalSchool Nantes, en remportant l’𝗔𝘄𝗮𝗿𝗱 𝗱𝗲 𝗹𝗮 𝗠𝗲𝗶𝗹𝗹𝗲𝘂𝗿𝗲 𝗗𝗶𝗿𝗲𝗰𝘁𝗶𝗼𝗻 𝗔𝗿𝘁𝗶𝘀𝘁𝗶𝗾𝘂𝗲 ! 🎮 Je vous laisse le lien pour 𝘁𝗲𝘀𝘁𝗲𝗿 𝗻𝗼𝘁𝗿𝗲 𝗷𝗲𝘂, à vous de jouer : https://lnkd.in/erJVwE9p",
-    first_image: "mapeach.jpg",
-    second_image: "mapeach.jpg",
+    first_image: "",
+    second_image: "mapeach/mapeach-2.jpg",
     details: {
       softwares: ["figma.svg", "wordpress.svg"],
       role: ["Maquettage", "Design"],
       team: ["Erwann Michaud de Perier", "Arthur Ploteau", "Louka Lemonnier", "Mathéo Lebéhot"],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
-    graphic_chart: {
-      logo: "equinox-logo.svg",
-      colors: ["#f33329", "#f5d60a", "#8b94d3", "#cebfb1"],
-    },
+    buttons: [
+      {
+        href: "https://oriane-frouin.mds-nantes.yt/mapeach/",
+        title: "Visiter le site",
+        color: "melon",
+      },
+      {
+        href: "https://oriane-frouin.mds-nantes.yt/mapeach/",
+        title: "Voir la maquette",
+        color: "verdigris",
+      },
+    ],
   },
   // FLOAX
   {
@@ -179,10 +190,10 @@ export const worksItems = [
     description: "Site vitrine de Floax",
     image: "floax.jpg",
     softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
-    banner: "plantopia-banner.jpg",
-    hashtag: "#IntégrationWeb #Maquettage",
+    banner: "floax-banner.jpg",
+    hashtag: "#IntégrationWeb #Développement front ",
     big_description:
-      "Plantopia est un site e-commerce de plantes et fleurs réalisé en duo dans le cadre du cours d’Intégration web. Il présente une page d'accueil, une page avec toutes les plantes et fleurs, une page détail du produit et une page panier",
+      "Floax est un site vitrine réalisé pour l'entreprise où j'ai effectué mon stage. J'ai pris en charge l'intégration et le développement front-end du site avec d'autres personnes. Il met en valeur les services de l'entreprise et fournit des informations pertinentes aux visiteurs.",
     first_image: "floax.jpg",
     second_image: "floax.jpg",
     details: {
@@ -191,10 +202,13 @@ export const worksItems = [
       team: ["Loïc Vanderschooten, Clara Le Meur, Vincent Ramaye"],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
-    graphic_chart: {
-      logo: "plantopia-logo.svg",
-      colors: ["#397539", "#214521", "#EAD0C2", "#EFDDCF"],
-    },
+    buttons: [
+      {
+        href: "https://floax.fr",
+        title: "Voir le site",
+        color: "melon",
+      },
+    ],
   },
   // PSS
   {
@@ -213,7 +227,14 @@ export const worksItems = [
     details: {
       softwares: ["html.svg", "sass.svg", "vue.svg"],
       role: ["Travail d’équipe", "Développement web"],
-      team: ["Loïc Vanderschooten, Clara Le Meur, Vincent Ramaye"],
+      team: [
+        "Loïc Vanderschooten",
+        "Adrien Vaucard",
+        "Clara Le Meur",
+        "Brice Le Gallo-Tastet",
+        "Vincent Ramaye",
+        "Kim Robert",
+      ],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
     graphic_chart: {
@@ -227,23 +248,19 @@ export const worksItems = [
     category: ["DEVELOPPEMENT", "WEBDESIGN"],
     title: "Plantopia",
     description: "Site e-commerce de plantes",
-    image: "plantopia.jpg",
+    image: "plantopia/plantopia.jpg",
     softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
-    banner: "plantopia-banner.jpg",
+    banner: "plantopia/plantopia-banner.jpg",
     hashtag: "#IntégrationWeb #Maquettage",
     big_description:
       "Plantopia est un site e-commerce de plantes et fleurs réalisé en duo dans le cadre du cours d’Intégration web. Il présente une page d'accueil, une page avec toutes les plantes et fleurs, une page détail du produit et une page panier",
-    first_image: "plantopia-2.jpg",
-    second_image: "plantopia-1.jpg",
+    first_image: "plantopia/plantopia-1.jpg",
+    second_image: "plantopia/plantopia-2.jpg",
     details: {
       softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
       role: ["Travail d’équipe", "Développement web", "Maquettage"],
       team: ["Erwann Michaud de Perier"],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
-    },
-    graphic_chart: {
-      logo: "plantopia-logo.svg",
-      colors: ["#397539", "#214521", "#EAD0C2", "#EFDDCF"],
     },
   },
   // LE DÉDALE
@@ -252,23 +269,19 @@ export const worksItems = [
     title: "Le Dédale",
     category: ["DEVELOPPEMENT", "WEBDESIGN"],
     description: "Site boutique-café d'un client",
-    image: "le-dedale.jpg",
+    image: "dedale/le-dedale.jpg",
     softwares: ["figma.svg", "wordpress.svg", "elementor.svg"],
-    banner: "dedale-banner.jpg",
+    banner: "dedale/dedale-banner.jpg",
     hashtag: "#IntégrationWeb #Maquettage",
     big_description:
       "Le Dédale, boutique-café ludique à Rezé est notre client actuel pour notre projet Fil rouge de deuxième année de formation. Au vu de leur installation récente, nous leur avons proposé de créer leur site. Désormais, au-delà d'un simple site vitrine, il s'agit également de leur créer un espace boutique contenant tous leurs produits le tout d'un un univers steampunk !",
-    first_image: "plantopia-1.jpg",
-    second_image: "plantopia-1.jpg",
+    first_image: "dedale/dedale-banner.jpg",
+    second_image: "dedale/dedale-banner.jpg",
     details: {
-      softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
-      role: ["Travail d’équipe", "Développement web", "Maquettage"],
-      team: ["Erwann Michaud de Perier"],
+      softwares: ["figma.svg", "wordpress.svg", "woocommerce.svg"],
+      role: ["Gestion de Projet", "Développement web", "Maquettage"],
+      team: ["Erwan Duchêne", "Audrey Norvez", "Valentin Renaud"],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
-    },
-    graphic_chart: {
-      logo: "plantopia-logo.svg",
-      colors: ["#397539", "#214521", "#EAD0C2", "#EFDDCF"],
     },
   },
   //LOTR
@@ -288,7 +301,7 @@ export const worksItems = [
     details: {
       softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
       role: ["Travail d’équipe", "Développement web", "Maquettage"],
-      team: ["Erwann Michaud de Perier"],
+      // team: ["Erwann Michaud de Perier"],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
     graphic_chart: {
@@ -302,22 +315,19 @@ export const worksItems = [
     title: "Pause Connect",
     category: ["DEVELOPPEMENT", "WEBDESIGN"],
     description: "Site de sensibilisation addiction",
-    image: "pause-connect.jpg",
+    image: "pause-connect/pause-connect.jpg",
     softwares: ["figma.svg", "html.svg", "css.svg", "vue.svg"],
-    banner: "pause-connect-banner.jpg",
+    banner: "pause-connect/pause-connect-banner.jpg",
     hashtag: "#DéveloppementFront #Maquettage #Marketing",
-    big_description: "Pause Connect est un projet de partiels",
-    first_image: "plantopia-1.jpg",
-    second_image: "pause-connect-2.jpg",
+    big_description:
+      "Pause Connect est un projet de sensibilisation à l'addiction aux écrans, réalisé dans le cadre de partiels. Ce site propose des données chiffrées, des conseils pratiques, des défis pour réduire l'utilisation des écrans, ainsi qu'un quiz interactif pour évaluer la dépendance potentielle.",
+    first_image: "pause-connect/pause-connect-2.jpg",
+    second_image: "pause-connect/pause-connect-2.jpg",
     details: {
       softwares: ["figma.svg", "html.svg", "css.svg", "vue.svg"],
       role: ["Travail d’équipe", "Développement web", "Maquettage"],
       team: ["Erwann Michaud de Perier", "Erwan Duchêne"],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
-    },
-    graphic_chart: {
-      logo: "pause-connect-logo.svg",
-      colors: ["#1A547F", "#99D98C", "#D1E97C", "#091C2A"],
     },
   },
   //Ghibli
@@ -326,23 +336,19 @@ export const worksItems = [
     title: "Ghibli",
     category: ["DEVELOPPEMENT"],
     description: "Site de films",
-    image: "ghibli.jpg",
+    image: "ghibli/ghibli.jpg",
     softwares: ["figma.svg", "html.svg", "css.svg", "vue.svg"],
-    banner: "ghibli-banner.jpg",
+    banner: "ghibli/ghibli-banner.jpg",
     hashtag: "#IntégrationWeb #Maquettage",
     big_description:
       "Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web.",
-    first_image: "ghibli-1.jpg",
-    second_image: "ghibli-2.jpg",
+    first_image: "ghibli/ghibli-1.jpg",
+    second_image: "ghibli/ghibli-2.jpg",
     details: {
       softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
       role: ["Développement front", "Maquettage"],
       team: [""],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
-    },
-    graphic_chart: {
-      logo: "ghibli-logo.svg",
-      colors: ["#397539", "#214521", "#EAD0C2", "#EFDDCF"],
     },
   },
   //NIKE X TAKASHI
@@ -362,14 +368,8 @@ export const worksItems = [
     details: {
       softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
       role: ["Travail d’équipe", "Développement web", "Maquettage"],
-      team: ["Erwann Michaud de Perier"],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
-    graphic_chart: {
-      logo: "plantopia-logo.svg",
-      colors: ["#397539", "#214521", "#EAD0C2", "#EFDDCF"],
-    },
-    gallery: ["plantopia-1.jpg", "plantopia-1.jpg", "plantopia-1.jpg", "plantopia-1.jpg"],
   },
   // MAGDIEL
   {
