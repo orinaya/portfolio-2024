@@ -53,7 +53,7 @@ img {
 }
 .caca-whitebox {
   background-color: #fff;
-  width: 180px;
+  width: 184px;
   border-radius: 0 10px 10px 0;
   padding: 16px;
 }
@@ -76,6 +76,7 @@ img {
   cursor: pointer;
   display: flex;
   /* flex-direction: row-reverse; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .caca-image > img {
   border-radius: 10px;

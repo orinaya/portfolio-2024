@@ -3,10 +3,10 @@ import H2Particle from "../particles/H2Particle.vue"
 import InformationsParticle from "../particles/InformationParticle.vue"
 import {persosItems, contactItems} from "@/services/datas"
 import LinkParticle from "../particles/LinkParticle.vue"
-import {useToast} from "primevue/usetoast"
-import Toast from "primevue/toast"
+// import {useToast} from "primevue/usetoast"
+// import Toast from "primevue/toast"
 
-const toast = useToast()
+// const toast = useToast()
 // const infos = [
 //   {
 //     icon: "icon-mail-olive.svg",
