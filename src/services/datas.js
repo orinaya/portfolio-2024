@@ -513,7 +513,7 @@ export const contactItems = [
       {
         icon: "icon-mail-olive.svg",
         subtitle: "Email",
-        content: "contact@orianefrouin.fr",
+        content: "ori.frouin@gmail.com",
       },
       {
         icon: "icon-tel.svg",
