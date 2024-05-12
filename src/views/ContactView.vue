@@ -5,9 +5,7 @@ import H1Particle from "@/components/particles/H1Particle.vue"
 
 <template>
   <main>
-    <H1Particle title="Me contacter" />
-
-    <!-- <h1 class="text-3xl font-bold underline">Contact</h1> -->
+    <H1Particle title="Me contacter" center class="py-20" />
     <ContactFormComponent />
   </main>
 </template>

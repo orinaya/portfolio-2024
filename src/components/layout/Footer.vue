@@ -3,7 +3,7 @@
   <footer class="relative flex items-end">
     <div class="container">
       <div
-        class="w-full flex bg-darkOlive-200 items-center justify-around bottom-0 py-3 px-6 rounded-t-xl text-white-998"
+        class="w-full flex items-center justify-around bottom-0 py-3 px-6 rounded-t-xl text-darkOlive-980"
       >
         <RouterLink
           to="/"
@@ -38,6 +38,7 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  height: 600px;
+  height: 460px;
+  margin-top: 110px;
 }
 </style>

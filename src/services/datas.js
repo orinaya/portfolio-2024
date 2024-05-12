@@ -147,6 +147,7 @@ export const worksItems = [
         color: "melon",
       },
     ],
+    date: 8,
   },
   // MAPEACH
   {
@@ -181,6 +182,7 @@ export const worksItems = [
         color: "verdigris",
       },
     ],
+    date: 12,
   },
   // FLOAX
   {
@@ -209,6 +211,7 @@ export const worksItems = [
         color: "melon",
       },
     ],
+    date: 2,
   },
   // PSS
   {
@@ -237,10 +240,7 @@ export const worksItems = [
       ],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
-    graphic_chart: {
-      logo: "plantopia-logo.svg",
-      colors: ["#397539", "#214521", "#EAD0C2", "#EFDDCF"],
-    },
+    date: 3,
   },
   // PLANTOPIA
   {
@@ -262,6 +262,7 @@ export const worksItems = [
       team: ["Erwann Michaud de Perier"],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
+    date: 4,
   },
   // LE DÉDALE
   {
@@ -283,6 +284,7 @@ export const worksItems = [
       team: ["Erwan Duchêne", "Audrey Norvez", "Valentin Renaud"],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
+    date: 9,
   },
   //LOTR
   {
@@ -304,10 +306,7 @@ export const worksItems = [
       // team: ["Erwann Michaud de Perier"],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
-    graphic_chart: {
-      logo: "plantopia-logo.svg",
-      colors: ["#397539", "#214521", "#EAD0C2", "#EFDDCF"],
-    },
+    date: 10,
   },
   // PAUSE CONNECT
   {
@@ -329,6 +328,7 @@ export const worksItems = [
       team: ["Erwann Michaud de Perier", "Erwan Duchêne"],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
+    date: 5,
   },
   //Ghibli
   {
@@ -350,6 +350,7 @@ export const worksItems = [
       team: [""],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
+    date: 6,
   },
   //NIKE X TAKASHI
   {
@@ -370,6 +371,7 @@ export const worksItems = [
       role: ["Travail d’équipe", "Développement web", "Maquettage"],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
+    date: 1,
   },
   // MAGDIEL
   {
@@ -391,10 +393,7 @@ export const worksItems = [
       team: [""],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
-    graphic_chart: {
-      logo: "ghibli-logo.svg",
-      colors: ["#397539", "#214521", "#EAD0C2", "#EFDDCF"],
-    },
+    date: 7,
   },
   //BUMBLE
   {
@@ -420,32 +419,33 @@ export const worksItems = [
       logo: "plantopia-logo.svg",
       colors: ["#397539", "#214521", "#EAD0C2", "#EFDDCF"],
     },
+    date: 11,
   },
-  //AUTO PORTRAIT
-  {
-    id: "",
-    category: ["DESIGN"],
-    title: "Auto portrait",
-    description: "Auto portrait vectoriel",
-    image: "autoportrait.jpg",
-    softwares: ["illustrator.svg"],
-    banner: "pause-connect-banner.jpg",
-    hashtag: "#IntégrationWeb #Maquettage",
-    big_description:
-      "Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web.",
-    first_image: "autoportrait.jpg",
-    second_image: "plantopia-1.jpg",
-    details: {
-      softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
-      role: ["Travail d’équipe", "Développement web", "Maquettage"],
-      team: ["Erwann Michaud de Perier"],
-      school_year: "Bachelor Cycle Web et Multimédia - Année 2",
-    },
-    graphic_chart: {
-      logo: "plantopia-logo.svg",
-      colors: ["#397539", "#214521", "#EAD0C2", "#EFDDCF"],
-    },
-  },
+  // //AUTO PORTRAIT
+  // {
+  //   id: "",
+  //   category: ["DESIGN"],
+  //   title: "Auto portrait",
+  //   description: "Auto portrait vectoriel",
+  //   image: "autoportrait.jpg",
+  //   softwares: ["illustrator.svg"],
+  //   banner: "pause-connect-banner.jpg",
+  //   hashtag: "#IntégrationWeb #Maquettage",
+  //   big_description:
+  //     "Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web.",
+  //   first_image: "autoportrait.jpg",
+  //   second_image: "plantopia-1.jpg",
+  //   details: {
+  //     softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
+  //     role: ["Travail d’équipe", "Développement web", "Maquettage"],
+  //     team: ["Erwann Michaud de Perier"],
+  //     school_year: "Bachelor Cycle Web et Multimédia - Année 2",
+  //   },
+  //   graphic_chart: {
+  //     logo: "plantopia-logo.svg",
+  //     colors: ["#397539", "#214521", "#EAD0C2", "#EFDDCF"],
+  //   },
+  // },
 ]
 
 export const passionItems = [
