@@ -4,50 +4,36 @@ import {useRouter} from "vue-router"
 const router = useRouter()
 </script>
 <template>
-  <nav
-    class="h-16 flex items-center sticky top-0 z-50"
-    :class="router.currentRoute.value.name === 'accueil' ? 'bg-darkOlive-200' : 'bg-beige-900'"
-  >
-    <div class="container">
-      <div class="flex justify-between items-center">
-        <RouterLink
-          to="/"
-          class="font-neueKaine font-extrabold py-2 px-4 rounded-lg text-4xl"
-          :class="
-            router.currentRoute.value.name === 'accueil' ? ' text-white-998' : ' text-darkOlive-200'
-          "
-          >ori</RouterLink
-        >
-        <div class="flex gap-8">
-          <RouterLink
-            to="/profil"
-            class="py-2 px-4 rounded-lg"
-            :class="
-              router.currentRoute.value.name === 'accueil'
-                ? ' text-white-998'
-                : ' text-darkOlive-200'
-            "
-            >Mon profil</RouterLink
-          >
-          <RouterLink
-            to="/projets"
-            class="py-2 px-4 rounded-lg"
-            :class="
-              router.currentRoute.value.name === 'accueil'
-                ? ' text-white-998'
-                : ' text-darkOlive-200'
-            "
-            >Mes projets</RouterLink
-          >
-          <LinkParticle
-            to="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=drive_link"
-            target="_blank"
-            title="Télécharger mon CV"
-            color="darkolive"
-          />
-          <LinkParticle to="/contact" title="Me contacter" color="verdigris" mailto:orianefrn />
-        </div>
+  <nav class="h-16 flex items-center sticky top-0 z-50 bg-beige-900">
+    <div class="flex flex-1">
+      <RouterLink
+        to="/"
+        class="link font-neueKaine font-extrabold text-4xl text-darkOlive-200 w-fit ml-48"
+        >ori</RouterLink
+      >
+    </div>
+
+    <div class="flex flex-1 justify-center items-center m-4">
+      <div class="flex gap-8">
+        <RouterLink to="/profil" class="link text-darkOlive-200">Mon profil</RouterLink>
+        <RouterLink to="/projets" class="link text-darkOlive-200">Mes projets</RouterLink>
+        <LinkParticle
+          to="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=drive_link"
+          target="_blank"
+          title="Télécharger mon CV"
+          color="beige"
+        />
+        <LinkParticle to="/contact" title="Me contacter" color="melon" mailto:orianefrn />
       </div>
     </div>
   </nav>
 </template>
+
+<style scoped>
+.link {
+  padding: 6px 12px;
+  border-radius: 4px;
+  width: fit-content;
+  height: fit-content;
+}
+</style>

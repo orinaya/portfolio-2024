@@ -37,7 +37,7 @@ const getIconUrl = (image) => {
   display: flex;
   text-align: center;
   padding: 6px 12px;
-  border-radius: 6px;
+  border-radius: 4px;
   font-weight: 600;
   border: none;
   font-size: 16px;
@@ -94,6 +94,16 @@ const getIconUrl = (image) => {
   }
 }
 
+.color-neutral-verdigris {
+  color: var(--verdigris-900);
+  background-color: var(--verdigris-400);
+
+  &:hover {
+    color: white;
+    box-shadow: inset 200px 0 0 0 var(--verdigris-300);
+  }
+}
+
 .color-olive {
   color: var(--olive-200);
   background-color: var(--olive-1000);
@@ -114,5 +124,15 @@ const getIconUrl = (image) => {
     color: var(--verdigris-300);
     box-shadow: inset 200px 0 0 0 var(--verdigris-800);
   }
+}
+
+.color-beige {
+  color: var(--beige-400);
+  background-color: var(--beige-900);
+
+  /* &:hover {
+    color: var(--beige-700);
+    box-shadow: inset 200px 0 0 0 var(--beige-800);
+  } */
 }
 </style>

@@ -3,10 +3,27 @@ import {RouterLink, RouterView} from "vue-router"
 import Hero from "./components/layout/Hero.vue"
 import Navbar from "./components/layout/Navbar.vue"
 import Footer from "./components/layout/Footer.vue"
+import {useRouter} from "vue-router"
+import {onBeforeUnmount, onMounted, ref} from "vue"
+const router = useRouter()
+
+const isScrolled = ref(false)
+
+const handleScroll = () => {
+  isScrolled.value = window.scrollY > window.innerHeight
+}
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll)
+})
 </script>
 
 <template>
-  <Navbar />
+  <Navbar v-if="router.currentRoute.value.name !== 'accueil' || isScrolled" />
   <RouterView />
   <Footer />
 </template>

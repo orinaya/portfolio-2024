@@ -34,7 +34,7 @@ const colorClass = computed(() => `color-${buttons.color}`)
   display: flex;
   text-align: center;
   padding: 6px 12px;
-  border-radius: 6px;
+  border-radius: 4px;
   font-weight: 600;
   border: none;
   font-size: 16px;

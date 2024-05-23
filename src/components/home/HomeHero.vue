@@ -1,12 +1,20 @@
 <script setup>
 import LinkParticle from "../particles/LinkParticle.vue"
 </script>
+
 <template>
-  <section class="bg-beige-900 hero">
-    <!-- <img src="../../assets/img/waves.svg" class="absolute w-full img-bg" /> -->
-    <div class="container">
-      <div class="flex justify-between text-darkOlive-200 py-20 items-center">
-        <div class="max-w-xl flex flex-col gap-12">
+  <div class="rounded-b-xl mb-24">
+    <div class="h-screen flex justify-between w-full">
+      <div class="flex flex-1 flex-col">
+        <nav class="pl-44 my-8">
+          <RouterLink
+            to="/"
+            class="link font-neueKaine font-extrabold text-4xl text-darkOlive-200 w-fit"
+            >ori</RouterLink
+          >
+        </nav>
+
+        <div class="w-full flex flex-col gap-12 pl-48 py-48">
           <div class="flex flex-col gap-4 relative">
             <div class="bubble absolute">
               <img src="../../assets/img/talk-bubble.svg" class="relative" />
@@ -39,31 +47,36 @@ import LinkParticle from "../particles/LinkParticle.vue"
             <LinkParticle
               to="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=sharing"
               title="Télécharger mon CV"
-              color="darkolive"
+              color="beige"
             />
           </div>
         </div>
-        <div class="image-box flex-1 bg-darkOlive-200 h-full">
-          <img src="/src/assets/img/hero-image.svg" class="hero-img relative" />
-        </div>
+      </div>
+      <div class="hero-box flex flex-1 flex-col bg-verdigris-300 m-4 rounded-xl items-center">
+        <nav class="flex w-fit gap-8 m-4 h-fit justify-between">
+          <RouterLink to="/profil" class="link text-verdigris-900">Mon profil</RouterLink>
+          <RouterLink to="/projets" class="link text-verdigris-900">Mes projets</RouterLink>
+          <LinkParticle
+            to="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=drive_link"
+            target="_blank"
+            title="Télécharger mon CV"
+            color="neutral-verdigris"
+          />
+          <LinkParticle to="/contact" title="Me contacter" color="verdigris" mailto:orianefrn />
+        </nav>
+
+        <img src="../../assets/img/hero-image.svg" />
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <style scoped>
-.hero-img {
-  height: 500px;
-  width: 445px;
-  object-fit: contain;
-}
-.img-bg {
-  top: 560px;
-}
-
-.hero {
-  margin-bottom: 350px;
-  padding-bottom: 160px;
+.hero-box {
+  background-image: url("../../assets/img/hero-waves.svg");
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .bubble {
@@ -77,7 +90,10 @@ import LinkParticle from "../particles/LinkParticle.vue"
   max-width: 240px;
 }
 
-.image-box {
-  background-image: url("../../assets/img/waves.svg");
+.link {
+  padding: 6px 12px;
+  border-radius: 4px;
+  width: fit-content;
+  height: fit-content;
 }
 </style>

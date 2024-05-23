@@ -35,7 +35,7 @@ const getProjectDetails = (id) => {
           @send-project-id="getProjectDetails"
         />
       </div>
-      <LinkParticle to="/projets" title="Voir tous mes projets" color="melon" />
+      <LinkParticle to="/projets" title="Découvrir mes projets" color="melon" />
     </div>
   </section>
 </template>

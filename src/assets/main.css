@@ -62,7 +62,9 @@ a {
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsl(153, 8%, 23%);
-    color: hsl(176, 31%, 70%);
+    /* background-color: hsl(153, 8%, 23%);
+    color: hsl(176, 31%, 70%); */
+    color: var(--verdigris-900);
+    background-color: var(--verdigris-400);
   }
 }

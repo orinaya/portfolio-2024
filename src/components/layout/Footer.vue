@@ -3,11 +3,11 @@
   <footer class="relative flex items-end">
     <div class="container">
       <div
-        class="w-full flex items-center justify-around bottom-0 py-3 px-6 rounded-t-xl text-darkOlive-980"
+        class="w-full flex items-center justify-around bottom-0 py-3 px-6 rounded-t-xl text-darkOlive-200"
       >
         <RouterLink
           to="/"
-          class="font-neueKaine font-extrabold text-darkOlive-980 py-2 px-4 rounded-lg text-4xl h-52 flex flex-col items-center"
+          class="font-neueKaine font-extrabold text-darkOlive-200 py-2 px-4 rounded-lg text-4xl h-52 flex flex-col items-center"
           >ori</RouterLink
         >
 

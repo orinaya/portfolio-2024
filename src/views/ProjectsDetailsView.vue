@@ -72,18 +72,18 @@ const getPreviousProjectRoute = () => {
           'flex justify-start': !getNextProjectRoute(),
         }"
       >
-        <ExternalLinkParticle
+        <!-- <ExternalLinkParticle
           v-if="getPreviousProjectRoute()"
           :href="getPreviousProjectRoute()"
           title="Projet précedent"
-          color="melon"
+          color="beige"
         />
         <ExternalLinkParticle
           v-if="getNextProjectRoute()"
           :href="getNextProjectRoute()"
           title="Projet suivant"
-          color="melon"
-        />
+          color="beige"
+        /> -->
       </div>
     </div>
     <div
@@ -225,13 +225,13 @@ const getPreviousProjectRoute = () => {
         v-if="getPreviousProjectRoute()"
         :href="getPreviousProjectRoute()"
         title="Projet précedent"
-        color="melon"
+        color="beige"
       />
       <ExternalLinkParticle
         v-if="getNextProjectRoute()"
         :href="getNextProjectRoute()"
         title="Projet suivant"
-        color="melon"
+        color="beige"
       />
     </div>
   </div>
