@@ -22,8 +22,15 @@ const router = useRouter()
           target="_blank"
           title="Télécharger mon CV"
           color="beige"
+          iconAfter="download"
         />
-        <LinkParticle to="/contact" title="Me contacter" color="melon" mailto:orianefrn />
+        <LinkParticle
+          to="/contact"
+          title="Me contacter"
+          color="melon"
+          mailto:orianefrn
+          iconAfter="tel"
+        />
       </div>
     </div>
   </nav>

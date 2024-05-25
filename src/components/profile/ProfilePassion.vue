@@ -48,7 +48,7 @@ import H2Particle from "../particles/H2Particle.vue"
           <div
             class="flex gap-2 items-center justify-center text-2xl font-semibold text-verdigris-400"
           >
-            <img src="../../assets/icons/icon-tv.svg" />
+            <i class="icon-tv" />
             <h3>Audiovisuel</h3>
           </div>
           <p class="font-semibold text-xl text-melon-100">Films / Séries / Animes</p>

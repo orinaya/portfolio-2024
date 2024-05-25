@@ -4,6 +4,7 @@ import {worksItems} from "../services/datas.js"
 import HeroTertiary from "@/components/layout/HeroTertiary.vue"
 import CardParticle from "../components/particles/CardParticle.vue"
 import {computed, ref} from "vue"
+import ButtonParticle from "@/components/particles/ButtonParticle.vue"
 
 const getImageUrl = (image) => {
   return new URL(`/src/assets/works/${image}`, import.meta.url).href
@@ -50,10 +51,9 @@ const filteredMovies = computed(() => {
   <div class="container">
     <div class="flex justify-between items-center">
       <div class="flex gap-8 py-12 px-0">
-        <button><img src="../assets/icons/icon-grid.svg" />Tous mes travaux</button>
-        <button><img src="../assets/icons/icon-dev.svg" />Développement</button>
-        <button><img src="../assets/icons/icon-design.svg" />Design</button>
-        <button><img src="" />Marketing</button>
+        <button><i class="icon-all"></i>Tous mes travaux</button>
+        <button><i class="icon-dev"></i>Développement</button>
+        <button><i class="icon-design"></i>Design</button>
       </div>
       <div class="flex gap-2 items-center">
         <select class="bg-white-998 rounded-md" v-model="selectedSort">

@@ -226,12 +226,14 @@ const getPreviousProjectRoute = () => {
         :href="getPreviousProjectRoute()"
         title="Projet précedent"
         color="beige"
+        iconBefore="arrowbefore"
       />
       <ExternalLinkParticle
         v-if="getNextProjectRoute()"
         :href="getNextProjectRoute()"
         title="Projet suivant"
         color="beige"
+        iconAfter="arrowafter"
       />
     </div>
   </div>

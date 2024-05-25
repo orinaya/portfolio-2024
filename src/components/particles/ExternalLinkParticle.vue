@@ -26,9 +26,9 @@ const getIconUrl = (image) => {
 
 <template>
   <a :href="buttons.routeLink" :title="routeLink" :class="[colorClass]" class="btn">
-    <img v-if="iconBefore" class="link-icon-before icomoon" :src="getIconUrl(buttons.iconBefore)" />
+    <i v-if="iconBefore" class="link-icon-before icomoon" :class="`icon-${buttons.iconBefore}`" />
     {{ buttons.title }}
-    <img v-if="iconAfter" class="link-icon-after icomoon" :src="getIconUrl(buttons.iconAfter)" />
+    <i v-if="iconAfter" class="link-icon-after icomoon" :class="`icon-${buttons.iconAfter}`" />
   </a>
 </template>
 

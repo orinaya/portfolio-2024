@@ -1,6 +1,4 @@
 <script setup>
-import LinkParticle from "../particles/LinkParticle.vue"
-
 defineProps({
   uptitle: String,
   profil: Boolean,

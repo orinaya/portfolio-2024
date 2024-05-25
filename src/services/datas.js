@@ -487,17 +487,17 @@ export const persosItems = [
     titleEnd: "personnelles",
     data: [
       {
-        icon: "icon-cake.svg",
+        icon: "icon-cake",
         subtitle: "Âge",
         content: "24 ans",
       },
       {
-        icon: "icon-address.svg",
+        icon: "icon-location",
         subtitle: "Adresse",
         content: "44800, Saint-Herblain",
       },
       {
-        icon: "icon-car.svg",
+        icon: "icon-car",
         subtitle: "Transport",
         content: "Permis B + Voiture",
       },

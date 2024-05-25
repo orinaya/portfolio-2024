@@ -1,5 +1,4 @@
 <script setup>
-import LinkParticle from "../particles/LinkParticle.vue"
 import BreadcrumbParticle from "@/components/particles/BreadcrumbParticle.vue"
 
 defineProps({

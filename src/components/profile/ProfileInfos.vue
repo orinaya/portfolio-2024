@@ -2,23 +2,6 @@
 import H2Particle from "../particles/H2Particle.vue"
 import InformationsParticle from "../particles/InformationParticle.vue"
 import {persosItems, contactItems} from "@/services/datas"
-import LinkParticle from "../particles/LinkParticle.vue"
-// import {useToast} from "primevue/usetoast"
-// import Toast from "primevue/toast"
-
-// const toast = useToast()
-// const infos = [
-//   {
-//     icon: "icon-mail-olive.svg",
-//     subtitle: "Email",
-//     content: "contact@orianefrouin.fr",
-//   },
-//   {
-//     icon: "icon-tel.svg",
-//     subtitle: "Téléphone",
-//     content: "07 70 35 45 69",
-//   },
-// ]
 
 const getIconUrl = (image) => {
   return new URL(`/src/assets/icons/${image}`, import.meta.url).href
@@ -61,11 +44,23 @@ const copy = () => {
           </div> -->
 
           <div class="flex gap-5 justify-start items-center">
-            <img :src="getIconUrl('icon-mail-olive.svg')" class="p-2 rounded-md bg-darkOlive-600" />
+            <i class="icon-mail p-2 rounded-md bg-darkOlive-600" />
             <p class="w-52 subtitle">Email</p>
             <div class="flex gap-2 items-center justify-end">
               <p class="w-full">contact@orianefrouin.fr</p>
-              <button @click="copy"><img src="../../assets/icons/icon-copy.svg" /></button>
+              <button @click="copy"><i class="icon-copy" /></button>
+            </div>
+          </div>
+          <div class="flex gap-5 justify-start items-center">
+            <i class="icon-linkedin p-1 rounded-md bg-verdigris-900"
+              ><span class="path1"></span><span class="path2"></span
+            ></i>
+
+            <p class="w-52 subtitle">LinkedIn</p>
+            <div class="flex gap-2 items-center justify-end">
+              <a href="https://www.linkedin.com/in/oriane-frouin/" class="w-full"
+                >/in/oriane-frouin</a
+              >
             </div>
           </div>
         </div>
@@ -76,8 +71,21 @@ const copy = () => {
   </section>
 </template>
 
-<style>
-.message {
-  background-color: aquamarine;
+<style scoped>
+.icon-linkedin .path1:before {
+  content: "\e909";
+  color: rgb(0, 118, 178);
+  font-size: 32px;
+}
+.icon-linkedin .path2:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  font-size: 32px;
+}
+
+.icon-mail::before {
+  font-size: 24px;
+  color: #f1f3f2;
 }
 </style>

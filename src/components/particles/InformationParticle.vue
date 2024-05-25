@@ -11,7 +11,7 @@ const getIconUrl = (image) => {
 <template>
   <div class="flex flex-col gap-6 w-11/12">
     <div v-for="info in infos" :key="info.subtitle" class="flex gap-5 justify-start items-center">
-      <img :src="getIconUrl(info.icon)" class="p-2 rounded-md bg-darkOlive-600" />
+      <i :class="info.icon" class="p-2 rounded-md bg-darkOlive-600" />
       <p class="w-52 subtitle">{{ info.subtitle }}</p>
       <p class="w-full">{{ info.content }}</p>
     </div>
@@ -21,5 +21,13 @@ const getIconUrl = (image) => {
 <style>
 .subtitle {
   color: #838383;
+}
+
+.icon-cake::before,
+.icon-location::before,
+.icon-car::before,
+.icon-mail::before {
+  font-size: 24px;
+  color: #f1f3f2;
 }
 </style>

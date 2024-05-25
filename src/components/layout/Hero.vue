@@ -40,6 +40,7 @@ import LinkParticle from "../particles/LinkParticle.vue"
               to="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=sharing"
               title="Télécharger mon CV"
               color="darkolive"
+              iconAfter="download"
             />
           </div>
         </div>

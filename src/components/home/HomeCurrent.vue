@@ -54,7 +54,13 @@ const currentHome = [
           <p>{{ item.text }}</p>
         </div>
       </div>
-      <LinkParticle to="/projets" title="Télécharger mon CV" color="melon" level="secondary" />
+      <LinkParticle
+        to="/projets"
+        title="Télécharger mon CV"
+        color="melon"
+        level="secondary"
+        iconAfter="download"
+      />
     </div>
   </section>
 </template>
