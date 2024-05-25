@@ -7,10 +7,7 @@ defineProps({
   description: String,
   image: String,
   softwares: Array,
-  price: {
-    type: String,
-    required: false,
-  },
+  date: Number,
 })
 
 const getIconUrl = (image) => {
@@ -76,7 +73,7 @@ img {
   cursor: pointer;
   display: flex;
   /* flex-direction: row-reverse; */
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
 }
 .caca-image > img {
   border-radius: 10px;

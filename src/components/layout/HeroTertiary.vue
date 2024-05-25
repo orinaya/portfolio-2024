@@ -1,15 +1,32 @@
 <script setup>
+import BreadcrumbParticle from "@/components/particles/BreadcrumbParticle.vue"
+
 defineProps({
   uptitle: String,
   profil: Boolean,
+  pageName: String,
+  previousPages: {
+    type: Object,
+    required: false,
+    path: {
+      type: String,
+      required: false,
+    },
+    name: {
+      type: String,
+      required: false,
+    },
+  },
 })
 </script>
 <template>
   <section class="bg-beige-900 hero">
-    <img src="../../assets/img/short_waves.svg" class="absolute w-full img-bg" />
+    <img src="../../assets/img/mini_waves.svg" class="absolute w-full img-bg" />
     <div class="container">
+      <!-- <BreadcrumbParticle :pageName="pageName" :previousPages="previousPages" class="container" /> -->
+
       <div class="flex justify-between text-darkOlive-200 py-20 items-center">
-        <div class="max-w-xl flex flex-col gap-6">
+        <div class="max-w-2xl flex flex-col gap-6">
           <div>
             <div class="flex gap-2">
               <!-- <img :src="getImageUrl(icon)" /> -->
@@ -22,13 +39,10 @@ defineProps({
             </template>
             <template v-else>
               <h1 class="font-neueKaine font-extrabold text-4xl">
-                Découvrir mes compétences à travers des <span>projets concrets</span>
+                Mes <span>compétences</span> en action
               </h1>
             </template>
           </div>
-        </div>
-        <div>
-          <img src="/src/assets/img/profile_picture.png" class="hero-img" />
         </div>
       </div>
     </div>
@@ -42,11 +56,11 @@ defineProps({
   object-fit: contain;
 }
 .img-bg {
-  top: 340px;
+  top: 220px;
 }
 
 .hero {
-  margin-bottom: 180px;
-  padding-bottom: 160px;
+  margin-bottom: 49px;
+  /* padding-bottom: 49px; */
 }
 </style>

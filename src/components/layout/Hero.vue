@@ -2,48 +2,50 @@
 import LinkParticle from "../particles/LinkParticle.vue"
 </script>
 <template>
-  <section class="bg-darkOlive-200 hero">
-    <img src="../../assets/img/waves.svg" class="absolute w-full img-bg" />
+  <section class="bg-beige-900 hero">
+    <!-- <img src="../../assets/img/waves.svg" class="absolute w-full img-bg" /> -->
     <div class="container">
-      <div class="flex justify-between text-darkOlive-980 py-20 items-center">
-        <div class="max-w-xl flex flex-col gap-8">
-          <div
-            class="flex gap-3 bg-darkOlive-230 text-verdigris-700 font-semibold w-fit py-2 px-4 rounded-full relative"
-          >
-            <div class="bg-white-998 rounded-3xl p-2 absolute top-0 left-0">
-              <img class="h-6 w-6" src="../../assets/icons/icon-megaphone.svg" />
+      <div class="flex justify-between text-darkOlive-200 py-20 items-center">
+        <div class="max-w-xl flex flex-col gap-12">
+          <div class="flex flex-col gap-4 relative">
+            <div class="bubble absolute">
+              <img src="../../assets/img/talk-bubble.svg" class="relative" />
+              <p class="bubble-text absolute text-darkOlive-200 z-20">
+                Je recherche une alternance en
+                <strong class="text-melon-600">Développement Web</strong>
+              </p>
             </div>
-            <p class="w-full pl-9">Recherche alternance Développement Web</p>
+            <h1 class="font-neueKaine font-bold text-5xl">
+              Hello,
+              <br />
+              je m'appelle
+              <br />
+              <span class="text-melon-700 font-black text-5xl">Oriane Frouin !</span>
+            </h1>
+            <p class="max-w-lg">
+              Embarquez dans mon univers, du <strong>design</strong> au
+              <strong>développement web</strong> en passant par le <strong>marketing</strong>, je
+              vous livre tous les secrets de mon voyage !
+            </p>
           </div>
-          <h1 class="font-neueKaine font-bold text-5xl">
-            Hello,
-            <br />
-            je m'appelle
-            <br />
-            <span class="text-melon-700 font-black">Oriane Frouin !</span>
-          </h1>
-          <p class="max-w-lg">
-            Embarquez dans mon univers, du <strong>design</strong> au
-            <strong>développement web</strong> en passant par le <strong>marketing</strong>, je vous
-            livre tous les secrets de mon voyage !
-          </p>
+
           <div class="flex gap-8">
             <LinkParticle
               to="/projets"
               title="Découvrir mes projets"
-              color="verdigris"
+              color="melon"
               level="primary"
             />
             <LinkParticle
               to="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=sharing"
               title="Télécharger mon CV"
-              color="melon"
-              level="secondary"
+              color="darkolive"
+              iconAfter="download"
             />
           </div>
         </div>
-        <div>
-          <img src="/src/assets/img/hero-image.png" class="hero-img" />
+        <div class="image-box flex-1 bg-darkOlive-200 h-full">
+          <img src="/src/assets/img/hero-image.svg" class="hero-img relative" />
         </div>
       </div>
     </div>
@@ -63,5 +65,20 @@ import LinkParticle from "../particles/LinkParticle.vue"
 .hero {
   margin-bottom: 350px;
   padding-bottom: 160px;
+}
+
+.bubble {
+  left: 135px;
+  top: -90px;
+}
+
+.bubble-text {
+  top: 14px;
+  left: 30px;
+  max-width: 240px;
+}
+
+.image-box {
+  background-image: url("../../assets/img/waves.svg");
 }
 </style>

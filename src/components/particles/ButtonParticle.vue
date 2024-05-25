@@ -7,7 +7,7 @@ const buttons = defineProps({
     required: false,
   },
   color: String,
-  routeLink: String,
+  type: String,
   iconBefore: {
     type: String,
     required: false,
@@ -19,17 +19,14 @@ const buttons = defineProps({
 })
 
 const colorClass = computed(() => `color-${buttons.color}`)
-const getIconUrl = (image) => {
-  return new URL(`/src/assets/icons/${image}`, import.meta.url).href
-}
 </script>
 
 <template>
-  <a :href="buttons.routeLink" :title="routeLink" :class="[colorClass]" class="btn">
-    <i v-if="iconBefore" class="link-icon-before icomoon" :class="`icon-${buttons.iconBefore}`" />
+  <button :type="buttons.type" :title="routeLink" class="btn" :class="[colorClass]">
+    <i v-if="iconBefore" class="link-icon-before icomoon" :class="`icon-${buttons.iconBefore}`"></i>
     {{ buttons.title }}
-    <i v-if="iconAfter" class="link-icon-after icomoon" :class="`icon-${buttons.iconAfter}`" />
-  </a>
+    <i v-if="iconAfter" class="link-icon-after icomoon" :class="`icon-${buttons.iconAfter}`"></i>
+  </button>
 </template>
 
 <style scoped>
@@ -49,7 +46,9 @@ const getIconUrl = (image) => {
   transform: perspective(1px) translateZ(0);
   position: relative;
   transition: color 0.3s;
-  /* gap: 8px; */
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     /* transform: scale(1.06); */
@@ -68,61 +67,56 @@ const getIconUrl = (image) => {
 }
 .btn:hover {
   color: #fff;
-  box-shadow: inset 200px 0 0 0 black;
 }
 
 .color-melon {
-  box-shadow: inset 0 0 0 0 var(--melon-900);
   color: var(--melon-500);
   transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   background-color: var(--melon-900);
 
   &:hover {
     color: white;
-    box-shadow: inset 200px 0 0 0 var(--melon-500);
   }
 }
 
 .color-verdigris {
   color: var(--verdigris-300);
-  box-shadow: inset 0 0 0 0 var(--verdigris-500);
   background-color: var(--verdigris-800);
 
   &:hover {
     color: white;
-    box-shadow: inset 200px 0 0 0 var(--verdigris-300);
+  }
+}
+
+.color-neutral-verdigris {
+  color: var(--verdigris-900);
+  background-color: var(--verdigris-400);
+
+  &:hover {
+    color: white;
   }
 }
 
 .color-olive {
   color: var(--olive-200);
   background-color: var(--olive-1000);
-  box-shadow: inset 0 0 0 0 var(--olive-1000);
 
   &:hover {
     color: white;
-    box-shadow: inset 200px 0 0 0 var(--olive-500);
   }
 }
 
 .color-darkolive {
   color: var(--verdigris-700);
   background-color: var(--olive-230);
-  /* box-shadow: inset 0 0 0 0 var(--olive-1000); */
 
   &:hover {
     color: var(--verdigris-300);
-    box-shadow: inset 200px 0 0 0 var(--verdigris-800);
   }
 }
 
 .color-beige {
   color: var(--beige-400);
   background-color: var(--beige-900);
-
-  /* &:hover {
-    color: var(--beige-700);
-    box-shadow: inset 200px 0 0 0 var(--beige-800);
-  } */
 }
 </style>

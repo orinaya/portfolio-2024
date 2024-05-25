@@ -1,21 +1,23 @@
 <script setup>
+import ButtonParticle from "./particles/ButtonParticle.vue"
+
 // import ButtonParticle from "../particles/ButtonParticle.vue"
 </script>
 
 <template>
   <section class="contact-form container">
     <div class="contact-form_content">
-      <div class="contact-form_image">
+      <div class="contact-form_image bg-darkOlive-200">
         <div>
-          <h2>Une question ?</h2>
-          <h2>Contactez moi !</h2>
+          <h2 class="font-extrabold text-melon-700">Une question ?</h2>
+          <h2 class="font-extralight text-white-998">Contactez moi !</h2>
         </div>
-        <p class="form_text">
+        <p class="form_text text-white-998">
           Vous désirez continuer le voyage avec moi ? N’hésitez pas à me faire part de tous vos
           questionnements !
         </p>
       </div>
-      <form class="cfcc-form" action="" method="get">
+      <form class="cfcc-form" action="" method="post">
         <div>
           <label for="lastname" class="form-item_label">Nom</label>
           <input
@@ -48,7 +50,7 @@
         </div>
         <div>
           <label for="subject" class="form-item_label">Vous me contacter au sujet de :</label>
-          <select class="form-item_input select">
+          <select class="form-item_input select" name="subject">
             <option value="Alternance">Alternance</option>
             <option>Opportunités</option>
             <option>Autres</option>
@@ -59,48 +61,54 @@
           <label for="message" class="form-item_label">Message</label>
           <textarea
             id="message"
-            name="usermessage"
+            name="message"
             placeholder="Écrivez votre message..."
             class="cffi-field cfccfi-area"
           ></textarea>
         </div>
         <div class="form-checkbox">
-          <input type="checkbox" />
+          <input type="checkbox" name="accept_terms" />
+
           <p>
             En soumettant ce formulaire, j’accepte que mes informations soient utilisées
             exclusivement dans le cadre de ma demande
           </p>
         </div>
-        <!-- <ButtonParticle title="Valider" type="submit" color="verdigris" /> -->
+        <ButtonParticle title="Valider" type="submit" color="verdigris" />
       </form>
     </div>
   </section>
 </template>
 
 <style scoped>
+h2:first-child {
+  font-family: "Neue Kaine";
+}
 h2:last-child {
-  font-family: "IBM Plex Sans";
+  font-family: "Poppins";
 }
 .contact-form_content {
   display: flex;
   justify-content: space-between;
-  margin-top: 64px;
+  /* margin-top: 64px; */
 }
 
 .contact-form_image {
-  background-image: url(@/assets/img/background-contact.svg);
-  background-position: center;
-  background-size: cover;
+  background-image: url(/src/assets/img/waves.svg);
+  background-position-y: 280px;
+  background-size: 200%;
   width: 45%;
   border-radius: 10px;
   padding: 80px 40px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 12px;
+  background-repeat: no-repeat;
+  background-position-x: -65px;
 }
 
 .form_text {
-  max-width: 400px;
+  max-width: 600px;
 }
 
 .cfcc-form {
@@ -172,7 +180,7 @@ h2:last-child {
 
 h2 {
   font-size: 32px;
-  color: var(--verdigris-300);
+  /* color: var(--verdigris-300); */
 }
 
 h2:last-child {
@@ -183,6 +191,6 @@ h2:last-child {
 }
 
 option {
-  font-family: "IBM Plex Sans";
+  font-family: "Poppins";
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="breadcrumb mt-12">
+  <div class="breadcrumb mt-8 text-s">
     <RouterLink
       class="breadcrumb-previous text-darkOlive-200"
       v-for="page in previousPages"
