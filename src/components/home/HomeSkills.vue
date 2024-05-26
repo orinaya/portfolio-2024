@@ -70,5 +70,15 @@ const getImageUrl = (image) => {
         </div>
       </div>
     </div>
+    <div class="mt-5 flex gap-2 items-center">
+      <span class="w-2 h-2 rounded-full"></span>
+      <p>En cours d'apprentissage</p>
+    </div>
   </section>
 </template>
+
+<style scoped>
+span {
+  background-color: #4ebc6c;
+}
+</style>

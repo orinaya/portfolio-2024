@@ -1,4 +1,5 @@
 <script setup>
+import ExternalLinkParticle from "../particles/ExternalLinkParticle.vue"
 import LinkParticle from "../particles/LinkParticle.vue"
 </script>
 
@@ -48,8 +49,8 @@ import LinkParticle from "../particles/LinkParticle.vue"
               level="primary"
               iconAfter="arrowafter"
             />
-            <LinkParticle
-              to="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=sharing"
+            <ExternalLinkParticle
+              href="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=sharing"
               title="Télécharger mon CV"
               color="beige"
               iconAfter="download"
@@ -61,8 +62,8 @@ import LinkParticle from "../particles/LinkParticle.vue"
         <nav class="flex w-fit gap-8 m-4 h-fit justify-between">
           <RouterLink to="/profil" class="link text-verdigris-900">Mon profil</RouterLink>
           <RouterLink to="/projets" class="link text-verdigris-900">Mes projets</RouterLink>
-          <LinkParticle
-            to="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=drive_link"
+          <ExternalLinkParticle
+            href="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=drive_link"
             target="_blank"
             title="Télécharger mon CV"
             color="neutral-verdigris"
@@ -73,7 +74,7 @@ import LinkParticle from "../particles/LinkParticle.vue"
             title="Me contacter"
             color="verdigris"
             mailto:orianefrn
-            iconAfter="tel"
+            iconAfter="mail"
           />
         </nav>
 
@@ -89,6 +90,7 @@ import LinkParticle from "../particles/LinkParticle.vue"
   background-position: bottom;
   background-size: contain;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .bubble {
@@ -226,6 +228,45 @@ import LinkParticle from "../particles/LinkParticle.vue"
   img {
     width: 100%;
     height: auto;
+  }
+}
+
+/* .ocean {
+  z-index: 2;
+  height: 20%;
+  width: 100%;
+  /* position: absolute; 
+  bottom: 0;
+  left: 0;
+   background: #015871; 
+}
+
+.wave {
+  background: url("../../assets/img/wave-animation-1.svg") repeat-x;
+   position: absolute; 
+  bottom: 0px;
+  width: 6400px;
+  height: 200px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0); 
+} */
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%,
+  100% {
+    transform: translate3d(0, -25px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
   }
 }
 </style>

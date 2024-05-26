@@ -122,7 +122,7 @@ export const worksItems = [
   //EQUINOX
   {
     id: "0",
-    category: ["DEVELOPPEMENT", "WEBDESIGN"],
+    category: ["DEVELOPPEMENT", "DESIGN GRAPHIQUE"],
     title: "Equinox",
     description: "Création d’un jeu vidéo",
     image: "equinox/equinox.jpg",
@@ -152,7 +152,7 @@ export const worksItems = [
   // MAPEACH
   {
     id: "1",
-    category: ["DEVELOPPEMENT", "WEBDESIGN"],
+    category: ["DEVELOPPEMENT", "WEBDESIGN", "COMMUNICATION"],
     title: "MaPeach",
     description: "Application de rendez-vous en couple",
     image: "mapeach/mapeach.jpg",
@@ -355,7 +355,7 @@ export const worksItems = [
   //NIKE X TAKASHI
   {
     id: "9",
-    category: ["DESIGN"],
+    category: ["DESIGN GRAPHIQUE"],
     title: "Nike x Takashi",
     description: "Collab et affiches",
     image: "nike-takashi.jpg",
@@ -377,7 +377,7 @@ export const worksItems = [
   {
     id: "10",
     title: "Magdiel Lopez",
-    category: ["DEVELOPPEMENT", "WEBDESIGN"],
+    category: ["DESIGN GRAPHIQUE"],
     description: "Application de dates en couple",
     image: "magdiel-lopez.jpg",
     softwares: ["figma.svg", "html.svg", "css.svg", "vue.svg"],
@@ -398,7 +398,7 @@ export const worksItems = [
   //BUMBLE
   {
     id: "11",
-    category: ["MARKETING"],
+    category: ["COMMUNICATION"],
     title: "Bumble",
     description: "Inspiration d'un artiste",
     image: "bumble.jpg",
@@ -613,12 +613,6 @@ export const designItems = [
     title: "After Effects",
   },
   {
-    color: "#CCCCFF",
-    image: "premiere.svg",
-    title: "Premiere Pro",
-  },
-
-  {
     color: "#CCE8FF",
     image: "photoshop.svg",
     title: "Photoshop",
@@ -631,6 +625,21 @@ export const designItems = [
 ]
 
 export const othersItems = [
+  {
+    color: "#CCEEFF",
+    image: "wordpress.svg",
+    title: "Wordpress",
+  },
+  {
+    color: "#FFCCE1",
+    image: "elementor.svg",
+    title: "Elementor",
+  },
+  {
+    color: "#CCCCFF",
+    image: "premiere.svg",
+    title: "Premiere Pro",
+  },
   {
     color: "#DDDFEE",
     image: "word.svg",
@@ -646,16 +655,6 @@ export const othersItems = [
     color: "#F5E0D6",
     image: "power-point.svg",
     title: "Power Point",
-  },
-  {
-    color: "#CCEEFF",
-    image: "wordpress.svg",
-    title: "Wordpress",
-  },
-  {
-    color: "#FFCCE1",
-    image: "elementor.svg",
-    title: "Elementor",
   },
 ]
 

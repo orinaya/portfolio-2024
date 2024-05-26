@@ -4,7 +4,6 @@ import {worksItems} from "../services/datas.js"
 import HeroTertiary from "@/components/layout/HeroTertiary.vue"
 import CardParticle from "../components/particles/CardParticle.vue"
 import {computed, ref} from "vue"
-import ButtonParticle from "@/components/particles/ButtonParticle.vue"
 
 const getImageUrl = (image) => {
   return new URL(`/src/assets/works/${image}`, import.meta.url).href
@@ -49,7 +48,7 @@ const filteredMovies = computed(() => {
   <HeroTertiary uptitle="Mes projets" pageName="Projets" :previousPages="previousPages" />
   <div class="container">
     <div class="flex justify-between items-center">
-      <div class="flex gap-8 py-12 px-0">
+      <div class="flex gap-5 py-12 px-0">
         <button
           @click="selectedCategory = 'all'"
           :class="selectedCategory !== 'all' ? 'button' : 'focus'"
@@ -59,9 +58,14 @@ const filteredMovies = computed(() => {
         <button @click="selectedCategory = 'DEVELOPPEMENT'">
           <i class="icon-dev"></i>Développement
         </button>
-        <button @click="selectedCategory = 'WEBDESIGN'"><i class="icon-design"></i>Design</button>
-        <button @click="selectedCategory = 'MARKETING'">
-          <i class="icon-design"></i>Marketing
+        <button @click="selectedCategory = 'WEBDESIGN'">
+          <i class="icon-design"></i>Webdesign
+        </button>
+        <button @click="selectedCategory = 'DESIGN GRAPHIQUE'">
+          <i class="icon-design"></i>Design
+        </button>
+        <button @click="selectedCategory = 'COMMUNICATION'">
+          <i class="icon-design"></i>Communication
         </button>
       </div>
       <div class="flex gap-2 items-center">
@@ -76,7 +80,7 @@ const filteredMovies = computed(() => {
       </div>
     </div>
 
-    <div class="flex flex-wrap justify-between gap-12">
+    <div class="flex flex-wrap justify-start gap-16">
       <CardParticle
         v-for="item in filteredMovies"
         :id="item.id"
@@ -96,7 +100,7 @@ button,
 .button {
   color: hsl(176, 31%, 20%);
   font-weight: 300;
-  font-size: 20px;
+  font-size: 18px;
   background-color: transparent;
   border: none;
   display: flex;

@@ -1,6 +1,5 @@
 <script setup>
 import {RouterLink, RouterView} from "vue-router"
-import Hero from "./components/layout/Hero.vue"
 import Navbar from "./components/layout/Navbar.vue"
 import Footer from "./components/layout/Footer.vue"
 import {useRouter} from "vue-router"

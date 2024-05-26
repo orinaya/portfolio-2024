@@ -1,8 +1,8 @@
 <script setup>
+import ExternalLinkParticle from "../particles/ExternalLinkParticle.vue"
 import LinkParticle from "../particles/LinkParticle.vue"
-import {useRouter} from "vue-router"
-const router = useRouter()
 </script>
+
 <template>
   <nav class="h-16 flex items-center sticky top-0 z-50 bg-beige-900">
     <div class="flex flex-1">
@@ -17,8 +17,8 @@ const router = useRouter()
       <div class="flex gap-8">
         <RouterLink to="/profil" class="link text-darkOlive-200">Mon profil</RouterLink>
         <RouterLink to="/projets" class="link text-darkOlive-200">Mes projets</RouterLink>
-        <LinkParticle
-          to="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=drive_link"
+        <ExternalLinkParticle
+          href="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=drive_link"
           target="_blank"
           title="Télécharger mon CV"
           color="beige"
@@ -29,7 +29,7 @@ const router = useRouter()
           title="Me contacter"
           color="melon"
           mailto:orianefrn
-          iconAfter="tel"
+          iconAfter="mail"
         />
       </div>
     </div>

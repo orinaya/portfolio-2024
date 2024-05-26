@@ -18,7 +18,7 @@ const getIconUrl = (image) => {
   </div>
 </template>
 
-<style>
+<style scoped>
 .subtitle {
   color: #838383;
 }
