@@ -28,7 +28,13 @@ defineProps({
           </div>
         </div>
         <div>
-          <img src="/src/assets/img/profile_picture.png" class="hero-img" />
+          <img src="/src/assets/img/profile_picture.png" class="hero-img relative" />
+          <div class="bubble absolute float-content">
+            <img src="../../assets/img/talk-bubble-reverse.svg" class="relative" />
+            <p class="bubble-text absolute text-darkOlive-200 z-20">
+              “ Ma passion ? Fixer les problèmes de code que j'ai créé ”
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -36,9 +42,44 @@ defineProps({
 </template>
 
 <style scoped>
+.bubble {
+  right: 400px;
+  top: 140px;
+}
+
+.bubble-text {
+  top: 14px;
+  left: 30px;
+  max-width: 300px;
+  /* text-align: end; */
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.float-content {
+  transform: translatey(0px);
+  animation: float 2s ease-in-out infinite;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .hero-img {
   /* height: 500px; */
   /* width: 445px; */
+  height: 200px;
+  width: 200px;
   object-fit: contain;
 }
 .img-bg {

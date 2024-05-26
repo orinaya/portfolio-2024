@@ -3,7 +3,7 @@ import LinkParticle from "../particles/LinkParticle.vue"
 </script>
 
 <template>
-  <div class="rounded-b-xl mb-24">
+  <div class="rounded-b-xl mb-24 bg-beige-900">
     <div class="h-screen flex justify-between w-full">
       <div class="flex flex-1 flex-col">
         <nav class="pl-44 my-8">
@@ -108,10 +108,6 @@ import LinkParticle from "../particles/LinkParticle.vue"
   width: fit-content;
   height: fit-content;
 }
-
-/* h1 {
-  max-width: 240px;
-} */
 
 @keyframes typing {
   0% {
@@ -226,14 +222,10 @@ import LinkParticle from "../particles/LinkParticle.vue"
 
 .float-content {
   transform: translatey(0px);
-  animation: float 4s ease-in-out infinite;
+  animation: float 2s ease-in-out infinite;
   img {
     width: 100%;
     height: auto;
   }
-}
-
-.icon-download:before {
-  color: red;
 }
 </style>

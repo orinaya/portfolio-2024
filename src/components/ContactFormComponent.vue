@@ -94,8 +94,8 @@ h2:last-child {
 }
 
 .contact-form_image {
-  background-image: url(/src/assets/img/waves.svg);
-  background-position-y: 280px;
+  background-image: url(/src/assets/img/hero-waves.svg);
+  background-position: bottom;
   background-size: 200%;
   width: 45%;
   border-radius: 10px;

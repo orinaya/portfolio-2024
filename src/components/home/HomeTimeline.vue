@@ -41,7 +41,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <section class="steps-container container bg-darkOlive-200 p-8 rounded-xl pb-28">
+  <section id="parcours" class="steps-container container bg-darkOlive-200 p-8 rounded-xl pb-28">
     <H2Particle
       title="Explorez mes expériences diverses et variées"
       uptitle="Mon parcours"
@@ -86,7 +86,7 @@ onUnmounted(() => {
               <div class="flex flex-wrap gap-2">
                 <span
                   v-for="skill in item.skills"
-                  class="rounded-md bg-darkOlive-400 text-white-998 py-1 px-2 font-light"
+                  class="rounded-md bg-darkOlive-400 text-white-998 py-1 px-2 font-light hover:brightness-110"
                   >{{ skill }}</span
                 >
               </div>

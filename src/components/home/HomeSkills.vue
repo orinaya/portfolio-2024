@@ -19,7 +19,7 @@ const getImageUrl = (image) => {
 
     <div class="flex justify-between w-full gap-2" style="height: 360px">
       <div class="rounded-xl w-2/5 p-6 flex flex-col gap-4" style="background-color: #fff">
-        <h3 class="text-verdigris-300 text-xl font-semibold">Développement</h3>
+        <h3 class="text-verdigris-300 text-xl font-regular">Développement</h3>
         <div class="flex flex-wrap gap-2">
           <SkillsParticle
             v-for="item in devItems"
@@ -33,7 +33,7 @@ const getImageUrl = (image) => {
       </div>
 
       <div class="rounded-xl w-56 p-6 flex flex-col gap-4" style="background-color: #fff">
-        <h3 class="text-verdigris-300 text-xl font-semibold">Design</h3>
+        <h3 class="text-verdigris-300 text-xl font-regular">Design</h3>
         <div class="flex flex-wrap gap-2">
           <SkillsParticle
             v-for="item in designItems"
@@ -46,7 +46,7 @@ const getImageUrl = (image) => {
       </div>
 
       <div class="rounded-xl w-56 p-6 flex flex-col gap-4" style="background-color: #fff">
-        <h3 class="text-verdigris-300 text-xl font-semibold">Autres</h3>
+        <h3 class="text-verdigris-300 text-xl font-regular">Autres</h3>
         <div class="flex flex-wrap gap-2">
           <SkillsParticle
             v-for="item in othersItems"
@@ -59,7 +59,7 @@ const getImageUrl = (image) => {
       </div>
 
       <div class="rounded-xl w-56 p-6 flex flex-col gap-4" style="background-color: #fff">
-        <h3 class="text-verdigris-300 text-xl font-semibold">Langues</h3>
+        <h3 class="text-verdigris-300 text-xl font-regular">Langues</h3>
         <div class="flex flex-wrap gap-2">
           <SkillsParticle
             v-for="item in languagesItems"

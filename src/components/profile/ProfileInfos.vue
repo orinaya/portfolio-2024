@@ -37,17 +37,19 @@ const copy = () => {
       <div class="flex flex-col gap-8">
         <H2Particle uptitle="Contact & réseaux" title="Me contacter" />
         <div class="flex flex-col gap-6 w-full">
-          <!-- <div class="flex gap-5 justify-start items-center">
-            <img :src="getIconUrl(info.icon)" class="p-2 rounded-md bg-darkOlive-600" />
-            <p class="w-52 subtitle">{{ info.subtitle }}</p>
-            <p class="w-full">{{ info.content }}</p>
-          </div> -->
-
           <div class="flex gap-5 justify-start items-center">
             <i class="icon-mail p-2 rounded-md bg-darkOlive-600" />
             <p class="w-52 subtitle">Email</p>
             <div class="flex gap-2 items-center justify-end">
-              <p class="w-full">contact@orianefrouin.fr</p>
+              <p class="w-full">ori.frouin@gmail.com</p>
+              <button @click="copy"><i class="icon-copy" /></button>
+            </div>
+          </div>
+          <div class="flex gap-5 justify-start items-center">
+            <i class="icon-tel p-2 rounded-md bg-darkOlive-600" />
+            <p class="w-52 subtitle">Téléphone</p>
+            <div class="flex gap-2 items-center justify-end">
+              <p class="w-full">07 70 35 45 69</p>
               <button @click="copy"><i class="icon-copy" /></button>
             </div>
           </div>
@@ -72,19 +74,8 @@ const copy = () => {
 </template>
 
 <style scoped>
-.icon-linkedin .path1:before {
-  content: "\e909";
-  color: rgb(0, 118, 178);
-  font-size: 32px;
-}
-.icon-linkedin .path2:before {
-  content: "\e90a";
-  margin-left: -1em;
-  color: rgb(255, 255, 255);
-  font-size: 32px;
-}
-
-.icon-mail::before {
+.icon-mail::before,
+.icon-tel::before {
   font-size: 24px;
   color: #f1f3f2;
 }

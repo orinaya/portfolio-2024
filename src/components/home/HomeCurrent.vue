@@ -37,7 +37,7 @@ const currentHome = [
         <div
           v-for="item in currentHome"
           :key="item"
-          class="bg-darkOlive-800 h-52 w-80 py-5 px-10 flex flex-col justify-end items-center rounded-xl relative"
+          class="bg-darkOlive-800 h-52 w-80 py-5 px-10 flex flex-col justify-end items-center rounded-xl relative hover:scale-105 transition-transform duration-200 hover:brightness-110 hover:drop-shadow-xl"
         >
           <span
             class="absolute -top-3 z-10 bg-verdigris-700 text-verdigris-100 rounded-full px-3 font-medium"
@@ -55,11 +55,11 @@ const currentHome = [
         </div>
       </div>
       <LinkParticle
-        to="/projets"
-        title="Télécharger mon CV"
+        to="/"
+        title="Voir mon parcours"
         color="melon"
         level="secondary"
-        iconAfter="download"
+        iconAfter="arrowafter"
       />
     </div>
   </section>

@@ -398,7 +398,7 @@ export const worksItems = [
   //BUMBLE
   {
     id: "11",
-    category: ["DESIGN"],
+    category: ["MARKETING"],
     title: "Bumble",
     description: "Inspiration d'un artiste",
     image: "bumble.jpg",

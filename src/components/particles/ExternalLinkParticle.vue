@@ -46,13 +46,16 @@ const getIconUrl = (image) => {
   width: fit-content;
   height: fit-content;
   align-items: center;
-  transform: perspective(1px) translateZ(0);
+  /* transform: perspective(1px) translateZ(0); */
   position: relative;
-  transition: color 0.3s;
-  /* gap: 8px; */
+  /* transition: color 0.3s; */
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  transition: transform 250ms ease-in-out;
 
   &:hover {
-    /* transform: scale(1.06); */
+    transform: scale(1.06);
   }
 }
 
@@ -60,69 +63,60 @@ const getIconUrl = (image) => {
   margin-left: 8px;
 }
 
-.btn {
-  /* box-shadow: inset 0 0 0 0 #54b3d6; 
-  color: #54b3d6;  */
-
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-.btn:hover {
-  color: #fff;
-  box-shadow: inset 200px 0 0 0 black;
-}
-
 .color-melon {
-  box-shadow: inset 0 0 0 0 var(--melon-900);
   color: var(--melon-500);
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   background-color: var(--melon-900);
 
   &:hover {
-    color: white;
-    box-shadow: inset 200px 0 0 0 var(--melon-500);
+    color: var(--melon-300);
+    background-color: var(--melon-800);
   }
 }
 
 .color-verdigris {
   color: var(--verdigris-300);
-  box-shadow: inset 0 0 0 0 var(--verdigris-500);
   background-color: var(--verdigris-800);
 
   &:hover {
+    color: var(--verdigris-900);
+    background-color: var(--verdigris-400);
+  }
+}
+
+.color-neutral-verdigris {
+  color: var(--verdigris-900);
+  background-color: var(--verdigris-400);
+
+  &:hover {
     color: white;
-    box-shadow: inset 200px 0 0 0 var(--verdigris-300);
+    background-color: var(--verdigris-500);
   }
 }
 
 .color-olive {
   color: var(--olive-200);
   background-color: var(--olive-1000);
-  box-shadow: inset 0 0 0 0 var(--olive-1000);
 
   &:hover {
     color: white;
-    box-shadow: inset 200px 0 0 0 var(--olive-500);
   }
 }
 
 .color-darkolive {
   color: var(--verdigris-700);
   background-color: var(--olive-230);
-  /* box-shadow: inset 0 0 0 0 var(--olive-1000); */
 
   &:hover {
     color: var(--verdigris-300);
-    box-shadow: inset 200px 0 0 0 var(--verdigris-800);
   }
 }
 
 .color-beige {
   color: var(--beige-400);
   background-color: var(--beige-900);
-
-  /* &:hover {
-    color: var(--beige-700);
-    box-shadow: inset 200px 0 0 0 var(--beige-800);
-  } */
+  &:hover {
+    color: var(--beige-200);
+    background-color: var(--beige-800);
+  }
 }
 </style>

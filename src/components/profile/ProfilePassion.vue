@@ -8,7 +8,7 @@ import H2Particle from "../particles/H2Particle.vue"
       <H2Particle title="Explorer mon univers" uptitle="Passions & hobbies" />
       <div class="grid grid-cols-7 gap-8">
         <div
-          class="col-span-3 flex flex-col bg-melon-900 py-6 px-8 items-center justify-center gap-3 rounded-xl"
+          class="col-span-3 flex flex-col bg-melon-900 py-6 px-8 items-center justify-center gap-3 rounded-xl hover:scale-105 transition-transform duration-200 hover:drop-shadow-xl"
         >
           <div class="flex gap-2 items-center justify-center text-2xl font-semibold text-melon-600">
             <img src="../../assets/icons/icon-sportcar.svg" />
@@ -43,7 +43,7 @@ import H2Particle from "../particles/H2Particle.vue"
         </div>
 
         <div
-          class="col-span-3 flex flex-col py-6 px-8 items-center justify-center gap-3 rounded-xl bg-verdigris-900"
+          class="col-span-3 flex flex-col py-6 px-8 items-center justify-center gap-3 rounded-xl bg-verdigris-900 hover:scale-105 transition-transform duration-200 hover:drop-shadow-xl"
         >
           <div
             class="flex gap-2 items-center justify-center text-2xl font-semibold text-verdigris-400"
@@ -78,7 +78,7 @@ import H2Particle from "../particles/H2Particle.vue"
         </div>
 
         <div
-          class="col-span-3 flex flex-col py-6 px-8 items-center justify-center gap-3 rounded-xl bg-darkOlive-900"
+          class="col-span-3 flex flex-col py-6 px-8 items-center justify-center gap-3 rounded-xl bg-darkOlive-900 hover:scale-105 transition-transform duration-200 hover:drop-shadow-xl"
         >
           <div
             class="flex gap-2 items-center justify-center text-2xl font-semibold text-darkOlive-400"

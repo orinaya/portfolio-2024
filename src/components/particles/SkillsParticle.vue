@@ -11,7 +11,7 @@ defineProps({
 <template>
   <div class="flex flex-col items-center w-20 h-20">
     <div
-      class="flex justify-center items-center rounded-lg w-12 h-12 relative"
+      class="flex justify-center items-center rounded-lg w-12 h-12 relative hover:scale-110 transition-transform duration-200 hover:brightness-110 hover:drop-shadow-xl"
       :style="{'background-color': color}"
     >
       <span v-if="inProgress" class="absolute z-10 w-2.5 h-2.5 -top-1 -right-1 rounded-lg"></span>

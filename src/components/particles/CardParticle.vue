@@ -15,7 +15,10 @@ const getIconUrl = (image) => {
 }
 </script>
 <template>
-  <div class="caca-container" @click="$emit('sendProjectId', id)">
+  <div
+    class="caca-container hover:scale-105 transition-transform duration-200 hover:brightness-105 hover:drop-shadow-xl"
+    @click="$emit('sendProjectId', id)"
+  >
     <img :src="image" />
     <!-- <span><img src="" />{{ price }}</span>-->
 

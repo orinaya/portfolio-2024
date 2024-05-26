@@ -43,15 +43,16 @@ const colorClass = computed(() => `color-${buttons.color}`)
   width: fit-content;
   height: fit-content;
   align-items: center;
-  transform: perspective(1px) translateZ(0);
+  /* transform: perspective(1px) translateZ(0); */
   position: relative;
-  transition: color 0.3s;
+  /* transition: color 0.3s; */
   gap: 8px;
   align-items: center;
   justify-content: center;
+  transition: transform 250ms ease-in-out;
 
   &:hover {
-    /* transform: scale(1.06); */
+    transform: scale(1.06);
   }
 }
 
@@ -59,23 +60,13 @@ const colorClass = computed(() => `color-${buttons.color}`)
   margin-left: 8px;
 }
 
-.btn {
-  /* box-shadow: inset 0 0 0 0 #54b3d6; 
-  color: #54b3d6;  */
-
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-.btn:hover {
-  color: #fff;
-}
-
 .color-melon {
   color: var(--melon-500);
-  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   background-color: var(--melon-900);
 
   &:hover {
-    color: white;
+    color: var(--melon-300);
+    background-color: var(--melon-800);
   }
 }
 
@@ -84,7 +75,8 @@ const colorClass = computed(() => `color-${buttons.color}`)
   background-color: var(--verdigris-800);
 
   &:hover {
-    color: white;
+    color: var(--verdigris-900);
+    background-color: var(--verdigris-400);
   }
 }
 
@@ -94,6 +86,7 @@ const colorClass = computed(() => `color-${buttons.color}`)
 
   &:hover {
     color: white;
+    background-color: var(--verdigris-500);
   }
 }
 
@@ -118,5 +111,9 @@ const colorClass = computed(() => `color-${buttons.color}`)
 .color-beige {
   color: var(--beige-400);
   background-color: var(--beige-900);
+  &:hover {
+    color: var(--beige-200);
+    background-color: var(--beige-800);
+  }
 }
 </style>

@@ -21,26 +21,25 @@ const previousPages = [
   },
 ]
 
-const selectedSort = ref("default")
+const selectedCategory = ref("all")
 
+const selectedSort = ref("default")
 const filteredMovies = computed(() => {
-  const filtered = worksItems
+  let filtered = worksItems
+
+  if (selectedCategory.value !== "all") {
+    filtered = filtered.filter((item) =>
+      item.category.includes(selectedCategory.value.toUpperCase())
+    )
+  }
 
   switch (selectedSort.value) {
-    // case "name_asc":
-    //   filtered.sort((a, b) => a.title.localeCompare(b.title))
-    //   break
-    // case "name_desc":
-    //   filtered.sort((a, b) => b.title.localeCompare(a.title))
-    //   break
     case "date_asc":
       filtered.sort((a, b) => new Date(a.date) - new Date(b.date))
       break
     case "date_desc":
       filtered.sort((a, b) => new Date(b.date) - new Date(a.date))
       break
-    case "default":
-      return filtered
   }
   return filtered
 })
@@ -51,16 +50,26 @@ const filteredMovies = computed(() => {
   <div class="container">
     <div class="flex justify-between items-center">
       <div class="flex gap-8 py-12 px-0">
-        <button><i class="icon-all"></i>Tous mes travaux</button>
-        <button><i class="icon-dev"></i>Développement</button>
-        <button><i class="icon-design"></i>Design</button>
+        <button
+          @click="selectedCategory = 'all'"
+          :class="selectedCategory !== 'all' ? 'button' : 'focus'"
+        >
+          <i class="icon-all"></i>Tous mes travaux
+        </button>
+        <button @click="selectedCategory = 'DEVELOPPEMENT'">
+          <i class="icon-dev"></i>Développement
+        </button>
+        <button @click="selectedCategory = 'WEBDESIGN'"><i class="icon-design"></i>Design</button>
+        <button @click="selectedCategory = 'MARKETING'">
+          <i class="icon-design"></i>Marketing
+        </button>
       </div>
       <div class="flex gap-2 items-center">
-        <select class="bg-white-998 rounded-md" v-model="selectedSort">
+        <!-- <select class="bg-white-998 rounded-md" v-model="selectedSort">
           <option value="default">Trier par</option>
           <option value="date_asc">Le plus ancien</option>
           <option value="date_desc">Le plus récent</option>
-        </select>
+        </select> -->
         <span class="bg-verdigris-900 text-verdigris-400 font-semibold w-fit px-3 rounded"
           >{{ worksItems.length }} resultats</span
         >
@@ -83,10 +92,11 @@ const filteredMovies = computed(() => {
 </template>
 
 <style scoped>
-button {
+button,
+.button {
   color: hsl(176, 31%, 20%);
   font-weight: 300;
-  font-size: 24px;
+  font-size: 20px;
   background-color: transparent;
   border: none;
   display: flex;
@@ -95,9 +105,14 @@ button {
   padding: 4px 16px;
   border-radius: 5px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: hsl(176, 31%, 70%);
   }
+}
+
+.focus {
+  background-color: hsl(176, 31%, 70%);
 }
 
 select,
