@@ -71,20 +71,7 @@ const getPreviousProjectRoute = () => {
           'flex justify-between': getPreviousProjectRoute() && getNextProjectRoute(),
           'flex justify-start': !getNextProjectRoute(),
         }"
-      >
-        <!-- <ExternalLinkParticle
-          v-if="getPreviousProjectRoute()"
-          :href="getPreviousProjectRoute()"
-          title="Projet précedent"
-          color="beige"
-        />
-        <ExternalLinkParticle
-          v-if="getNextProjectRoute()"
-          :href="getNextProjectRoute()"
-          title="Projet suivant"
-          color="beige"
-        /> -->
-      </div>
+      ></div>
     </div>
     <div
       class="banner w-full bg-bottom bg-no-repeat rounded-xl my-16 mx-auto relative"
@@ -176,9 +163,16 @@ const getPreviousProjectRoute = () => {
             </div>
           </div>
           <div class="flex justify-between">
-            <div>
+            <div class="flex flex-col">
               <p class="text-base font-semibold">Équipe sur le projet</p>
-              <p class="w-52" v-for="item in works.details.team" :key="item">{{ item }}</p>
+              <a
+                :href="works.details.teamLink"
+                target="_blank"
+                class="flex w-fit items-center gap-2"
+                v-for="item in works.details.team"
+                :key="item"
+                >{{ item }}<i class="icon-squareout"></i
+              ></a>
             </div>
             <div>
               <p class="text-base font-semibold">Années d’étude</p>

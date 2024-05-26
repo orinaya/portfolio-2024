@@ -95,33 +95,42 @@
 .icon-dev:before {
   content: "\e907";
 }
-.icon-dice:before {
-  content: "\e908";
-  color: #868686;
-}
 .icon-download:before {
+  content: "\e908";
+}
+.icon-github:before {
   content: "\e909";
+  font-size: 28px;
+}
+.icon-layout:before {
+  content: "\e90a";
 }
 .icon-linkedin .path1:before {
-  content: "\e90a";
+  content: "\e90b";
   color: rgb(0, 118, 178);
-  font-size: 32px;
+  font-size: 28px;
 }
 .icon-linkedin .path2:before {
-  content: "\e90b";
+  content: "\e90c";
   margin-left: -1em;
   color: rgb(255, 255, 255);
-  font-size: 32px;
+  font-size: 28px;
 }
 .icon-location:before {
-  content: "\e90c";
-}
-.icon-mail:before {
   content: "\e90d";
 }
-.icon-tel:before {
+.icon-mail:before {
   content: "\e90e";
 }
-.icon-tv:before {
+.icon-marketing:before {
   content: "\e90f";
+}
+.icon-squareout:before {
+  content: "\e910";
+}
+.icon-tel:before {
+  content: "\e911";
+}
+.icon-tv:before {
+  content: "\e912";
 }

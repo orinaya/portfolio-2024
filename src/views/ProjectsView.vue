@@ -53,19 +53,19 @@ const filteredMovies = computed(() => {
           @click="selectedCategory = 'all'"
           :class="selectedCategory !== 'all' ? 'button' : 'focus'"
         >
-          <i class="icon-all"></i>Tous mes travaux
+          <i class="icon-all"></i>Tous mes projets
         </button>
         <button @click="selectedCategory = 'DEVELOPPEMENT'">
           <i class="icon-dev"></i>Développement
         </button>
         <button @click="selectedCategory = 'WEBDESIGN'">
-          <i class="icon-design"></i>Webdesign
+          <i class="icon-layout"></i>Webdesign
         </button>
         <button @click="selectedCategory = 'DESIGN GRAPHIQUE'">
           <i class="icon-design"></i>Design
         </button>
         <button @click="selectedCategory = 'COMMUNICATION'">
-          <i class="icon-design"></i>Communication
+          <i class="icon-marketing"></i>Communication
         </button>
       </div>
       <div class="flex gap-2 items-center">

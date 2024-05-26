@@ -60,9 +60,12 @@ const copy = () => {
 
             <p class="w-52 subtitle">LinkedIn</p>
             <div class="flex gap-2 items-center justify-end">
-              <a href="https://www.linkedin.com/in/oriane-frouin/" class="w-full"
-                >/in/oriane-frouin</a
-              >
+              <a
+                href="https://www.linkedin.com/in/oriane-frouin/"
+                target="_blank"
+                class="w-full flex items-center gap-2"
+                >/in/oriane-frouin<i class="icon-squareout"></i
+              ></a>
             </div>
           </div>
         </div>

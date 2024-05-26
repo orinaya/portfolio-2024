@@ -138,6 +138,11 @@ export const worksItems = [
       softwares: ["godot.svg", "aseprite.svg"],
       role: ["Responsable Pitch Deck", "Design"],
       team: ["Erwan Duchêne", "Erwann Michaud de Perier", "Matilin Noël"],
+      teamLink: [
+        "https://www.linkedin.com/in/erwan-duch%C3%AAne/",
+        "https://www.linkedin.com/in/erwann-michaud-de-perier-149282268/",
+        "https://www.linkedin.com/in/matilin-noel/",
+      ],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
     buttons: [
@@ -168,6 +173,12 @@ export const worksItems = [
       softwares: ["figma.svg", "wordpress.svg"],
       role: ["Maquettage", "Design"],
       team: ["Erwann Michaud de Perier", "Arthur Ploteau", "Louka Lemonnier", "Mathéo Lebéhot"],
+      teamLink: [
+        "https://www.linkedin.com/in/erwann-michaud-de-perier-149282268/",
+        "https://www.linkedin.com/in/arthur-ploteau-314110234/",
+        "https://www.linkedin.com/in/louka-lemonnier/",
+        "https://www.linkedin.com/in/matheolebehot/",
+      ],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
     buttons: [
@@ -260,6 +271,7 @@ export const worksItems = [
       softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
       role: ["Travail d’équipe", "Développement web", "Maquettage"],
       team: ["Erwann Michaud de Perier"],
+      teamLink: ["https://www.linkedin.com/in/erwann-michaud-de-perier-149282268/"],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
     date: 4,
@@ -282,6 +294,11 @@ export const worksItems = [
       softwares: ["figma.svg", "wordpress.svg", "woocommerce.svg"],
       role: ["Gestion de Projet", "Développement web", "Maquettage"],
       team: ["Erwan Duchêne", "Audrey Norvez", "Valentin Renaud"],
+      teamLink: [
+        "https://www.linkedin.com/in/erwan-duch%C3%AAne/",
+        "https://www.linkedin.com/in/audrey-norvez-a25673253/",
+        "https://www.linkedin.com/in/valentin-renaud/",
+      ],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
     date: 9,
@@ -326,6 +343,10 @@ export const worksItems = [
       softwares: ["figma.svg", "html.svg", "css.svg", "vue.svg"],
       role: ["Travail d’équipe", "Développement web", "Maquettage"],
       team: ["Erwann Michaud de Perier", "Erwan Duchêne"],
+      teamLink: [
+        "https://www.linkedin.com/in/erwann-michaud-de-perier-149282268/",
+        "https://www.linkedin.com/in/erwan-duch%C3%AAne/",
+      ],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
     date: 5,
@@ -412,7 +433,12 @@ export const worksItems = [
     details: {
       softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
       role: ["Travail d’équipe", "Développement web", "Maquettage"],
-      team: ["Erwann Michaud de Perier"],
+      team: ["Erwann Michaud de Perier", "Arthur Ploteau", "Valentin Renaud"],
+      teamLink: [
+        "https://www.linkedin.com/in/erwann-michaud-de-perier-149282268/",
+        "https://www.linkedin.com/in/arthur-ploteau-314110234/",
+        "https://www.linkedin.com/in/valentin-renaud/",
+      ],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
     graphic_chart: {
@@ -594,6 +620,18 @@ export const devItems = [
     title: "Strapi",
     inProgress: true,
   },
+  {
+    color: "#E6E0FF",
+    image: "tailwind.svg",
+    title: "Tailwind",
+    inProgress: true,
+  },
+  {
+    color: "#E6E0FF",
+    image: "typescript.svg",
+    title: "Typescript",
+    inProgress: true,
+  },
 ]
 
 export const designItems = [
@@ -636,25 +674,20 @@ export const othersItems = [
     title: "Elementor",
   },
   {
+    color: "#FFCCE1",
+    image: "woo.svg",
+    title: "Woo Commerce",
+    inProgress: true,
+  },
+  {
     color: "#CCCCFF",
     image: "premiere.svg",
     title: "Premiere Pro",
   },
   {
-    color: "#DDDFEE",
-    image: "word.svg",
-    title: "Word",
-  },
-
-  {
-    color: "#DCEFE1",
-    image: "excel.svg",
-    title: "Excel",
-  },
-  {
-    color: "#F5E0D6",
-    image: "power-point.svg",
-    title: "Power Point",
+    color: "#FFD9CC",
+    image: "office.svg",
+    title: "Suite Office",
   },
 ]
 
@@ -662,11 +695,11 @@ export const languagesItems = [
   {
     color: "#CCD8FF",
     image: "french-flag.svg",
-    title: "Maternelle",
+    // title: "Maternelle",
   },
   {
     color: "#FBD0D7",
     image: "english-flag.svg",
-    title: "Niveau",
+    // title: "Niveau",
   },
 ]

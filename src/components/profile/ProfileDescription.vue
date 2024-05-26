@@ -25,25 +25,25 @@ import H2Particle from "../particles/H2Particle.vue"
         <p>
           Aujourd'hui, j'ai renoué avec ma créativité et ma logique en effectuant un
           <a href="https://www.mydigitalschool.com/bachelor-1-2-web" target="_blank"
-            >Bachelor Cycle Web et Multimédia</a
-          >
+            >Bachelor Cycle Web et Multimédia <i class="icon-squareout"></i>
+          </a>
           à MyDigitalSchool, où j'étudie à la fois le design, le développement web et le marketing.
           Chaque jour je développe (sans mauvais jeux de mots) mes compétences avec passion et
           aspire ainsi à intégrer le MBA
           <a href="https://www.mydigitalschool.com/mba-architecte-web" target="_blank"
-            >Développeur Full Stack.</a
-          >
+            >Développeur Full Stack. <i class="icon-squareout"></i>
+          </a>
         </p>
 
         <p>
           Cela fait désormais un an que j'ai intégré l'entreprise
-          <a href="https://www.floax.fr/" target="_blank">Floax</a>, et ma motivation à réussir est
-          toujours aussi forte. Tout comme durant mes années d'études précédentes, je continue
-          d'apprendre de nouvelles choses chaque jour, tant sur le plan technique que professionnel.
-          Au sein de cette entreprise, j'ai acquis de nouvelles compétences dans divers domaines,
-          notamment en matière de développement front et back. J'ai également pu observer les
-          méthodes de travail et de gestion de projets, qui m'ont été utiles lors de mes projets
-          d'études.
+          <a href="https://www.floax.fr/" target="_blank">Floax <i class="icon-squareout"></i> </a>,
+          et ma motivation à réussir est toujours aussi forte. Tout comme durant mes années d'études
+          précédentes, je continue d'apprendre de nouvelles choses chaque jour, tant sur le plan
+          technique que professionnel. Au sein de cette entreprise, j'ai acquis de nouvelles
+          compétences dans divers domaines, notamment en matière de développement front et back.
+          J'ai également pu observer les méthodes de travail et de gestion de projets, qui m'ont été
+          utiles lors de mes projets d'études.
         </p>
       </div>
     </div>
