@@ -23,7 +23,7 @@ const getProjectDetails = (id) => {
         icon="icon-skills.svg"
       />
 
-      <div class="flex justify-between">
+      <div class="flex justify-between flex-wrap gap-8">
         <CardParticle
           v-for="item in worksItems.slice(0, 3)"
           :id="item.id"

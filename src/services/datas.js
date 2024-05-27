@@ -202,7 +202,7 @@ export const worksItems = [
     title: "Studio Floax",
     description: "Site vitrine de Floax",
     image: "floax.jpg",
-    softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
+    softwares: ["html.svg", "sass.svg", "vue.svg"],
     banner: "floax-banner.jpg",
     hashtag: "#IntégrationWeb #Développement front ",
     big_description:

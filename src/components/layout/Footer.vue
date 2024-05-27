@@ -1,17 +1,19 @@
 <script setup>
 import ExternalLinkParticle from "../particles/ExternalLinkParticle.vue"
-import LinkParticle from "../particles/LinkParticle.vue"
 </script>
+
 <template>
   <footer class="relative flex items-end">
     <div class="container">
       <div
-        class="w-full flex flex-col items-start justify-between bottom-0 py-3 px-6 text-darkOlive-200"
+        class="w-full flex flex-col items-start justify-between bottom-0 py-3 lg:px-6 px-0 text-darkOlive-200"
       >
         <div
-          class="w-full flex items-start justify-around bottom-0 py-3 px-6 rounded-t-xl text-darkOlive-200 h-40"
+          class="w-full flex flex-wrap items-start lg:justify-around justify-between bottom-0 py-3 px-6 rounded-t-xl text-darkOlive-200 lg:h-40 h-fit gap-4 md:gap-0"
         >
-          <h2 class="text-4xl font-neueKaine font-extrabold">
+          <h2
+            class="md:text-4xl text-3xl font-neueKaine font-extrabold lg:w-fit w-full mb-8 lg:mb-0"
+          >
             Une opportunité ? <br /><span class="font-normal">Discutons-en !</span>
           </h2>
           <div class="flex flex-col gap-2 justify-start">
@@ -43,7 +45,7 @@ import LinkParticle from "../particles/LinkParticle.vue"
             </a>
           </div>
         </div>
-        <div class="w-full flex justify-center mt-12">
+        <div class="w-full flex justify-center lg:mt-12 mt-4">
           <ExternalLinkParticle
             href="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=drive_link"
             target="_blank"
@@ -67,7 +69,14 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  height: 540px;
+
+  height: 700px;
   margin-top: 110px;
+}
+
+@media (min-width: 768px) {
+  footer {
+    height: 540px;
+  }
 }
 </style>

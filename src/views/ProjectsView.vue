@@ -80,7 +80,7 @@ const filteredMovies = computed(() => {
       </div>
     </div>
 
-    <div class="flex flex-wrap justify-start gap-16">
+    <div class="flex flex-wrap justify-start gap-12">
       <CardParticle
         v-for="item in filteredMovies"
         :id="item.id"
