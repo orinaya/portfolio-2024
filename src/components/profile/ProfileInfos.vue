@@ -26,39 +26,48 @@ const copy = () => {
 </script>
 
 <template>
-  <section class="container">
-    <div class="flex justify-evenly flex-auto rounded-xl py-12" style="background-color: #f5f0ea">
+  <section class="container mt-12">
+    <div
+      class="flex flex-col lg:flex-row lg:justify-evenly justify-start rounded-xl py-12 px-12 lg:px-8 lg:gap-0 gap-8"
+      style="background-color: #f5f0ea"
+    >
       <div class="flex flex-col gap-8">
         <H2Particle uptitle="Mes infos" title="Me connaitre" />
         <InformationsParticle v-for="item in persosItems" :infos="item.data" :key="item.title" />
       </div>
 
-      <span class="inline-block border-l-2 h-60 my-0 mx-5" style="color: #d9cfbf"></span>
+      <span class="inline-block border-l-2 my-0 mx-5 lg:h-60 h-0" style="color: #d9cfbf"></span>
       <div class="flex flex-col gap-8">
         <H2Particle uptitle="Contact & réseaux" title="Me contacter" />
         <div class="flex flex-col gap-6 w-full">
-          <div class="flex gap-5 justify-start items-center">
-            <i class="icon-mail p-2 rounded-md bg-darkOlive-600" />
-            <p class="w-52 subtitle">Email</p>
+          <div class="flex flex-wrap gap-5 justify-start items-center">
+            <div class="flex items-center gap-4">
+              <i class="icon-mail p-2 rounded-md bg-darkOlive-600" />
+              <p class="md:w-52 w-fit subtitle">Email</p>
+            </div>
             <div class="flex gap-2 items-center justify-end">
-              <p class="w-full">ori.frouin@gmail.com</p>
+              <p class="w-fit">ori.frouin@gmail.com</p>
               <button @click="copy"><i class="icon-copy" /></button>
             </div>
           </div>
-          <div class="flex gap-5 justify-start items-center">
-            <i class="icon-tel p-2 rounded-md bg-darkOlive-600" />
-            <p class="w-52 subtitle">Téléphone</p>
+          <div class="flex flex-wrap gap-5 justify-start md:items-center">
+            <div class="flex items-center gap-4">
+              <i class="icon-tel p-2 rounded-md bg-darkOlive-600" />
+              <p class="md:w-52 w-fit subtitle">Téléphone</p>
+            </div>
             <div class="flex gap-2 items-center justify-end">
               <p class="w-full">07 70 35 45 69</p>
               <button @click="copy"><i class="icon-copy" /></button>
             </div>
           </div>
-          <div class="flex gap-5 justify-start items-center">
-            <i class="icon-linkedin p-1 rounded-md bg-verdigris-900"
-              ><span class="path1"></span><span class="path2"></span
-            ></i>
+          <div class="flex flex-wrap gap-5 justify-start md:items-center">
+            <div class="flex items-center gap-4">
+              <i class="icon-linkedin p-1 rounded-md bg-verdigris-900"
+                ><span class="path1"></span><span class="path2"></span
+              ></i>
 
-            <p class="w-52 subtitle">LinkedIn</p>
+              <p class="md:w-52 w-fit subtitle">LinkedIn</p>
+            </div>
             <div class="flex gap-2 items-center justify-end">
               <a
                 href="https://www.linkedin.com/in/oriane-frouin/"
@@ -69,8 +78,6 @@ const copy = () => {
             </div>
           </div>
         </div>
-
-        <!-- <LinkParticle to="/contact" title="Me contacter" color="melon" /> -->
       </div>
     </div>
   </section>

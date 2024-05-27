@@ -5,7 +5,7 @@ import LinkParticle from "../particles/LinkParticle.vue"
 
 <template>
   <div class="rounded-b-xl mb-24 bg-beige-900">
-    <div class="h-screen flex justify-between w-full">
+    <div class="hero-container lg:h-screen flex flex-col md:flex-row justify-between w-full">
       <div class="flex flex-1 flex-col">
         <nav class="pl-44 my-8">
           <RouterLink
@@ -15,7 +15,7 @@ import LinkParticle from "../particles/LinkParticle.vue"
           >
         </nav>
 
-        <div class="w-full flex flex-col gap-12 pl-48 py-48">
+        <div class="w-full flex flex-col gap-12 lg:pl-40 xl:pl-48 pl-12 md:py-48 py-8 pt-32">
           <div class="flex flex-col gap-4 relative">
             <div class="bubble absolute float-content">
               <img src="../../assets/img/talk-bubble.svg" class="relative" />
@@ -27,21 +27,21 @@ import LinkParticle from "../particles/LinkParticle.vue"
 
             <h1
               aria-label="Hello, je m'appelle Oriane Frouin !"
-              class="font-neueKaine font-bold text-5xl"
+              class="font-neueKaine font-bold lg:text-5xl text-3xl"
             >
               Hello, <br />je m'appelle&nbsp;<br /><span
-                class="typewriter text-melon-700 font-black text-5xl"
+                class="typewriter text-melon-700 font-black lg:text-5xl text-3xl"
               ></span>
             </h1>
 
-            <p class="max-w-lg">
+            <p class="lg:max-w-lg max-w-xs">
               Embarquez dans mon univers, du <strong>design</strong> au
               <strong>développement web</strong> en passant par le <strong>marketing</strong>, je
               vous livre tous les secrets de mon voyage !
             </p>
           </div>
 
-          <div class="flex gap-8">
+          <div class="flex lg:flex-row flex-col gap-8">
             <LinkParticle
               to="/projets"
               title="Découvrir mes projets"
@@ -58,7 +58,9 @@ import LinkParticle from "../particles/LinkParticle.vue"
           </div>
         </div>
       </div>
-      <div class="hero-box flex flex-1 flex-col bg-verdigris-300 m-4 rounded-xl items-center">
+      <div
+        class="hidden hero-box md:flex flex-1 flex-col bg-verdigris-300 m-4 rounded-xl items-center"
+      >
         <nav class="flex w-fit gap-8 m-4 h-fit justify-between">
           <RouterLink to="/profil" class="link text-verdigris-900">Mon profil</RouterLink>
           <RouterLink to="/projets" class="link text-verdigris-900">Mes projets</RouterLink>
@@ -78,24 +80,39 @@ import LinkParticle from "../particles/LinkParticle.vue"
           />
         </nav>
 
-        <img src="../../assets/img/hero-image.svg" />
+        <img src="../../assets/img/hero-image.svg" class="hero-img" />
+      </div>
+
+      <div
+        class="md:hidden hero-box flex flex-1 flex-col bg-verdigris-300 m-4 rounded-xl items-center"
+      >
+        <img src="../../assets/img/hero-image.svg" class="hero-img" />
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.hero-container {
+  height: 960px;
+}
+
 .hero-box {
   background-image: url("../../assets/img/hero-waves.svg");
   background-position: bottom;
-  background-size: contain;
+  background-size: 180%;
   background-repeat: no-repeat;
   overflow: hidden;
 }
 
+.hero-img {
+  width: 209px;
+  margin-top: 25px;
+}
+
 .bubble {
-  left: 135px;
-  top: -90px;
+  left: 0px;
+  top: -113px;
 }
 
 .bubble-text {
@@ -109,6 +126,25 @@ import LinkParticle from "../particles/LinkParticle.vue"
   border-radius: 4px;
   width: fit-content;
   height: fit-content;
+}
+
+@media (min-width: 768px) {
+  .bubble {
+    left: 135px;
+    top: -90px;
+  }
+  .hero-box {
+    background-size: contain;
+  }
+
+  .hero-container {
+    height: 740px;
+  }
+
+  .hero-img {
+    width: 240px;
+    margin-top: 140px;
+  }
 }
 
 @keyframes typing {
@@ -226,7 +262,8 @@ import LinkParticle from "../particles/LinkParticle.vue"
   transform: translatey(0px);
   animation: float 2s ease-in-out infinite;
   img {
-    width: 100%;
+    max-width: none;
+    /* width: 100%; */
     height: auto;
   }
 }

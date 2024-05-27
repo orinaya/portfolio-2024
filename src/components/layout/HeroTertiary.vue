@@ -21,10 +21,7 @@ defineProps({
 </script>
 <template>
   <section class="bg-beige-900 hero">
-    <img src="../../assets/img/mini_waves.svg" class="absolute w-full img-bg" />
     <div class="container">
-      <!-- <BreadcrumbParticle :pageName="pageName" :previousPages="previousPages" class="container" /> -->
-
       <div class="flex justify-between text-darkOlive-200 py-20 items-center">
         <div class="max-w-2xl flex flex-col gap-6">
           <div>
@@ -46,21 +43,25 @@ defineProps({
         </div>
       </div>
     </div>
+    <img src="../../assets/img/mini_waves.svg" class="absolute w-full img-bg border-box" />
   </section>
 </template>
 
 <style scoped>
-.hero-img {
-  /* height: 500px; */
-  /* width: 445px; */
-  object-fit: contain;
-}
 .img-bg {
-  top: 220px;
+  object-fit: cover;
+  top: 350px;
+  height: 50px;
 }
 
 .hero {
-  margin-bottom: 49px;
-  /* padding-bottom: 49px; */
+  margin-bottom: 64px;
+}
+
+@media (min-width: 768px) {
+  .img-bg {
+    top: 250px;
+    height: auto;
+  }
 }
 </style>

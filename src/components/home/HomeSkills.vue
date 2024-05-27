@@ -17,10 +17,13 @@ const getImageUrl = (image) => {
       class="mb-12"
     />
 
-    <div class="flex justify-between w-full gap-2" style="height: 360px">
-      <div class="rounded-xl w-2/5 p-6 flex flex-col gap-4" style="background-color: #fff">
+    <div class="flex flex-wrap lg:justify-start justify-between w-full gap-6">
+      <div
+        class="rounded-xl w-full lg:w-2/5 p-6 flex flex-col gap-4"
+        style="background-color: #fff"
+      >
         <h3 class="text-verdigris-300 text-xl font-regular">Développement</h3>
-        <div class="flex flex-wrap gap-2">
+        <div class="flex flex-wrap lg:gap-2 gap-1">
           <SkillsParticle
             v-for="item in devItems"
             :key="item"
@@ -32,9 +35,9 @@ const getImageUrl = (image) => {
         </div>
       </div>
 
-      <div class="rounded-xl w-56 p-6 flex flex-col gap-4" style="background-color: #fff">
+      <div class="rounded-xl lg:w-56 p-6 flex flex-col gap-4" style="background-color: #fff">
         <h3 class="text-verdigris-300 text-xl font-regular">Design</h3>
-        <div class="flex flex-wrap gap-2">
+        <div class="flex flex-wrap lg:gap-2 gap-1">
           <SkillsParticle
             v-for="item in designItems"
             :color="item.color"
@@ -45,9 +48,9 @@ const getImageUrl = (image) => {
         </div>
       </div>
 
-      <div class="rounded-xl w-56 p-6 flex flex-col gap-4" style="background-color: #fff">
+      <div class="rounded-xl lg:w-56 p-6 flex flex-col gap-4" style="background-color: #fff">
         <h3 class="text-verdigris-300 text-xl font-regular">Autres</h3>
-        <div class="flex flex-wrap gap-2">
+        <div class="flex flex-wrap lg:gap-2 gap-1">
           <SkillsParticle
             v-for="item in othersItems"
             :color="item.color"
@@ -60,7 +63,7 @@ const getImageUrl = (image) => {
 
       <div class="rounded-xl w-56 p-6 flex flex-col gap-4" style="background-color: #fff">
         <h3 class="text-verdigris-300 text-xl font-regular">Langues</h3>
-        <div class="flex flex-wrap gap-2">
+        <div class="flex flex-wrap lg:gap-2 gap-1">
           <SkillsParticle
             v-for="item in languagesItems"
             :color="item.color"
@@ -71,14 +74,8 @@ const getImageUrl = (image) => {
       </div>
     </div>
     <div class="mt-5 flex gap-2 items-center">
-      <span class="w-2 h-2 rounded-full"></span>
+      <span class="w-2 h-2 rounded-full" style="background-color: #4ebc6c"></span>
       <p>En cours d'apprentissage</p>
     </div>
   </section>
 </template>
-
-<style scoped>
-span {
-  background-color: #4ebc6c;
-}
-</style>

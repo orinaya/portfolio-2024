@@ -28,7 +28,7 @@ const getIconUrl = (image) => {
         <div class="flex justify-between flex-col">
           <p class="font-medium text-base">Outils</p>
           <div>
-            <div class="flex gap-1">
+            <div class="flex gap-1 flex-wrap justify-start">
               <img
                 class="icon h-9 w-fit"
                 v-for="software in softwares"
@@ -62,7 +62,7 @@ img {
   width: fit-content;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .card-content {
     width: 11.5rem;
     padding: 1rem;

@@ -47,8 +47,8 @@ const filteredMovies = computed(() => {
 <template>
   <HeroTertiary uptitle="Mes projets" pageName="Projets" :previousPages="previousPages" />
   <div class="container">
-    <div class="flex justify-between items-center">
-      <div class="flex gap-5 py-12 px-0">
+    <div class="flex lg:flex-row flex-col-reverse justify-between items-center">
+      <div class="flex flex-wrap gap-5 py-12 px-0">
         <button
           @click="selectedCategory = 'all'"
           :class="selectedCategory !== 'all' ? 'button' : 'focus'"
@@ -80,7 +80,7 @@ const filteredMovies = computed(() => {
       </div>
     </div>
 
-    <div class="flex flex-wrap justify-start gap-12">
+    <div class="flex flex-wrap justify-start lg:gap-12 gap-8">
       <CardParticle
         v-for="item in filteredMovies"
         :id="item.id"

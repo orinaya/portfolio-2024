@@ -51,18 +51,20 @@ onUnmounted(() => {
     />
     <div class="flex flex-col relative min-h-60 mt-12 w-full gap-20">
       <div
-        class="vertical-line absolute left-1/2 w-2 bg-melon-800 rounded-full"
+        class="hidden md:block vertical-line absolute xl:left-1/2 left-0 w-2 bg-melon-800 rounded-full"
         :style="{height: lineHeight + 'px'}"
       ></div>
-      <div class="top-line absolute left-1/2 w-2 top-0 bottom-0 rounded-full"></div>
+      <div
+        class="hidden md:block top-line absolute xl:left-1/2 left-0 w-2 top-0 bottom-0 rounded-full"
+      ></div>
 
-      <div class="flex flex-col gap-5">
+      <div class="flex flex-col xl:gap-5 gap-8">
         <div v-for="item in timelineItems" class="cards flex flex-col gap-2">
           <div
-            class="cards-dot absolute bg-melon-700 w-4 h-4 rounded-full flex items-center justify-center"
+            class="hidden md:flex cards-dot absolute bg-melon-700 w-4 h-4 rounded-full items-center justify-center"
           ></div>
           <div
-            class="cards-content bob-on-hover flex flex-col items-center bg-darkOlive-300 border-solid border-darkOlive-500 border-2 rounded-lg text-white-998 cursor-pointer p-5"
+            class="cards-content bob-on-hover flex flex-col items-center bg-darkOlive-300 border-solid border-darkOlive-500 border-2 rounded-xl text-white-998 cursor-pointer p-5"
           >
             <div class="flex justify-between items-center w-full">
               <h3 class="font-semibold text-verdigris-700">{{ item.title }}</h3>
@@ -99,6 +101,22 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+.steps-container {
+  max-width: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .steps-container {
+    max-width: 1280px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* @keyframes slide-in {
   from {
     transform: translateX(-100%);
@@ -109,15 +127,34 @@ onUnmounted(() => {
 } */
 
 .cards-content {
-  width: 420px;
-  margin-bottom: -80px;
-  /* animation: slide-in 1000ms; */
+  width: 100%;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .cards-content {
+    width: 420px;
+    margin-bottom: 0;
+  }
 }
 
 .cards-dot {
-  left: 49.8%;
+  left: -4px;
   top: 146px;
   z-index: 3;
+}
+
+@media (min-width: 1280px) {
+  .cards-dot {
+    left: 49.8%;
+    top: 146px;
+    z-index: 3;
+  }
+
+  .cards-content {
+    width: 420px;
+    margin-bottom: -80px;
+  }
 }
 
 .vertical-line {
@@ -166,11 +203,32 @@ img {
 }
 
 .cards:nth-child(odd) {
-  align-items: flex-start;
+  margin-left: 0;
 }
 
 .cards:nth-child(even) {
-  align-items: flex-end;
+  margin-left: 0;
+}
+
+@media (min-width: 1280px) {
+  .cards:nth-child(odd) {
+    align-items: flex-start;
+    margin-left: 5rem;
+  }
+
+  .cards:nth-child(even) {
+    align-items: flex-end;
+    margin-right: 5rem;
+  }
+}
+@media (min-width: 768px) {
+  .cards:nth-child(odd) {
+    margin-left: 5rem;
+  }
+
+  .cards:nth-child(even) {
+    margin-left: 5rem;
+  }
 }
 
 /*===================*/

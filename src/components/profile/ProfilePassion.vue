@@ -6,7 +6,7 @@ import H2Particle from "../particles/H2Particle.vue"
   <section class="container">
     <div class="flex flex-col gap-8">
       <H2Particle title="Explorer mon univers" uptitle="Passions & hobbies" />
-      <div class="grid grid-cols-7 gap-8">
+      <div class="lg:grid grid-cols-7 gap-8 flex flex-col">
         <div
           class="col-span-3 flex flex-col bg-melon-900 py-6 px-8 items-center justify-center gap-3 rounded-xl hover:scale-105 transition-transform duration-200 hover:drop-shadow-xl"
         >
