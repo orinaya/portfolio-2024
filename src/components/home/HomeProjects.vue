@@ -31,7 +31,6 @@ const getProjectDetails = (id) => {
           :description="item.description"
           :image="getImageUrl(item.image)"
           :softwares="item.softwares"
-          :price="item.price"
           @send-project-id="getProjectDetails"
         />
       </div>

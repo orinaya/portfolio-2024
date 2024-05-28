@@ -23,6 +23,7 @@ const getIconUrl = (image) => {
     <div class="card-content bg-white-998 rounded-r-lg p-4">
       <div class="flex flex-col gap-1 h-full justify-between">
         <div>
+          <h3 class="font-semibold text-lg text-darkOlive-200">{{ title }}</h3>
           <p class="text-sm lg:text-base">{{ description }}</p>
         </div>
         <div class="flex justify-between flex-col">

@@ -89,7 +89,7 @@ const getPreviousProject = () => {
     </div>
     <div class="flex flex-col lg:flex-row justify-between my-16 mx-auto gap-16">
       <div class="bg-white-998 h-96 flex-1 rounded-xl">
-        <div class="p-8">
+        <div class="p-8 flex flex-col gap-4">
           <H2Particle
             title="Comprendre les enjeux et la finalité"
             uptitle="Description du projet"
@@ -127,7 +127,7 @@ const getPreviousProject = () => {
         </template>
         <template v-slot:mapeach v-if="userRoute === '1'">
           <div class="rounded-xl flex-1 bg-white-998 h-96">
-            <div class="flex flex-col gap-2 justify-center items-center">
+            <div class="flex flex-col gap-2 justify-center items-center h-96">
               <video
                 controls
                 autoplay
@@ -144,7 +144,7 @@ const getPreviousProject = () => {
         <template v-slot:simple v-if="userRoute !== '1' && userRoute !== '0'">
           <div class="rounded-xl flex-1 bg-white-998 h-96">
             <div
-              class="bg-cover bg-no-repeat"
+              class="bg-cover bg-no-repeat h-96"
               :style="{backgroundImage: 'url(' + getImageUrl(works.first_image) + ')'}"
             ></div>
           </div>
@@ -165,23 +165,7 @@ const getPreviousProject = () => {
           <H2Particle title="Autour du projet" uptitle="Détails" small />
           <div class="flex flex-col gap-6 mt-5">
             <div class="flex justify-between">
-              <div>
-                <p class="text-base font-semibold">Logiciels et langages</p>
-                <div class="flex gap-2">
-                  <img
-                    v-for="item in works.details.softwares"
-                    :key="item"
-                    :src="getIconUrl(item)"
-                  />
-                </div>
-              </div>
-              <div>
-                <p class="text-base font-semibold">Mon rôle</p>
-                <p class="w-52" v-for="item in works.details.role" :key="item">{{ item }}</p>
-              </div>
-            </div>
-            <div class="flex justify-between">
-              <div class="flex flex-col">
+              <div class="flex flex-col" v-show="works.details.team != ''">
                 <p class="text-base font-semibold">Équipe sur le projet</p>
                 <a
                   :href="works.details.teamLink"
@@ -193,6 +177,22 @@ const getPreviousProject = () => {
                 ></a>
               </div>
               <div>
+                <p class="text-base font-semibold">Mon rôle</p>
+                <p class="w-52" v-for="item in works.details.role" :key="item">{{ item }}</p>
+              </div>
+            </div>
+            <div class="flex justify-between">
+              <div>
+                <p class="text-base font-semibold">Logiciels et langages</p>
+                <div class="flex gap-2">
+                  <img
+                    v-for="item in works.details.softwares"
+                    :key="item"
+                    :src="getIconUrl(item)"
+                  />
+                </div>
+              </div>
+              <div>
                 <p class="text-base font-semibold">Année d’étude</p>
                 <p class="w-52">{{ works.details.school_year }}</p>
               </div>
@@ -202,7 +202,8 @@ const getPreviousProject = () => {
       </div>
     </div>
 
-    <Poster class="my-16" v-if="userRoute === '1'">
+    <H2Particle title="Booster notre visibilité" uptitle="Nos Affiches" class="mb-12" />
+    <Poster class="mb-16" v-if="userRoute === '1'">
       <template v-slot:mapeach>
         <img src="../assets/works/mapeach/mapeach-poster-2.jpg" class="h-full" />
         <img src="../assets/works/mapeach/mapeach-poster-3.jpg" class="h-full" />
@@ -212,6 +213,7 @@ const getPreviousProject = () => {
     </Poster>
     <PdfFrame class="my-16">
       <template v-slot:equinox v-if="userRoute === '0'">
+        <H2Particle title="Une stratégie pour convaincre" uptitle="Notre PitchDeck" class="mb-12" />
         <iframe
           src="/src/assets/works/equinox/Equinox_Pitch_Deck_Nantes.pdf"
           width="100%"
@@ -220,6 +222,7 @@ const getPreviousProject = () => {
         </iframe>
       </template>
       <template v-slot:mapeach v-if="userRoute === '1'">
+        <H2Particle title="Une stratégie pour convaincre" uptitle="Notre Pitch" class="mb-12" />
         <iframe src="/src/assets/works/mapeach/MaPeach_Pitch.pdf" width="100%" height="700px">
         </iframe>
       </template>

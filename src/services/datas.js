@@ -119,24 +119,23 @@ export const timelineItems = [
 ]
 
 export const worksItems = [
-  //EQUINOX
+  //EQUINOX // OK
   {
     id: "0",
-    category: ["DEVELOPPEMENT", "DESIGN GRAPHIQUE"],
+    category: ["DEVELOPPEMENT", "DESIGN GRAPHIQUE", "MARKETING"],
     title: "Equinox",
-    description: "Création d’un jeu vidéo",
+    description: "Création d'un jeu vidéo lors d'une Game Jam",
     image: "equinox/equinox.jpg",
     softwares: ["godot.svg", "aseprite.svg"],
     banner: "equinox/equinox-banner.jpg",
-    hashtag: "#Game Jam #Pitch",
-    price: "Award de la Direction Artistique",
+    hashtag: "#GameJam #PitchDeck",
     big_description:
-      "En janvier 2024, Atlangames nous proposaient une Game Jam sur le thème “𝗳𝗿𝗼𝗻𝘁𝗶𝗲̀𝗿𝗲𝘀”. Le but ? Créer un jeu vidéo et en faire sa promotion en 4 jours, le tout en concurrence avec 17 autres écoles. 🐱 Après une matinée de brainstorming, est né “𝗘𝗾𝘂𝗶𝗻𝗼𝘅”, notre jeu de plateforme 2D. Il met en scène 𝗡𝗼𝘅, un petit chat décédé qui essaie de récupérer ses 8 vies restantes en traversant la frontière entre paradis et enfer.🏆 Entre #marketing, #design et #développement (et café), la semaine fut très rude mais il y a une bonne nouvelle. Nous continuons la lignée de prix gagnés par MyDigitalSchool Nantes, en remportant l’𝗔𝘄𝗮𝗿𝗱 𝗱𝗲 𝗹𝗮 𝗠𝗲𝗶𝗹𝗹𝗲𝘂𝗿𝗲 𝗗𝗶𝗿𝗲𝗰𝘁𝗶𝗼𝗻 𝗔𝗿𝘁𝗶𝘀𝘁𝗶𝗾𝘂𝗲 ! 🎮 Je vous laisse le lien pour 𝘁𝗲𝘀𝘁𝗲𝗿 𝗻𝗼𝘁𝗿𝗲 𝗷𝗲𝘂, à vous de jouer : https://lnkd.in/erJVwE9p",
+      "Cette année Atlangames nous proposaient une Game Jam sur le thème “𝗳𝗿𝗼𝗻𝘁𝗶𝗲̀𝗿𝗲𝘀”. Le but ? Créer un jeu vidéo et en faire sa promotion en 4 jours, le tout en concurrence avec 17 autres écoles. De cette Game Jam est né “𝗘𝗾𝘂𝗶𝗻𝗼𝘅”, notre jeu de plateforme 2D. Il met en scène 𝗡𝗼𝘅, un petit chat décédé qui essaie de récupérer ses 8 vies restantes en traversant la frontière entre paradis et enfer. Avec ce jeu, nous remportons pour MyDigitalSchool Nantes, l’𝗔𝘄𝗮𝗿𝗱 𝗱𝗲 𝗹𝗮 𝗠𝗲𝗶𝗹𝗹𝗲𝘂𝗿𝗲 𝗗𝗶𝗿𝗲𝗰𝘁𝗶𝗼𝗻 𝗔𝗿𝘁𝗶𝘀𝘁𝗶𝗾𝘂𝗲 ! À vous de jouer désormais ! 🎮",
     first_image: "",
     second_image: "equinox/equinox-2.jpg",
     details: {
       softwares: ["godot.svg", "aseprite.svg"],
-      role: ["Responsable Pitch Deck", "Design"],
+      role: ["Pitch Deck Manager", "Game Design"],
       team: ["Erwan Duchêne", "Erwann Michaud de Perier", "Matilin Noël"],
       teamLink: [
         "https://www.linkedin.com/in/erwan-duch%C3%AAne/",
@@ -149,29 +148,28 @@ export const worksItems = [
       {
         href: "https://margouillat.itch.io/equinox",
         title: "Tester le jeu",
-        color: "melon",
+        color: "verdigris",
       },
     ],
     date: 8,
   },
-  // MAPEACH
+  // MAPEACH // OK
   {
     id: "1",
-    category: ["DEVELOPPEMENT", "WEBDESIGN", "COMMUNICATION"],
+    category: ["DEVELOPPEMENT", "WEBDESIGN", "MARKETING"],
     title: "MaPeach",
-    description: "Application de rendez-vous en couple",
+    description: "Application de rendez-vous pour couple",
     image: "mapeach/mapeach.jpg",
     softwares: ["figma.svg", "wordpress.svg"],
     banner: "mapeach/mapeach-banner.jpg",
-    hashtag: "#IntégrationWeb #Maquettage",
-    price: "Award de la Direction Artistique",
+    hashtag: "#Innovation #RendezVous",
     big_description:
-      "En janvier 2024, Atlangames nous proposaient une Game Jam sur le thème “𝗳𝗿𝗼𝗻𝘁𝗶𝗲̀𝗿𝗲𝘀”. Le but ? Créer un jeu vidéo et en faire sa promotion en 4 jours, le tout en concurrence avec 17 autres écoles. 🐱 Après une matinée de brainstorming, est né “𝗘𝗾𝘂𝗶𝗻𝗼𝘅”, notre jeu de plateforme 2D. Il met en scène 𝗡𝗼𝘅, un petit chat décédé qui essaie de récupérer ses 8 vies restantes en traversant la frontière entre paradis et enfer.🏆 Entre #marketing, #design et #développement (et café), la semaine fut très rude mais il y a une bonne nouvelle. Nous continuons la lignée de prix gagnés par MyDigitalSchool Nantes, en remportant l’𝗔𝘄𝗮𝗿𝗱 𝗱𝗲 𝗹𝗮 𝗠𝗲𝗶𝗹𝗹𝗲𝘂𝗿𝗲 𝗗𝗶𝗿𝗲𝗰𝘁𝗶𝗼𝗻 𝗔𝗿𝘁𝗶𝘀𝘁𝗶𝗾𝘂𝗲 ! 🎮 Je vous laisse le lien pour 𝘁𝗲𝘀𝘁𝗲𝗿 𝗻𝗼𝘁𝗿𝗲 𝗷𝗲𝘂, à vous de jouer : https://lnkd.in/erJVwE9p",
+      "Le sujet ? Proposer un produit ou service innovant. Voici, MaPeach, une application recensant des lieux de rendez-vous à destination des couples perdus dans la routine. Elle permet de vivre de nouvelles aventures ludiquement grâce à une roue vous proposant un choix de lieu. Elle vous mettra au défi pour gagner de superbes badges. Grâce à notre galerie, il sera possible de figer ces moments en de merveilleuses photos et pourquoi pas donner l'envie à d'autres couples de l'utiliser ! ",
     first_image: "",
     second_image: "mapeach/mapeach-2.jpg",
     details: {
       softwares: ["figma.svg", "wordpress.svg"],
-      role: ["Maquettage", "Design"],
+      role: ["Maquettage", "Création Affiches", "Rédaction de contenus", "Gestion de projet"],
       team: ["Erwann Michaud de Perier", "Arthur Ploteau", "Louka Lemonnier", "Mathéo Lebéhot"],
       teamLink: [
         "https://www.linkedin.com/in/erwann-michaud-de-perier-149282268/",
@@ -185,41 +183,36 @@ export const worksItems = [
       {
         href: "https://oriane-frouin.mds-nantes.yt/mapeach/",
         title: "Visiter le site",
-        color: "melon",
-      },
-      {
-        href: "https://oriane-frouin.mds-nantes.yt/mapeach/",
-        title: "Voir la maquette",
         color: "verdigris",
       },
     ],
     date: 12,
   },
-  // FLOAX
+  // FLOAX // EN COURS
   {
     id: "2",
     category: ["DEVELOPPEMENT"],
     title: "Studio Floax",
     description: "Site vitrine de Floax",
-    image: "floax.jpg",
+    image: "floax/floax.jpg",
     softwares: ["html.svg", "sass.svg", "vue.svg"],
-    banner: "floax-banner.jpg",
-    hashtag: "#IntégrationWeb #Développement front ",
+    banner: "floax/floax-banner.jpg",
+    hashtag: "#IntégrationWeb #FrontEnd ",
     big_description:
-      "Floax est un site vitrine réalisé pour l'entreprise où j'ai effectué mon stage. J'ai pris en charge l'intégration et le développement front-end du site avec d'autres personnes. Il met en valeur les services de l'entreprise et fournit des informations pertinentes aux visiteurs.",
-    first_image: "floax.jpg",
+      "Floax est un site vitrine réalisé pour l'entreprise où j'ai effectué mon stage. J'ai pris en charge l'intégration et le développement front-end du site en compagnie d'autres collègues. Il met en valeur les services et compétences de l'entreprise.",
+    first_image: "floax/floax-1.jpg",
     second_image: "floax.jpg",
     details: {
       softwares: ["html.svg", "sass.svg", "vue.svg"],
-      role: ["Travail d’équipe", "Développement web"],
-      team: ["Loïc Vanderschooten, Clara Le Meur, Vincent Ramaye"],
+      role: ["Intégration web", "Développement front"],
+      team: ["Loïc Vanderschooten", "Clara Le Meur", "Vincent Ramaye"],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
     buttons: [
       {
         href: "https://floax.fr",
-        title: "Voir le site",
-        color: "melon",
+        title: "Visiter le site",
+        color: "verdigris",
       },
     ],
     date: 2,
@@ -247,7 +240,6 @@ export const worksItems = [
         "Clara Le Meur",
         "Brice Le Gallo-Tastet",
         "Vincent Ramaye",
-        "Kim Robert",
       ],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
@@ -320,7 +312,7 @@ export const worksItems = [
     details: {
       softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
       role: ["Travail d’équipe", "Développement web", "Maquettage"],
-      // team: ["Erwann Michaud de Perier"],
+      team: [""],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
     date: 10,
@@ -419,7 +411,7 @@ export const worksItems = [
   //BUMBLE
   {
     id: "11",
-    category: ["COMMUNICATION"],
+    category: ["MARKETING"],
     title: "Bumble",
     description: "Inspiration d'un artiste",
     image: "bumble.jpg",
@@ -447,31 +439,6 @@ export const worksItems = [
     },
     date: 11,
   },
-  // //AUTO PORTRAIT
-  // {
-  //   id: "",
-  //   category: ["DESIGN"],
-  //   title: "Auto portrait",
-  //   description: "Auto portrait vectoriel",
-  //   image: "autoportrait.jpg",
-  //   softwares: ["illustrator.svg"],
-  //   banner: "pause-connect-banner.jpg",
-  //   hashtag: "#IntégrationWeb #Maquettage",
-  //   big_description:
-  //     "Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web.",
-  //   first_image: "autoportrait.jpg",
-  //   second_image: "plantopia-1.jpg",
-  //   details: {
-  //     softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
-  //     role: ["Travail d’équipe", "Développement web", "Maquettage"],
-  //     team: ["Erwann Michaud de Perier"],
-  //     school_year: "Bachelor Cycle Web et Multimédia - Année 2",
-  //   },
-  //   graphic_chart: {
-  //     logo: "plantopia-logo.svg",
-  //     colors: ["#397539", "#214521", "#EAD0C2", "#EFDDCF"],
-  //   },
-  // },
 ]
 
 export const passionItems = [

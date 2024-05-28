@@ -64,8 +64,8 @@ const filteredMovies = computed(() => {
         <button @click="selectedCategory = 'DESIGN GRAPHIQUE'">
           <i class="icon-design"></i>Design
         </button>
-        <button @click="selectedCategory = 'COMMUNICATION'">
-          <i class="icon-marketing"></i>Communication
+        <button @click="selectedCategory = 'MARKETING'">
+          <i class="icon-marketing"></i>Marketing & Communication
         </button>
       </div>
       <div class="flex gap-2 items-center">
