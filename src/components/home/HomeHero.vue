@@ -147,6 +147,12 @@ import LinkParticle from "../particles/LinkParticle.vue"
   }
 }
 
+@media (min-width: 1280px) {
+  .hero-container {
+    height: 100vh;
+  }
+}
+
 @keyframes typing {
   0% {
     content: "";

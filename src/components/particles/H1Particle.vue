@@ -27,10 +27,10 @@ const getImageUrl = (image) => {
       <!-- <img :src="getImageUrl(icon)" /> -->
       <p class="uppercase text-melon-700">{{ uptitle }}</p>
     </div>
-    <h1 v-if="center" class="text-verdigris-100 font-neueKaine font-extrabold text-4xl text-center">
+    <h1 v-if="center" class="text-darkOlive-200 font-neueKaine font-extrabold text-4xl text-center">
       {{ title }}
     </h1>
-    <h1 v-else class="text-verdigris-100 font-neueKaine font-extrabold text-4xl">{{ title }}</h1>
+    <h1 v-else class="text-darkOlive-200 font-neueKaine font-extrabold text-4xl">{{ title }}</h1>
   </div>
 </template>
 

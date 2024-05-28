@@ -283,7 +283,7 @@ export const worksItems = [
     category: ["DEVELOPPEMENT", "WEBDESIGN"],
     description: "Site boutique-café d'un client",
     image: "dedale/le-dedale.jpg",
-    softwares: ["figma.svg", "wordpress.svg", "elementor.svg"],
+    softwares: ["figma.svg", "wordpress.svg", "elementor.svg", ".svg"],
     banner: "dedale/dedale-banner.jpg",
     hashtag: "#IntégrationWeb #Maquettage",
     big_description:
@@ -291,7 +291,7 @@ export const worksItems = [
     first_image: "dedale/dedale-banner.jpg",
     second_image: "dedale/dedale-banner.jpg",
     details: {
-      softwares: ["figma.svg", "wordpress.svg", "woocommerce.svg"],
+      softwares: ["figma.svg", "wordpress.svg", "elementor.svg", "woo.svg"],
       role: ["Gestion de Projet", "Développement web", "Maquettage"],
       team: ["Erwan Duchêne", "Audrey Norvez", "Valentin Renaud"],
       teamLink: [
