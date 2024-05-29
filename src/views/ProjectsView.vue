@@ -9,9 +9,14 @@ const getImageUrl = (image) => {
   return new URL(`/src/assets/works/${image}`, import.meta.url).href
 }
 
-const getProjectDetails = (id) => {
-  router.push({path: `/projets/${id}`})
+const getProjectDetails = (path) => {
+  router.push({path: `/projets/${path}`})
 }
+
+// const getProjectDetails = (title) => {
+//   const encodedTitle = encodeURIComponent(title)
+//   router.push({path: `/projets/${encodedTitle}`})
+// }
 
 const previousPages = [
   {
@@ -89,7 +94,7 @@ const filteredMovies = computed(() => {
         :image="getImageUrl(item.image)"
         :softwares="item.softwares"
         :date="item.date"
-        @send-project-id="getProjectDetails"
+        @send-project-id="getProjectDetails(item.path)"
       />
     </div>
   </div>

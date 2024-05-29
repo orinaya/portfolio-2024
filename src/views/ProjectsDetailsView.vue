@@ -5,7 +5,6 @@ import H1Particle from "@/components/particles/H1Particle.vue"
 import ExternalLinkParticle from "@/components/particles/ExternalLinkParticle.vue"
 import FirstMedia from "@/components/projects/FirstMedia.vue"
 import PdfFrame from "@/components/projects/PdfFrame.vue"
-import Poster from "@/components/projects/Poster.vue"
 import BreadcrumbParticle from "@/components/particles/BreadcrumbParticle.vue"
 import H2Particle from "@/components/particles/H2Particle.vue"
 
@@ -18,11 +17,9 @@ const getIconUrl = (image) => {
 }
 
 const router = useRouter()
-const userRoute = router.currentRoute.value.params.id.toString()
-console.log(router)
+const userRoute = router.currentRoute.value.params.path
 
-const works = worksItems[userRoute]
-console.log("works", works.id)
+const works = worksItems.find((item) => item.path === userRoute)
 
 const previousPages = [
   {
@@ -36,23 +33,27 @@ const previousPages = [
 ]
 
 const getNextProjectRoute = () => {
-  const nextRoute = parseInt(userRoute) + 1
-  return nextRoute < worksItems.length ? `${nextRoute}` : null
+  const currentIndex = worksItems.findIndex((item) => item.path === userRoute)
+  const nextRoute = currentIndex + 1
+  return nextRoute < worksItems.length ? worksItems[nextRoute].path : null
 }
 
 const getPreviousProjectRoute = () => {
-  const previousRoute = parseInt(userRoute) - 1
-  return previousRoute >= 0 ? `${previousRoute}` : null
+  const currentIndex = worksItems.findIndex((item) => item.path === userRoute)
+  const previousRoute = currentIndex - 1
+  return previousRoute >= 0 ? worksItems[previousRoute].path : null
 }
 
 const getNextProject = () => {
-  const nextRoute = parseInt(userRoute) + 1
+  const currentIndex = worksItems.findIndex((item) => item.path === userRoute)
+  const nextRoute = currentIndex + 1
   return nextRoute < worksItems.length ? worksItems[nextRoute] : null
 }
 
 const getPreviousProject = () => {
-  const previousRoute = parseInt(userRoute) - 1
-  return previousRoute < worksItems.length ? worksItems[previousRoute] : null
+  const currentIndex = worksItems.findIndex((item) => item.path === userRoute)
+  const previousRoute = currentIndex - 1
+  return previousRoute >= 0 ? worksItems[previousRoute] : null
 }
 </script>
 
@@ -62,7 +63,7 @@ const getPreviousProject = () => {
     <img
       src="../assets/works/equinox/nox-angel-jump.gif"
       class="absolute h-36 top-28 md:block hidden right-20 lg:right-60"
-      v-if="userRoute === '0'"
+      v-if="userRoute === 'equinox'"
     />
 
     <H1Particle :title="works.title" center class="mt-6" />
@@ -109,7 +110,7 @@ const getPreviousProject = () => {
       </div>
 
       <FirstMedia>
-        <template v-slot:equinox v-if="userRoute === '0'">
+        <template v-slot:equinox v-if="userRoute === 'equinox'">
           <div class="rounded-xl flex-1 bg-white-998">
             <div class="flex flex-col gap-2 justify-center items-center h-96">
               <video
@@ -125,7 +126,7 @@ const getPreviousProject = () => {
             </div>
           </div>
         </template>
-        <template v-slot:mapeach v-if="userRoute === '1'">
+        <template v-slot:mapeach v-if="userRoute === 'equinox'">
           <div class="rounded-xl flex-1 bg-white-998 h-96">
             <div class="flex flex-col gap-2 justify-center items-center h-96">
               <video
@@ -141,7 +142,7 @@ const getPreviousProject = () => {
             </div>
           </div>
         </template>
-        <template v-slot:simple v-if="userRoute !== '1' && userRoute !== '0'">
+        <template v-slot:simple v-if="userRoute !== 'mapeach' && userRoute !== 'equinox'">
           <div class="rounded-xl flex-1 bg-white-998 h-96">
             <div
               class="bg-cover bg-no-repeat h-96"
@@ -202,28 +203,36 @@ const getPreviousProject = () => {
       </div>
     </div>
 
-    <H2Particle title="Booster notre visibilité" uptitle="Nos Affiches" class="mb-12" />
-    <Poster class="mb-16" v-if="userRoute === '1'">
-      <template v-slot:mapeach>
+    <div v-if="userRoute === 'mapeach'">
+      <H2Particle title="Booster notre visibilité" uptitle="Nos Affiches" class="mb-12" />
+      <div
+        class="poster-wrapper bg-white-998 rounded-xl flex flex-wrap justify-between p-8 mb-16 h-96"
+      >
         <img src="../assets/works/mapeach/mapeach-poster-2.jpg" class="h-full" />
         <img src="../assets/works/mapeach/mapeach-poster-3.jpg" class="h-full" />
         <img src="../assets/works/mapeach/mapeach-poster-1.jpg" class="h-full" />
         <img src="../assets/works/mapeach/mapeach-poster-4.jpg" class="h-full" />
-      </template>
-    </Poster>
+      </div>
+    </div>
+
     <PdfFrame class="my-16">
-      <template v-slot:equinox v-if="userRoute === '0'">
+      <template v-slot:equinox v-if="userRoute === 'equinox'">
         <H2Particle title="Une stratégie pour convaincre" uptitle="Notre PitchDeck" class="mb-12" />
         <iframe
-          src="/src/assets/works/equinox/Equinox_Pitch_Deck_Nantes.pdf"
+          src="@/assets/works/equinox/Equinox_Pitch_Deck_Nantes.pdf"
           width="100%"
           height="700px"
         >
         </iframe>
       </template>
-      <template v-slot:mapeach v-if="userRoute === '1'">
+      <template v-slot:mapeach v-if="userRoute === 'mapeach'">
         <H2Particle title="Une stratégie pour convaincre" uptitle="Notre Pitch" class="mb-12" />
-        <iframe src="/src/assets/works/mapeach/MaPeach_Pitch.pdf" width="100%" height="700px">
+        <iframe src="@/assets/works/mapeach/MaPeach_Pitch.pdf" width="100%" height="700px">
+        </iframe>
+      </template>
+      <template v-slot:bumble v-if="userRoute === 'bumble'">
+        <H2Particle title="Une stratégie pour convaincre" uptitle="Notre Pitch" class="mb-12" />
+        <iframe src="@/assets/works/bumble/Bumble-presentation.pdf" width="100%" height="700px">
         </iframe>
       </template>
     </PdfFrame>

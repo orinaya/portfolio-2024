@@ -122,6 +122,7 @@ export const worksItems = [
   //EQUINOX // OK
   {
     id: "0",
+    path: "equinox",
     category: ["DEVELOPPEMENT", "DESIGN GRAPHIQUE", "MARKETING"],
     title: "Equinox",
     description: "Création d'un jeu vidéo lors d'une Game Jam",
@@ -156,6 +157,7 @@ export const worksItems = [
   // MAPEACH // OK
   {
     id: "1",
+    path: "mapeach",
     category: ["DEVELOPPEMENT", "WEBDESIGN", "MARKETING"],
     title: "MaPeach",
     description: "Application de rendez-vous pour couple",
@@ -188,24 +190,25 @@ export const worksItems = [
     ],
     date: 12,
   },
-  // FLOAX // EN COURS
+  // FLOAX // OK
   {
     id: "2",
+    path: "studio-floax",
     category: ["DEVELOPPEMENT"],
-    title: "Studio Floax",
+    title: "Floax",
     description: "Site vitrine de Floax",
     image: "floax/floax.jpg",
-    softwares: ["html.svg", "sass.svg", "vue.svg"],
+    softwares: ["html.svg", "sass.svg", "vue.svg", "typescript.svg"],
     banner: "floax/floax-banner.jpg",
     hashtag: "#IntégrationWeb #FrontEnd ",
     big_description:
       "Floax est un site vitrine réalisé pour l'entreprise où j'ai effectué mon stage. J'ai pris en charge l'intégration et le développement front-end du site en compagnie d'autres collègues. Il met en valeur les services et compétences de l'entreprise.",
     first_image: "floax/floax-1.jpg",
-    second_image: "floax.jpg",
+    second_image: "floax/floax-2.jpg",
     details: {
-      softwares: ["html.svg", "sass.svg", "vue.svg"],
+      softwares: ["html.svg", "sass.svg", "vue.svg", "typescript.svg"],
       role: ["Intégration web", "Développement front"],
-      team: ["Loïc Vanderschooten", "Clara Le Meur", "Vincent Ramaye"],
+      team: ["Loïc Vanderschooten", "Clara Le Meur", "Vincent Ramaye", "Brice Le Gallo-Tastet"],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
     buttons: [
@@ -218,36 +221,38 @@ export const worksItems = [
     date: 2,
   },
   // PSS
-  {
-    id: "3",
-    category: ["DEVELOPPEMENT"],
-    title: "Prépa Sup Santé",
-    description: "Coucou",
-    image: "pss.jpg",
-    softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
-    banner: "plantopia-banner.jpg",
-    hashtag: "#IntégrationWeb #Maquettage",
-    big_description:
-      "Plantopia est un site e-commerce de plantes et fleurs réalisé en duo dans le cadre du cours d’Intégration web. Il présente une page d'accueil, une page avec toutes les plantes et fleurs, une page détail du produit et une page panier",
-    first_image: "pss.jpg",
-    second_image: "pss.jpg",
-    details: {
-      softwares: ["html.svg", "sass.svg", "vue.svg"],
-      role: ["Travail d’équipe", "Développement web"],
-      team: [
-        "Loïc Vanderschooten",
-        "Adrien Vaucard",
-        "Clara Le Meur",
-        "Brice Le Gallo-Tastet",
-        "Vincent Ramaye",
-      ],
-      school_year: "Bachelor Cycle Web et Multimédia - Année 2",
-    },
-    date: 3,
-  },
-  // PLANTOPIA
+  // {
+  //   id: "3",
+  //   path: "prepa-sup-sante",
+  //   category: ["DEVELOPPEMENT"],
+  //   title: "Prépa Sup Santé",
+  //   description: "Coucou",
+  //   image: "pss.jpg",
+  //   softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
+  //   banner: "plantopia-banner.jpg",
+  //   hashtag: "#IntégrationWeb #Maquettage",
+  //   big_description:
+  //     "Plantopia est un site e-commerce de plantes et fleurs réalisé en duo dans le cadre du cours d’Intégration web. Il présente une page d'accueil, une page avec toutes les plantes et fleurs, une page détail du produit et une page panier",
+  //   first_image: "pss.jpg",
+  //   second_image: "pss.jpg",
+  //   details: {
+  //     softwares: ["html.svg", "sass.svg", "vue.svg"],
+  //     role: ["Travail d’équipe", "Développement web"],
+  //     team: [
+  //       "Loïc Vanderschooten",
+  //       "Adrien Vaucard",
+  //       "Clara Le Meur",
+  //       "Brice Le Gallo-Tastet",
+  //       "Vincent Ramaye",
+  //     ],
+  //     school_year: "Bachelor Cycle Web et Multimédia - Année 2",
+  //   },
+  //   date: 3,
+  // },
+  // PLANTOPIA // OK
   {
     id: "4",
+    path: "plantopia",
     category: ["DEVELOPPEMENT", "WEBDESIGN"],
     title: "Plantopia",
     description: "Site e-commerce de plantes",
@@ -256,12 +261,12 @@ export const worksItems = [
     banner: "plantopia/plantopia-banner.jpg",
     hashtag: "#IntégrationWeb #Maquettage",
     big_description:
-      "Plantopia est un site e-commerce de plantes et fleurs réalisé en duo dans le cadre du cours d’Intégration web. Il présente une page d'accueil, une page avec toutes les plantes et fleurs, une page détail du produit et une page panier",
+      "Plantopia est un site e-commerce de plantes et fleurs réalisé en duo dans le cadre du cours d’Intégration web. Il présente une page d'accueil, une page recensant toutes les plantes et fleurs, une page détail du produit et une page panier.",
     first_image: "plantopia/plantopia-1.jpg",
     second_image: "plantopia/plantopia-2.jpg",
     details: {
       softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
-      role: ["Travail d’équipe", "Développement web", "Maquettage"],
+      role: ["Développement web", "Maquettage"],
       team: ["Erwann Michaud de Perier"],
       teamLink: ["https://www.linkedin.com/in/erwann-michaud-de-perier-149282268/"],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
@@ -271,6 +276,7 @@ export const worksItems = [
   // LE DÉDALE
   {
     id: "5",
+    path: "le-dedale",
     title: "Le Dédale",
     category: ["DEVELOPPEMENT", "WEBDESIGN"],
     description: "Site boutique-café d'un client",
@@ -298,6 +304,7 @@ export const worksItems = [
   //LOTR
   {
     id: "6",
+    path: "le-seigneur-des-anneaux",
     title: "Le Seigneur des Anneaux",
     category: ["DEVELOPPEMENT", "WEBDESIGN"],
     description: "Site de films",
@@ -320,6 +327,7 @@ export const worksItems = [
   // PAUSE CONNECT
   {
     id: "7",
+    path: "pause-connect",
     title: "Pause Connect",
     category: ["DEVELOPPEMENT", "WEBDESIGN"],
     description: "Site de sensibilisation addiction",
@@ -347,6 +355,7 @@ export const worksItems = [
   {
     id: "8",
     title: "Ghibli",
+    path: "ghibli",
     category: ["DEVELOPPEMENT"],
     description: "Site de films",
     image: "ghibli/ghibli.jpg",
@@ -368,6 +377,7 @@ export const worksItems = [
   //NIKE X TAKASHI
   {
     id: "9",
+    path: "nike-takashi",
     category: ["DESIGN GRAPHIQUE"],
     title: "Nike x Takashi",
     description: "Collab et affiches",
@@ -389,6 +399,7 @@ export const worksItems = [
   // MAGDIEL
   {
     id: "10",
+    path: "magdiel-lopez",
     title: "Magdiel Lopez",
     category: ["DESIGN GRAPHIQUE"],
     description: "Application de dates en couple",
@@ -411,10 +422,11 @@ export const worksItems = [
   //BUMBLE
   {
     id: "11",
+    path: "bumble",
     category: ["MARKETING"],
     title: "Bumble",
     description: "Inspiration d'un artiste",
-    image: "bumble.jpg",
+    image: "bumble/bumble.jpg",
     softwares: ["photoshop.svg"],
     banner: "pause-connect-banner.jpg",
     hashtag: "#IntégrationWeb #Maquettage",
@@ -432,10 +444,6 @@ export const worksItems = [
         "https://www.linkedin.com/in/valentin-renaud/",
       ],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
-    },
-    graphic_chart: {
-      logo: "plantopia-logo.svg",
-      colors: ["#397539", "#214521", "#EAD0C2", "#EFDDCF"],
     },
     date: 11,
   },

@@ -9,7 +9,7 @@ import LinkParticle from "../particles/LinkParticle.vue"
       <RouterLink
         to="/"
         class="link font-neueKaine font-extrabold text-4xl text-darkOlive-200 w-fit ml-48"
-        >ori</RouterLink
+        >orinaya</RouterLink
       >
     </div>
 
