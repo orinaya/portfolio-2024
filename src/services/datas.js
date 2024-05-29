@@ -349,6 +349,13 @@ export const worksItems = [
       ],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
+    buttons: [
+      {
+        href: "https://develop--magenta-torrone-ae14a6.netlify.app",
+        title: "Visiter le site",
+        color: "verdigris",
+      },
+    ],
     date: 5,
   },
   //Ghibli
@@ -381,14 +388,14 @@ export const worksItems = [
     category: ["DESIGN GRAPHIQUE"],
     title: "Nike x Takashi",
     description: "Collab et affiches",
-    image: "nike-takashi.jpg",
+    image: "nike/nike-1.jpg",
     softwares: ["illustrator.svg", "photoshop.svg"],
     banner: "takashi-2.jpg",
     hashtag: "#IntégrationWeb #Maquettage",
     big_description:
       "Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web.",
-    first_image: "takashi-1.jpg",
-    second_image: "takashi-2.jpg",
+    first_image: "nike/nike-1.jpg",
+    second_image: "nike/nike-2.jpg",
     details: {
       softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
       role: ["Travail d’équipe", "Développement web", "Maquettage"],
@@ -428,7 +435,7 @@ export const worksItems = [
     description: "Inspiration d'un artiste",
     image: "bumble/bumble.jpg",
     softwares: ["photoshop.svg"],
-    banner: "pause-connect-banner.jpg",
+    banner: "bumble/bumble-banner.jpg",
     hashtag: "#IntégrationWeb #Maquettage",
     big_description:
       "Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web.",

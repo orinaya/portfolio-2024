@@ -126,7 +126,7 @@ const getPreviousProject = () => {
             </div>
           </div>
         </template>
-        <template v-slot:mapeach v-if="userRoute === 'equinox'">
+        <template v-slot:mapeach v-if="userRoute === 'mapeach'">
           <div class="rounded-xl flex-1 bg-white-998 h-96">
             <div class="flex flex-col gap-2 justify-center items-center h-96">
               <video
@@ -145,7 +145,7 @@ const getPreviousProject = () => {
         <template v-slot:simple v-if="userRoute !== 'mapeach' && userRoute !== 'equinox'">
           <div class="rounded-xl flex-1 bg-white-998 h-96">
             <div
-              class="bg-cover bg-no-repeat h-96"
+              class="bg-cover bg-no-repeat h-96 rounded-xl"
               :style="{backgroundImage: 'url(' + getImageUrl(works.first_image) + ')'}"
             ></div>
           </div>
@@ -219,7 +219,7 @@ const getPreviousProject = () => {
       <template v-slot:equinox v-if="userRoute === 'equinox'">
         <H2Particle title="Une stratégie pour convaincre" uptitle="Notre PitchDeck" class="mb-12" />
         <iframe
-          src="@/assets/works/equinox/Equinox_Pitch_Deck_Nantes.pdf"
+          src="/src/assets/works/equinox/Equinox_Pitch_Deck_Nantes.pdf"
           width="100%"
           height="700px"
         >
@@ -227,12 +227,12 @@ const getPreviousProject = () => {
       </template>
       <template v-slot:mapeach v-if="userRoute === 'mapeach'">
         <H2Particle title="Une stratégie pour convaincre" uptitle="Notre Pitch" class="mb-12" />
-        <iframe src="@/assets/works/mapeach/MaPeach_Pitch.pdf" width="100%" height="700px">
+        <iframe src="/src/assets/works/mapeach/MaPeach_Pitch.pdf" width="100%" height="700px">
         </iframe>
       </template>
       <template v-slot:bumble v-if="userRoute === 'bumble'">
         <H2Particle title="Une stratégie pour convaincre" uptitle="Notre Pitch" class="mb-12" />
-        <iframe src="@/assets/works/bumble/Bumble-presentation.pdf" width="100%" height="700px">
+        <iframe src="/src/assets/works/bumble/Bumble-presentation.pdf" width="100%" height="700px">
         </iframe>
       </template>
     </PdfFrame>
