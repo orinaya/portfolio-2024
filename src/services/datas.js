@@ -273,7 +273,7 @@ export const worksItems = [
     },
     date: 4,
   },
-  // LE DÉDALE
+  // LE DÉDALE // EN COURS
   {
     id: "5",
     path: "le-dedale",
@@ -286,8 +286,8 @@ export const worksItems = [
     hashtag: "#IntégrationWeb #Maquettage",
     big_description:
       "Le Dédale, boutique-café ludique à Rezé est notre client actuel pour notre projet Fil rouge de deuxième année de formation. Au vu de leur installation récente, nous leur avons proposé de créer leur site. Désormais, au-delà d'un simple site vitrine, il s'agit également de leur créer un espace boutique contenant tous leurs produits le tout d'un un univers steampunk !",
-    first_image: "dedale/dedale-banner.jpg",
-    second_image: "dedale/dedale-banner.jpg",
+    first_image: "dedale/dedale-1.jpg",
+    second_image: "dedale/dedale-2.jpg",
     details: {
       softwares: ["figma.svg", "wordpress.svg", "elementor.svg", "woo.svg"],
       role: ["Gestion de Projet", "Développement web", "Maquettage"],
@@ -308,18 +308,18 @@ export const worksItems = [
     title: "Le Seigneur des Anneaux",
     category: ["DEVELOPPEMENT", "WEBDESIGN"],
     description: "Site de films",
-    image: "LOTR.jpg",
-    softwares: ["figma.svg", "wordpress.svg", "elementor.svg"],
-    banner: "dedale-banner.jpg",
-    hashtag: "#IntégrationWeb #Maquettage",
+    image: "lotr/LOTR.jpg",
+    softwares: ["figma.svg", "php.svg"],
+    banner: "lotr/lotr-banner.jpg",
+    hashtag: "#POO #MVC",
     big_description:
       "Le Dédale, boutique-café ludique à Rezé est notre client actuel pour notre projet Fil rouge de deuxième année de formation. Au vu de leur installation récente, nous leur avons proposé de créer leur site. Désormais, au-delà d'un simple site vitrine, il s'agit également de leur créer un espace boutique contenant tous leurs produits le tout d'un un univers steampunk !",
-    first_image: "plantopia-1.jpg",
-    second_image: "plantopia-1.jpg",
+    first_image: "lotr/lotr-1.jpg",
+    second_image: "lotr/lotr-2.jpg",
     details: {
-      softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
-      role: ["Travail d’équipe", "Développement web", "Maquettage"],
-      team: [""],
+      softwares: ["figma.svg", "php.svg"],
+      role: ["Développement web", "Maquettage"],
+      team: "",
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
     date: 10,
@@ -337,7 +337,7 @@ export const worksItems = [
     hashtag: "#DéveloppementFront #Maquettage #Marketing",
     big_description:
       "Pause Connect est un projet de sensibilisation à l'addiction aux écrans, réalisé dans le cadre de partiels. Ce site propose des données chiffrées, des conseils pratiques, des défis pour réduire l'utilisation des écrans, ainsi qu'un quiz interactif pour évaluer la dépendance potentielle.",
-    first_image: "pause-connect/pause-connect-2.jpg",
+    first_image: "pause-connect/pause-connect-1.jpg",
     second_image: "pause-connect/pause-connect-2.jpg",
     details: {
       softwares: ["figma.svg", "html.svg", "css.svg", "vue.svg"],
@@ -370,7 +370,7 @@ export const worksItems = [
     banner: "ghibli/ghibli-banner.jpg",
     hashtag: "#IntégrationWeb #Maquettage",
     big_description:
-      "Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web.",
+      "Ce projet a été réalisé dans le cadre du cours du framework Vue.js. Il recense tous les films du Studio Ghibli récupéré grâce à une API Ghibli. Le but, ici, était d'afficher toutes les données et de donner la possibilité de voir le détail d'un film mais également de filtrer et trier les films.",
     first_image: "ghibli/ghibli-1.jpg",
     second_image: "ghibli/ghibli-2.jpg",
     details: {
@@ -404,56 +404,56 @@ export const worksItems = [
     date: 1,
   },
   // MAGDIEL
-  {
-    id: "10",
-    path: "magdiel-lopez",
-    title: "Magdiel Lopez",
-    category: ["DESIGN GRAPHIQUE"],
-    description: "Application de dates en couple",
-    image: "magdiel-lopez.jpg",
-    softwares: ["figma.svg", "html.svg", "css.svg", "vue.svg"],
-    banner: "ghibli-banner.jpg",
-    hashtag: "#IntégrationWeb #Maquettage",
-    big_description:
-      "Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web.",
-    first_image: "ghibli-1.jpg",
-    second_image: "ghibli-2.jpg",
-    details: {
-      softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
-      role: ["Développement front", "Maquettage"],
-      team: [""],
-      school_year: "Bachelor Cycle Web et Multimédia - Année 2",
-    },
-    date: 7,
-  },
+  // {
+  //   id: "10",
+  //   path: "magdiel-lopez",
+  //   title: "Magdiel Lopez",
+  //   category: ["DESIGN GRAPHIQUE"],
+  //   description: "Application de dates en couple",
+  //   image: "magdiel-lopez.jpg",
+  //   softwares: ["figma.svg", "html.svg", "css.svg", "vue.svg"],
+  //   banner: "ghibli-banner.jpg",
+  //   hashtag: "#IntégrationWeb #Maquettage",
+  //   big_description:
+  //     "Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web.",
+  //   first_image: "ghibli-1.jpg",
+  //   second_image: "ghibli-2.jpg",
+  //   details: {
+  //     softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
+  //     role: ["Développement front", "Maquettage"],
+  //     team: [""],
+  //     school_year: "Bachelor Cycle Web et Multimédia - Année 2",
+  //   },
+  //   date: 7,
+  // },
   //BUMBLE
-  {
-    id: "11",
-    path: "bumble",
-    category: ["MARKETING"],
-    title: "Bumble",
-    description: "Inspiration d'un artiste",
-    image: "bumble/bumble.jpg",
-    softwares: ["photoshop.svg"],
-    banner: "bumble/bumble-banner.jpg",
-    hashtag: "#IntégrationWeb #Maquettage",
-    big_description:
-      "Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web.",
-    first_image: "plantopia-1.jpg",
-    second_image: "plantopia-1.jpg",
-    details: {
-      softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
-      role: ["Travail d’équipe", "Développement web", "Maquettage"],
-      team: ["Erwann Michaud de Perier", "Arthur Ploteau", "Valentin Renaud"],
-      teamLink: [
-        "https://www.linkedin.com/in/erwann-michaud-de-perier-149282268/",
-        "https://www.linkedin.com/in/arthur-ploteau-314110234/",
-        "https://www.linkedin.com/in/valentin-renaud/",
-      ],
-      school_year: "Bachelor Cycle Web et Multimédia - Année 2",
-    },
-    date: 11,
-  },
+  // {
+  //   id: "11",
+  //   path: "bumble",
+  //   category: ["MARKETING"],
+  //   title: "Bumble",
+  //   description: "Inspiration d'un artiste",
+  //   image: "bumble/bumble.jpg",
+  //   softwares: ["photoshop.svg"],
+  //   banner: "bumble/bumble-banner.jpg",
+  //   hashtag: "#IntégrationWeb #Maquettage",
+  //   big_description:
+  //     "Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web.",
+  //   first_image: "plantopia-1.jpg",
+  //   second_image: "plantopia-1.jpg",
+  //   details: {
+  //     softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
+  //     role: ["Travail d’équipe", "Développement web", "Maquettage"],
+  //     team: ["Erwann Michaud de Perier", "Arthur Ploteau", "Valentin Renaud"],
+  //     teamLink: [
+  //       "https://www.linkedin.com/in/erwann-michaud-de-perier-149282268/",
+  //       "https://www.linkedin.com/in/arthur-ploteau-314110234/",
+  //       "https://www.linkedin.com/in/valentin-renaud/",
+  //     ],
+  //     school_year: "Bachelor Cycle Web et Multimédia - Année 2",
+  //   },
+  //   date: 11,
+  // },
 ]
 
 export const passionItems = [
