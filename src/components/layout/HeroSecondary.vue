@@ -9,20 +9,13 @@ defineProps({
     <div class="container">
       <div class="flex justify-between text-darkOlive-200 py-20 items-center">
         <div class="max-w-xl flex flex-col gap-6">
-          <div>
+          <div class="lineUp">
             <div class="flex gap-2">
               <p class="uppercase text-melon-700 text-xl font-medium">{{ uptitle }}</p>
             </div>
-            <template v-if="profil">
-              <h1 class="font-neueKaine font-extrabold text-4xl">
-                Comprendre mon <span>univers</span> et mes <span>valeurs</span>
-              </h1>
-            </template>
-            <template v-else>
-              <h1 class="font-neueKaine font-extrabold text-4xl">
-                Découvrir mes compétences à travers des <span>projets concrets</span>
-              </h1>
-            </template>
+            <h1 class="font-neueKaine font-extrabold text-4xl lineUp">
+              Comprendre mon <span>univers</span> et mes <span>valeurs</span>
+            </h1>
           </div>
         </div>
 

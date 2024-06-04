@@ -1,4 +1,5 @@
 <script setup>
+import {computed} from "vue"
 import {useRouter} from "vue-router"
 import {worksItems} from "@/services/datas"
 import H1Particle from "@/components/particles/H1Particle.vue"
@@ -16,6 +17,9 @@ const getIconUrl = (image) => {
   return new URL(`/src/assets/icons/${image}`, import.meta.url).href
 }
 
+const pdfUrl = (pdf) => {
+  return new URL(`/works/${pdf}.pdf`, import.meta.url).href
+}
 const router = useRouter()
 const userRoute = router.currentRoute.value.params.path
 
@@ -218,22 +222,16 @@ const getPreviousProject = () => {
     <PdfFrame class="my-16">
       <template v-slot:equinox v-if="userRoute === 'equinox'">
         <H2Particle title="Une stratégie pour convaincre" uptitle="Notre PitchDeck" class="mb-12" />
-        <iframe
-          src="@/assets/works/equinox/Equinox_Pitch_Deck_Nantes.pdf"
-          width="100%"
-          height="700px"
-        >
+        <iframe :src="pdfUrl('equinox/Equinox_Pitch_Deck_Nantes')" width="100%" height="700px">
         </iframe>
       </template>
       <template v-slot:mapeach v-if="userRoute === 'mapeach'">
         <H2Particle title="Une stratégie pour convaincre" uptitle="Notre Pitch" class="mb-12" />
-        <iframe src="@/assets/works/mapeach/MaPeach_Pitch.pdf" width="100%" height="700px">
-        </iframe>
+        <iframe :src="pdfUrl('mapeach/MaPeach_Pitch')" width="100%" height="700px"> </iframe>
       </template>
       <template v-slot:bumble v-if="userRoute === 'bumble'">
         <H2Particle title="Une stratégie pour convaincre" uptitle="Notre Pitch" class="mb-12" />
-        <iframe src="@/assets/works/bumble/Bumble-presentation.pdf" width="100%" height="700px">
-        </iframe>
+        <iframe :src="pdfUrl('bumble/Bumble-presentation')" width="100%" height="700px"> </iframe>
       </template>
     </PdfFrame>
     <div class="container mt-4">
