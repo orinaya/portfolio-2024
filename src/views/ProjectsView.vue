@@ -13,11 +13,6 @@ const getProjectDetails = (path) => {
   router.push({path: `/projets/${path}`})
 }
 
-// const getProjectDetails = (title) => {
-//   const encodedTitle = encodeURIComponent(title)
-//   router.push({path: `/projets/${encodedTitle}`})
-// }
-
 const previousPages = [
   {
     path: "/projets",
@@ -74,11 +69,6 @@ const filteredMovies = computed(() => {
         </button>
       </div>
       <div class="flex gap-2 items-center">
-        <!-- <select class="bg-white-998 rounded-md" v-model="selectedSort">
-          <option value="default">Trier par</option>
-          <option value="date_asc">Le plus ancien</option>
-          <option value="date_desc">Le plus récent</option>
-        </select> -->
         <span class="bg-verdigris-900 text-verdigris-400 font-semibold w-fit px-3 rounded"
           >{{ worksItems.length }} resultats</span
         >

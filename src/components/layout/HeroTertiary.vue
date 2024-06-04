@@ -26,7 +26,6 @@ defineProps({
         <div class="max-w-2xl flex flex-col gap-6">
           <div>
             <div class="flex gap-2">
-              <!-- <img :src="getImageUrl(icon)" /> -->
               <p class="uppercase text-melon-700 text-xl font-medium">{{ uptitle }}</p>
             </div>
             <template v-if="profil">

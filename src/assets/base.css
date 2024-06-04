@@ -71,6 +71,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-doubleup:before {
+  content: "\e913";
+}
 .icon-all:before {
   content: "\e900";
 }

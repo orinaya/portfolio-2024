@@ -9,8 +9,8 @@ const getImageUrl = (image) => {
   return new URL(`/src/assets/works/${image}`, import.meta.url).href
 }
 
-const getProjectDetails = (id) => {
-  router.push({path: `/projets/${id}`})
+const getProjectDetails = (path) => {
+  router.push({path: `/projets/${path}`})
 }
 </script>
 
@@ -31,7 +31,7 @@ const getProjectDetails = (id) => {
           :description="item.description"
           :image="getImageUrl(item.image)"
           :softwares="item.softwares"
-          @send-project-id="getProjectDetails"
+          @send-project-title="getProjectDetails(item.path)"
         />
       </div>
       <LinkParticle

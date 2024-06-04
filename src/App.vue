@@ -4,6 +4,7 @@ import Navbar from "./components/layout/Navbar.vue"
 import Footer from "./components/layout/Footer.vue"
 import {useRouter} from "vue-router"
 import {onBeforeUnmount, onMounted, ref} from "vue"
+import ScrollTop from "./components/particles/ScrollTop.vue"
 const router = useRouter()
 
 const isScrolled = ref(false)
@@ -22,9 +23,10 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <Navbar v-if="router.currentRoute.value.name !== 'accueil' || isScrolled" />
+  <Navbar />
   <RouterView />
   <Footer />
+  <ScrollTop />
 </template>
 
 <style scoped>

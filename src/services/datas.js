@@ -15,18 +15,16 @@ export const navbarItems = [
 
 export const currentItems = [
   {
-    image: "floax-logo.svg",
-    link: "/experience",
-    title: "Stage développement web",
-    place: "Floax, 44100 Vertou",
-    date: "Depuis avril 2023",
+    title: "Bachelor Cycle Web et Multimédia",
+    text: "Bachelor 1 et Bachelor 2",
+    image: "mds-logo.svg",
+    date: "Depuis septembre 2022",
   },
   {
-    image: "mds-logo.svg",
-    link: "/etudes",
-    title: "Bachelor Cycle Web et Multimédia ",
-    place: "MyDigitalSchool, 44800 Saint Herblain",
-    date: "Depuis septembre 2022",
+    title: "Stage développement Web",
+    text: "Bachelor 1 et Bachelor 2",
+    image: "floax-logo.svg",
+    date: "Depuis avril 2023",
   },
 ]
 
@@ -39,7 +37,6 @@ export const timelineItems = [
     date: "2023-2024",
     skills: ["Vue.js", "Sass", "Strapi", "GraphQL", "Angular"],
   },
-
   {
     img: "mds-logo.svg",
     title: "Bachelor Cycle Web et Multimédia",
@@ -119,7 +116,7 @@ export const timelineItems = [
 ]
 
 export const worksItems = [
-  //EQUINOX // OK
+  //EQUINOX
   {
     id: "0",
     path: "equinox",
@@ -154,7 +151,7 @@ export const worksItems = [
     ],
     date: 8,
   },
-  // MAPEACH // OK
+  // MAPEACH
   {
     id: "1",
     path: "mapeach",
@@ -190,7 +187,7 @@ export const worksItems = [
     ],
     date: 12,
   },
-  // FLOAX // OK
+  // FLOAX
   {
     id: "2",
     path: "studio-floax",
@@ -220,36 +217,7 @@ export const worksItems = [
     ],
     date: 2,
   },
-  // PSS
-  // {
-  //   id: "3",
-  //   path: "prepa-sup-sante",
-  //   category: ["DEVELOPPEMENT"],
-  //   title: "Prépa Sup Santé",
-  //   description: "Coucou",
-  //   image: "pss.jpg",
-  //   softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
-  //   banner: "plantopia-banner.jpg",
-  //   hashtag: "#IntégrationWeb #Maquettage",
-  //   big_description:
-  //     "Plantopia est un site e-commerce de plantes et fleurs réalisé en duo dans le cadre du cours d’Intégration web. Il présente une page d'accueil, une page avec toutes les plantes et fleurs, une page détail du produit et une page panier",
-  //   first_image: "pss.jpg",
-  //   second_image: "pss.jpg",
-  //   details: {
-  //     softwares: ["html.svg", "sass.svg", "vue.svg"],
-  //     role: ["Travail d’équipe", "Développement web"],
-  //     team: [
-  //       "Loïc Vanderschooten",
-  //       "Adrien Vaucard",
-  //       "Clara Le Meur",
-  //       "Brice Le Gallo-Tastet",
-  //       "Vincent Ramaye",
-  //     ],
-  //     school_year: "Bachelor Cycle Web et Multimédia - Année 2",
-  //   },
-  //   date: 3,
-  // },
-  // PLANTOPIA // OK
+  // PLANTOPIA
   {
     id: "4",
     path: "plantopia",
@@ -273,7 +241,7 @@ export const worksItems = [
     },
     date: 4,
   },
-  // LE DÉDALE // EN COURS
+  // LE DÉDALE
   {
     id: "5",
     path: "le-dedale",
@@ -381,79 +349,6 @@ export const worksItems = [
     },
     date: 6,
   },
-  //NIKE X TAKASHI
-  {
-    id: "9",
-    path: "nike-takashi",
-    category: ["DESIGN GRAPHIQUE"],
-    title: "Nike x Takashi",
-    description: "Collab et affiches",
-    image: "nike/nike-1.jpg",
-    softwares: ["illustrator.svg", "photoshop.svg"],
-    banner: "takashi-2.jpg",
-    hashtag: "#IntégrationWeb #Maquettage",
-    big_description:
-      "Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web.",
-    first_image: "nike/nike-1.jpg",
-    second_image: "nike/nike-2.jpg",
-    details: {
-      softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
-      role: ["Travail d’équipe", "Développement web", "Maquettage"],
-      school_year: "Bachelor Cycle Web et Multimédia - Année 2",
-    },
-    date: 1,
-  },
-  // MAGDIEL
-  // {
-  //   id: "10",
-  //   path: "magdiel-lopez",
-  //   title: "Magdiel Lopez",
-  //   category: ["DESIGN GRAPHIQUE"],
-  //   description: "Application de dates en couple",
-  //   image: "magdiel-lopez.jpg",
-  //   softwares: ["figma.svg", "html.svg", "css.svg", "vue.svg"],
-  //   banner: "ghibli-banner.jpg",
-  //   hashtag: "#IntégrationWeb #Maquettage",
-  //   big_description:
-  //     "Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web.",
-  //   first_image: "ghibli-1.jpg",
-  //   second_image: "ghibli-2.jpg",
-  //   details: {
-  //     softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
-  //     role: ["Développement front", "Maquettage"],
-  //     team: [""],
-  //     school_year: "Bachelor Cycle Web et Multimédia - Année 2",
-  //   },
-  //   date: 7,
-  // },
-  //BUMBLE
-  // {
-  //   id: "11",
-  //   path: "bumble",
-  //   category: ["MARKETING"],
-  //   title: "Bumble",
-  //   description: "Inspiration d'un artiste",
-  //   image: "bumble/bumble.jpg",
-  //   softwares: ["photoshop.svg"],
-  //   banner: "bumble/bumble-banner.jpg",
-  //   hashtag: "#IntégrationWeb #Maquettage",
-  //   big_description:
-  //     "Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web. Plantopia est un site e-commerce de plantes et fleurs réalisé dans le cadre du cours d’Intégration web.",
-  //   first_image: "plantopia-1.jpg",
-  //   second_image: "plantopia-1.jpg",
-  //   details: {
-  //     softwares: ["figma.svg", "html.svg", "css.svg", "js.svg"],
-  //     role: ["Travail d’équipe", "Développement web", "Maquettage"],
-  //     team: ["Erwann Michaud de Perier", "Arthur Ploteau", "Valentin Renaud"],
-  //     teamLink: [
-  //       "https://www.linkedin.com/in/erwann-michaud-de-perier-149282268/",
-  //       "https://www.linkedin.com/in/arthur-ploteau-314110234/",
-  //       "https://www.linkedin.com/in/valentin-renaud/",
-  //     ],
-  //     school_year: "Bachelor Cycle Web et Multimédia - Année 2",
-  //   },
-  //   date: 11,
-  // },
 ]
 
 export const passionItems = [
@@ -508,25 +403,6 @@ export const persosItems = [
         icon: "icon-car",
         subtitle: "Transport",
         content: "Permis B + Voiture",
-      },
-    ],
-  },
-]
-
-export const contactItems = [
-  {
-    titleStart: "Contact &",
-    titleEnd: "réseaux",
-    data: [
-      {
-        icon: "icon-mail-olive.svg",
-        subtitle: "Email",
-        content: "ori.frouin@gmail.com",
-      },
-      {
-        icon: "icon-tel.svg",
-        subtitle: "Téléphone",
-        content: "07 70 35 45 69",
       },
     ],
   },
@@ -677,11 +553,9 @@ export const languagesItems = [
   {
     color: "#CCD8FF",
     image: "french-flag.svg",
-    // title: "Maternelle",
   },
   {
     color: "#FBD0D7",
     image: "english-flag.svg",
-    // title: "Niveau",
   },
 ]

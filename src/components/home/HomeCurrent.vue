@@ -1,25 +1,11 @@
 <script setup>
 import H2Particle from "../particles/H2Particle.vue"
 import LinkParticle from "../particles/LinkParticle.vue"
+import {currentItems} from "@/services/datas"
 
 const getImageUrl = (image) => {
   return new URL(`/src/assets/img/${image}`, import.meta.url).href
 }
-
-const currentHome = [
-  {
-    title: "Bachelor Cycle Web et Multimédia",
-    text: "Bachelor 1 et Bachelor 2",
-    image: "mds-logo.svg",
-    date: "Depuis septembre 2022",
-  },
-  {
-    title: "Stage développement Web",
-    text: "Bachelor 1 et Bachelor 2",
-    image: "floax-logo.svg",
-    date: "Depuis avril 2023",
-  },
-]
 </script>
 
 <template>
@@ -35,7 +21,7 @@ const currentHome = [
       />
       <div class="w-full flex flex-wrap gap-12 justify-center items-center">
         <div
-          v-for="item in currentHome"
+          v-for="item in currentItems"
           :key="item"
           class="bg-darkOlive-800 lg:h-52 h-44 w-80 py-5 lg:px-10 px-0 flex flex-col justify-end items-center rounded-xl relative hover:scale-105 transition-transform duration-200 hover:brightness-110 hover:drop-shadow-xl"
         >

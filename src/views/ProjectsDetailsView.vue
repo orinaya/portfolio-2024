@@ -219,7 +219,7 @@ const getPreviousProject = () => {
       <template v-slot:equinox v-if="userRoute === 'equinox'">
         <H2Particle title="Une stratégie pour convaincre" uptitle="Notre PitchDeck" class="mb-12" />
         <iframe
-          src="/src/assets/works/equinox/Equinox_Pitch_Deck_Nantes.pdf"
+          src="@/assets/works/equinox/Equinox_Pitch_Deck_Nantes.pdf"
           width="100%"
           height="700px"
         >
@@ -227,12 +227,12 @@ const getPreviousProject = () => {
       </template>
       <template v-slot:mapeach v-if="userRoute === 'mapeach'">
         <H2Particle title="Une stratégie pour convaincre" uptitle="Notre Pitch" class="mb-12" />
-        <iframe src="/src/assets/works/mapeach/MaPeach_Pitch.pdf" width="100%" height="700px">
+        <iframe src="@/assets/works/mapeach/MaPeach_Pitch.pdf" width="100%" height="700px">
         </iframe>
       </template>
       <template v-slot:bumble v-if="userRoute === 'bumble'">
         <H2Particle title="Une stratégie pour convaincre" uptitle="Notre Pitch" class="mb-12" />
-        <iframe src="/src/assets/works/bumble/Bumble-presentation.pdf" width="100%" height="700px">
+        <iframe src="@/assets/works/bumble/Bumble-presentation.pdf" width="100%" height="700px">
         </iframe>
       </template>
     </PdfFrame>

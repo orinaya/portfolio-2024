@@ -2,10 +2,6 @@
 defineProps({
   infos: Array,
 })
-
-const getIconUrl = (image) => {
-  return new URL(`/src/assets/icons/${image}`, import.meta.url).href
-}
 </script>
 
 <template>

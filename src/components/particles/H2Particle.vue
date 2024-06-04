@@ -15,16 +15,11 @@ defineProps({
     required: false,
   },
 })
-
-const getImageUrl = (image) => {
-  return new URL(`/src/assets/icons/${image}`, import.meta.url).href
-}
 </script>
 
 <template>
   <div>
     <div class="flex gap-2">
-      <!-- <img :src="getImageUrl(icon)" /> -->
       <p class="uppercase text-melon-700">{{ uptitle }}</p>
     </div>
     <h2 class="text-white-998 font-neueKaine font-extrabold text-3xl" v-if="darkBg">{{ title }}</h2>

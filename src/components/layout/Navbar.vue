@@ -1,37 +1,102 @@
 <script setup>
+import {onMounted, onUnmounted, ref} from "vue"
 import ExternalLinkParticle from "../particles/ExternalLinkParticle.vue"
-import LinkParticle from "../particles/LinkParticle.vue"
+import router from "@/router"
+import ButtonParticle from "../particles/ButtonParticle.vue"
+
+const navElement = ref(null)
+
+const handleScroll = () => {
+  if (!navElement.value) {
+    navElement.value = document.querySelector("nav")
+  }
+  const scrollTop = window.pageYOffset
+  if (scrollTop > 0) {
+    navElement.value.classList.add("nav-shrink")
+  } else {
+    navElement.value.classList.remove("nav-shrink")
+  }
+}
+
+const scrollToBottom = () => {
+  window.scrollTo({
+    top: document.documentElement.scrollHeight,
+    behavior: "smooth",
+  })
+}
+
+const isMenuOpen = ref(true)
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScroll)
+})
 </script>
 
 <template>
-  <nav class="h-16 flex items-center sticky top-0 z-50 bg-beige-900">
+  <nav
+    class="h-24 flex items-center sticky top-0 z-50"
+    :class="router.currentRoute.value.name !== 'accueil' ? 'bg-beige-900' : ''"
+  >
     <div class="flex flex-1">
       <RouterLink
         to="/"
-        class="link font-neueKaine font-extrabold text-4xl text-darkOlive-200 w-fit ml-48"
+        class="link font-neueKaine font-extrabold text-4xl text-darkOlive-200 w-fit lg:ml-48 ml-5 md:mt-0 mt-5"
         >orinaya</RouterLink
       >
     </div>
 
-    <div class="flex flex-1 justify-center items-center m-4">
-      <div class="flex gap-8">
-        <RouterLink to="/profil" class="link text-darkOlive-200">Mon profil</RouterLink>
-        <RouterLink to="/projets" class="link text-darkOlive-200">Mes projets</RouterLink>
+    <div class="flex flex-1 justify-center items-center m-4 menu" v-show="isMenuOpen">
+      <div class="flex items-center gap-8">
+        <RouterLink
+          to="/profil"
+          class="link"
+          :class="
+            router.currentRoute.value.name !== 'accueil'
+              ? 'text-darkOlive-200'
+              : 'text-verdigris-900'
+          "
+          >Mon profil</RouterLink
+        >
+        <RouterLink
+          to="/projets"
+          class="link"
+          :class="
+            router.currentRoute.value.name !== 'accueil'
+              ? 'text-darkOlive-200'
+              : 'text-verdigris-900'
+          "
+          >Mes projets</RouterLink
+        >
         <ExternalLinkParticle
           href="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=drive_link"
           target="_blank"
           title="Télécharger mon CV"
-          color="beige"
+          :color="router.currentRoute.value.name !== 'accueil' ? 'beige' : 'neutral-verdigris'"
           iconAfter="download"
         />
-        <LinkParticle
+        <ButtonParticle
+          @click="scrollToBottom"
           to="/contact"
           title="Me contacter"
-          color="melon"
+          :color="router.currentRoute.value.name !== 'accueil' ? 'melon' : 'verdigris'"
           mailto:orianefrn
           iconAfter="mail"
         />
       </div>
+    </div>
+
+    <div class="menu-toggle" @click="toggleMenu" :class="{open: isMenuOpen}">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </nav>
 </template>
@@ -42,5 +107,98 @@ import LinkParticle from "../particles/LinkParticle.vue"
   border-radius: 4px;
   width: fit-content;
   height: fit-content;
+}
+
+nav[style*="background-color"] {
+  display: none;
+}
+
+.nav-shrink {
+  height: 4rem;
+  background-color: var(--beige-900);
+  transition: height 0.3s ease;
+}
+
+.nav-shrink > div > div > a:nth-child(-n + 2) {
+  color: var(--olive-200);
+}
+
+.nav-shrink > div > div > a:nth-child(-n + 2) {
+  &:active,
+  &:focus {
+    color: var(--verdigris-900);
+  }
+}
+
+@media (max-width: 1024px) {
+  nav {
+    display: block;
+  }
+  .menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--olive-200);
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 2px;
+  }
+
+  .menu-toggle span:nth-child(1) {
+    top: 10px;
+  }
+
+  .menu-toggle span:nth-child(2) {
+    top: 18px;
+  }
+
+  .menu-toggle span:nth-child(3) {
+    top: 26px;
+  }
+
+  .menu-toggle.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  nav > div:nth-child(2) {
+    position: fixed;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex: 0;
+    z-index: 999;
+    display: flex;
+  }
+
+  nav > div:nth-child(2) > div {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

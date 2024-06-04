@@ -1,11 +1,7 @@
 <script setup>
 import H2Particle from "../particles/H2Particle.vue"
 import InformationsParticle from "../particles/InformationParticle.vue"
-import {persosItems, contactItems} from "@/services/datas"
-
-const getIconUrl = (image) => {
-  return new URL(`/src/assets/icons/${image}`, import.meta.url).href
-}
+import {persosItems} from "@/services/datas"
 
 const copy = () => {
   const emailContent = "contact@orianefrouin.fr"
@@ -47,7 +43,9 @@ const copy = () => {
             </div>
             <div class="flex gap-2 items-center justify-end">
               <p class="w-fit">ori.frouin@gmail.com</p>
-              <button @click="copy"><i class="icon-copy" /></button>
+              <button @click="copy">
+                <i class="icon-copy" />
+              </button>
             </div>
           </div>
           <div class="flex flex-wrap gap-5 justify-start md:items-center">

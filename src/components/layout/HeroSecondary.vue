@@ -27,7 +27,7 @@ defineProps({
         </div>
 
         <div class="lg:block hidden relative mt-10">
-          <img src="/src/assets/img/profile_picture.png" class="hero-img" />
+          <img src="@/assets/img/profile_picture.png" class="hero-img" />
           <img
             src="../../assets/img/talk-bubble-reverse.svg"
             class="bubble absolute float-content"

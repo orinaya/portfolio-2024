@@ -4,16 +4,16 @@ import LinkParticle from "../particles/LinkParticle.vue"
 </script>
 
 <template>
-  <div class="rounded-b-xl mb-24 bg-beige-900">
+  <div class="rounded-b-xl mb-24 bg-beige-900 relative -mt-24">
     <div class="hero-container lg:h-screen flex flex-col md:flex-row justify-between w-full">
-      <div class="flex flex-1 flex-col">
-        <nav class="pl-44 my-8">
+      <div class="flex flex-1 flex-col pt-24">
+        <!-- <nav class="pl-44 my-8">
           <RouterLink
             to="/"
             class="link font-neueKaine font-extrabold text-4xl text-darkOlive-200 w-fit"
             >ori</RouterLink
           >
-        </nav>
+        </nav> -->
 
         <div class="w-full flex flex-col gap-12 lg:pl-40 xl:pl-48 pl-12 md:py-48 py-8 pt-32">
           <div class="flex flex-col gap-4 relative">
@@ -59,27 +59,8 @@ import LinkParticle from "../particles/LinkParticle.vue"
         </div>
       </div>
       <div
-        class="hidden hero-box md:flex flex-1 flex-col bg-verdigris-300 m-4 rounded-xl items-center"
+        class="hidden hero-box md:flex flex-1 flex-col bg-verdigris-300 m-4 rounded-xl items-center pt-24"
       >
-        <nav class="flex w-fit gap-8 m-4 h-fit justify-between">
-          <RouterLink to="/profil" class="link text-verdigris-900">Mon profil</RouterLink>
-          <RouterLink to="/projets" class="link text-verdigris-900">Mes projets</RouterLink>
-          <ExternalLinkParticle
-            href="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=drive_link"
-            target="_blank"
-            title="Télécharger mon CV"
-            color="neutral-verdigris"
-            iconAfter="download"
-          />
-          <LinkParticle
-            to="/contact"
-            title="Me contacter"
-            color="verdigris"
-            mailto:orianefrn
-            iconAfter="mail"
-          />
-        </nav>
-
         <img src="../../assets/img/hero-image.svg" class="hero-img" />
       </div>
 
