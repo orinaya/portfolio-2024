@@ -18,7 +18,7 @@ const getIconUrl = (image) => {
 }
 
 const pdfUrl = (pdf) => {
-  return new URL(`@/assets/works/${pdf}.pdf`, import.meta.url).href
+  return new URL(`/src/assets/pdf/${pdf}.pdf`, import.meta.url).href
 }
 const router = useRouter()
 const userRoute = router.currentRoute.value.params.path
