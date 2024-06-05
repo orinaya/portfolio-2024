@@ -17,10 +17,6 @@ const getIconUrl = (image) => {
   return new URL(`/src/assets/icons/${image}`, import.meta.url).href
 }
 
-// const pdfUrl = (pdf) => {
-//   return new URL(`/pdf/${pdf}.pdf`, import.meta.url).href
-// }
-
 const pdfUrl = (pdf) => {
   return `/pdf/${pdf}.pdf`
 }
@@ -44,13 +40,13 @@ const previousPages = [
 const getNextProjectRoute = () => {
   const currentIndex = worksItems.findIndex((item) => item.path === userRoute)
   const nextRoute = currentIndex + 1
-  return nextRoute < worksItems.length ? worksItems[nextRoute].path : null
+  return nextRoute < worksItems.length ? `${/projets/}` + worksItems[nextRoute].path : null
 }
 
 const getPreviousProjectRoute = () => {
   const currentIndex = worksItems.findIndex((item) => item.path === userRoute)
   const previousRoute = currentIndex - 1
-  return previousRoute >= 0 ? worksItems[previousRoute].path : null
+  return previousRoute >= 0 ? `${/projets/}` + worksItems[previousRoute].path : null
 }
 
 const getNextProject = () => {
