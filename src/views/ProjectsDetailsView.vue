@@ -17,9 +17,14 @@ const getIconUrl = (image) => {
   return new URL(`/src/assets/icons/${image}`, import.meta.url).href
 }
 
+// const pdfUrl = (pdf) => {
+//   return new URL(`/pdf/${pdf}.pdf`, import.meta.url).href
+// }
+
 const pdfUrl = (pdf) => {
-  return new URL(`/pdf/${pdf}.pdf`, import.meta.url).href
+  return `/pdf/${pdf}.pdf`
 }
+
 const router = useRouter()
 const userRoute = router.currentRoute.value.params.path
 
