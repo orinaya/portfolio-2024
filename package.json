@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "vue": "^3.4.21",
+    "vue-easy-lightbox": "^1.19.0",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {

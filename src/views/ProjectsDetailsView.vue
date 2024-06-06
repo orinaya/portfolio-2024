@@ -1,5 +1,5 @@
 <script setup>
-import {computed} from "vue"
+import {computed, ref} from "vue"
 import {useRouter} from "vue-router"
 import {worksItems} from "@/services/datas"
 import H1Particle from "@/components/particles/H1Particle.vue"
@@ -8,6 +8,11 @@ import FirstMedia from "@/components/projects/FirstMedia.vue"
 import PdfFrame from "@/components/projects/PdfFrame.vue"
 import BreadcrumbParticle from "@/components/particles/BreadcrumbParticle.vue"
 import H2Particle from "@/components/particles/H2Particle.vue"
+import VueEasyLightbox from "vue-easy-lightbox"
+
+const showBanner = ref(false)
+const showFirstImage = ref(false)
+const showSecondImage = ref(false)
 
 const getImageUrl = (image) => {
   return new URL(`/src/assets/works/${image}`, import.meta.url).href
@@ -73,22 +78,21 @@ const getPreviousProject = () => {
 
     <H1Particle :title="works.title" center class="mt-6" />
 
-    <p class="text-verdigris-200 text-2xl text-center -mt-3">
+    <p class="text-verdigris-200 text-2xl text-center -mt-2">
       {{ works.description }}
     </p>
-    <div class="container mt-4">
-      <div
-        :class="{
-          'flex justify-end': !getPreviousProjectRoute(),
-          'flex justify-between': getPreviousProjectRoute() && getNextProjectRoute(),
-          'flex justify-start': !getNextProjectRoute(),
-        }"
-      ></div>
-    </div>
+
     <div
-      class="banner w-full bg-bottom bg-no-repeat rounded-xl md:my-16 my-4 mx-auto relative md:h-96 h-44"
+      class="banner w-full bg-bottom bg-no-repeat rounded-xl md:my-16 my-4 md:mt-8 mx-auto relative md:h-96 h-44 cursor-pointer"
       :style="'background-image: url(' + getImageUrl(works.banner) + ')'"
+      @click="showBanner = true"
     >
+      <vue-easy-lightbox
+        :visible="showBanner"
+        :imgs="getImageUrl(works.banner)"
+        @hide="showBanner = false"
+      />
+
       <span class="rounded-md py-1 px-2 absolute top-4 left-4">
         <strong class="font-semibold">{{ works.hashtag }}</strong>
       </span>
@@ -148,24 +152,31 @@ const getPreviousProject = () => {
           </div>
         </template>
         <template v-slot:simple v-if="userRoute !== 'mapeach' && userRoute !== 'equinox'">
-          <div class="rounded-xl flex-1 bg-white-998 h-96">
-            <div
-              class="bg-cover bg-no-repeat h-96 rounded-xl"
-              :style="{backgroundImage: 'url(' + getImageUrl(works.first_image) + ')'}"
-            ></div>
-          </div>
+          <img
+            :src="getImageUrl(works.first_image)"
+            @click="showFirstImage = true"
+            class="h-96 rounded-xl flex-1 object-cover cursor-pointer hover:scale-105 hover:drop-shadow-xl transition-transform"
+          />
+          <vue-easy-lightbox
+            :visible="showFirstImage"
+            :imgs="getImageUrl(works.first_image)"
+            @hide="showFirstImage = false"
+          />
         </template>
       </FirstMedia>
     </div>
 
     <div class="flex flex-col lg:flex-row justify-between my-16 mx-auto gap-16">
-      <div class="flex-1 h-96">
-        <div
-          class="h-96 bg-cover bg-no-repeat rounded-xl"
-          :style="{backgroundImage: 'url(' + getImageUrl(works.second_image) + ')'}"
-        ></div>
-      </div>
-
+      <img
+        :src="getImageUrl(works.second_image)"
+        @click="showSecondImage = true"
+        class="h-96 rounded-xl flex-1 object-cover cursor-pointer hover:scale-105 hover:drop-shadow-xl transition-transform"
+      />
+      <vue-easy-lightbox
+        :visible="showSecondImage"
+        :imgs="getImageUrl(works.second_image)"
+        @hide="showSecondImage = false"
+      />
       <div class="rounded-xl bg-white-998 flex-1">
         <div class="p-8">
           <H2Particle title="Autour du projet" uptitle="Détails" small />
@@ -245,7 +256,7 @@ const getPreviousProject = () => {
         <a
           :href="getPreviousProjectRoute()"
           class="color-beige bg-beige-950 rounded-xl p-4"
-          v-if="getPreviousProjectRoute() && getNextProject()"
+          v-if="getPreviousProjectRoute() && getPreviousProject()"
         >
           <div class="flex flex-col gap-2 items-start">
             <ExternalLinkParticle
@@ -301,7 +312,6 @@ const getPreviousProject = () => {
 </template>
 
 <style scoped>
-/*  */
 span {
   background-color: hsl(0, 0%, 100%, 0.6);
 }
