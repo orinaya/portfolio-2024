@@ -48,9 +48,9 @@ onUnmounted(() => {
     <div class="flex flex-1">
       <RouterLink
         to="/"
-        class="link font-neueKaine font-extrabold text-4xl text-darkOlive-200 w-fit lg:ml-48 ml-5 md:mt-0 mt-5"
-        >orinaya</RouterLink
-      >
+        class="link logo font-neueKaine font-extrabold text-4xl text-darkOlive-200 w-fit lg:ml-48 ml-5 md:mt-0 mt-5 hover:bg-verdigris-600 focus:bg-verdigris-600"
+        ><img src="../../assets/img/ori-logo.svg "
+      /></RouterLink>
     </div>
 
     <div class="flex flex-1 justify-center items-center m-4 menu" v-show="isMenuOpen">
@@ -107,6 +107,15 @@ onUnmounted(() => {
   border-radius: 4px;
   width: fit-content;
   height: fit-content;
+}
+
+.link.logo {
+  padding: 0 12px;
+  padding-left: 10px;
+}
+
+img {
+  height: 70px;
 }
 
 nav[style*="background-color"] {

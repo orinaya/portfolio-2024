@@ -8,6 +8,10 @@ import ExternalLinkParticle from "../particles/ExternalLinkParticle.vue"
       <div
         class="w-full flex flex-col items-start justify-between bottom-0 py-3 lg:px-6 px-0 text-darkOlive-200"
       >
+        <img
+          src="../../assets/img/ori-logo.svg"
+          class="h-20 w-full flex justify-center lg:mt-12 mb-12"
+        />
         <div
           class="w-full flex flex-wrap items-start lg:justify-around justify-between bottom-0 py-3 px-6 rounded-t-xl text-darkOlive-200 lg:h-40 h-fit gap-4 md:gap-0"
         >
@@ -16,6 +20,7 @@ import ExternalLinkParticle from "../particles/ExternalLinkParticle.vue"
           >
             Une opportunité ? <br /><span class="font-normal">Discutons-en !</span>
           </h2>
+
           <div class="flex flex-col gap-2 justify-start">
             <p class="font-semibold">Email</p>
             <p class="flex items-center gap-2"><i class="icon-mail"></i>ori.frouin@gmail.com</p>
@@ -69,14 +74,13 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-
   height: 700px;
   margin-top: 110px;
 }
 
 @media (min-width: 768px) {
   footer {
-    height: 540px;
+    height: 600px;
   }
 }
 </style>
