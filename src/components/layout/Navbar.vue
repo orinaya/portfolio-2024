@@ -25,7 +25,12 @@ const scrollToBottom = () => {
   })
 }
 
-const isMenuOpen = ref(true)
+const isMenuOpen = ref(false)
+
+const checkScreenSize = () => {
+  const screenWidth = window.innerWidth
+  isMenuOpen.value = screenWidth >= 1024
+}
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
@@ -37,10 +42,13 @@ const closeMenu = () => {
 
 onMounted(() => {
   window.addEventListener("scroll", handleScroll)
+  window.addEventListener("resize", checkScreenSize)
+  checkScreenSize()
 })
 
 onUnmounted(() => {
   window.removeEventListener("scroll", handleScroll)
+  window.removeEventListener("resize", checkScreenSize)
 })
 </script>
 
