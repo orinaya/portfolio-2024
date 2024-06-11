@@ -1,5 +1,5 @@
 <template>
-  <div class="breadcrumb mt-8 md:text-s text-xs">
+  <div class="breadcrumb mt-8 md:text-base text-xs">
     <RouterLink
       class="breadcrumb-previous text-darkOlive-200"
       v-for="page in previousPages"
@@ -14,7 +14,6 @@
 </template>
 
 <script lang="ts" setup>
-// import { Breadcrumb } from '@/definitions/breadcrumb';
 defineProps({
   pageName: {
     type: String,
@@ -45,10 +44,6 @@ defineProps({
   text-decoration: none;
   display: flex;
   align-items: center;
-
-  &:hover {
-    /* color: color(accent, 500); */
-  }
 }
 .breadcrumb-icon {
   max-width: fit-content;
