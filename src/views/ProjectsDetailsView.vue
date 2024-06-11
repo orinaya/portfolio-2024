@@ -13,6 +13,14 @@ import VueEasyLightbox from "vue-easy-lightbox"
 const showBanner = ref(false)
 const showFirstImage = ref(false)
 const showSecondImage = ref(false)
+const showFirstPoster = ref(false)
+const showSecondPoster = ref(false)
+const showThirdPoster = ref(false)
+const showFourthPoster = ref(false)
+const firstPoster = "mapeach/mapeach-poster-2.jpg"
+const secondPoster = "mapeach/mapeach-poster-3.jpg"
+const thirdPoster = "mapeach/mapeach-poster-1.jpg"
+const fourthPoster = "mapeach/mapeach-poster-4.jpg"
 
 const getImageUrl = (image) => {
   return new URL(`/src/assets/works/${image}`, import.meta.url).href
@@ -76,23 +84,22 @@ const getPreviousProject = () => {
       v-if="userRoute === 'equinox'"
     />
 
-    <H1Particle :title="works.title" center class="mt-6" />
+    <H1Particle :title="works.title" center class="md:mt-6 mt-0" />
 
-    <p class="text-verdigris-200 text-2xl text-center -mt-2">
+    <p class="text-verdigris-200 md:text-2xl text-lg text-center -mt-1">
       {{ works.description }}
     </p>
+    <vue-easy-lightbox
+      :visible="showBanner"
+      :imgs="getImageUrl(works.banner)"
+      @hide="showBanner = false"
+    />
 
     <div
       class="banner w-full bg-bottom bg-no-repeat rounded-xl md:my-16 my-4 md:mt-8 mx-auto relative md:h-96 h-44 cursor-pointer"
       :style="'background-image: url(' + getImageUrl(works.banner) + ')'"
       @click="showBanner = true"
     >
-      <vue-easy-lightbox
-        :visible="showBanner"
-        :imgs="getImageUrl(works.banner)"
-        @hide="showBanner = false"
-      />
-
       <span class="rounded-md py-1 px-2 absolute top-4 left-4">
         <strong class="font-semibold">{{ works.hashtag }}</strong>
       </span>
@@ -121,14 +128,14 @@ const getPreviousProject = () => {
       <FirstMedia>
         <template v-slot:equinox v-if="userRoute === 'equinox'">
           <div class="rounded-xl flex-1 bg-white-998">
-            <div class="flex flex-col gap-2 justify-center items-center h-96">
+            <div class="flex flex-col gap-2 justify-center items-center md:h-96 h-fit">
               <video
                 controls
                 autoplay
                 loop
                 muted
                 poster="../assets/works/equinox/equinox-trailer-cover.jpg"
-                class="w-11/12 rounded-md"
+                class="md:w-11/12 rounded-md w-full"
               >
                 <source src="../assets/works/equinox/Equinox_trailer.mp4" type="video/mp4" />
               </video>
@@ -136,15 +143,15 @@ const getPreviousProject = () => {
           </div>
         </template>
         <template v-slot:mapeach v-if="userRoute === 'mapeach'">
-          <div class="rounded-xl flex-1 bg-white-998 h-96">
-            <div class="flex flex-col gap-2 justify-center items-center h-96">
+          <div class="rounded-xl flex-1 bg-white-998">
+            <div class="flex flex-col gap-2 justify-center items-center md:h-96 h-fit">
               <video
                 controls
                 autoplay
                 loop
                 muted
                 poster="../assets/works/mapeach/mapeach-trailer-cover.jpg"
-                class="w-11/12 rounded-md"
+                class="md:w-11/12 rounded-md w-full"
               >
                 <source src="../assets/works/mapeach/MaPeach-trailer.mp4" type="video/mp4" />
               </video>
@@ -180,14 +187,14 @@ const getPreviousProject = () => {
       <div class="rounded-xl bg-white-998 flex-1">
         <div class="p-8">
           <H2Particle title="Autour du projet" uptitle="Détails" small />
-          <div class="flex flex-col gap-6 mt-5">
-            <div class="flex justify-between flex-wrap">
-              <div class="flex md:flex-col flex-none" v-show="works.details.team != ''">
+          <div class="flex flex-col gap-6 mt-5 flex-wrap">
+            <div class="flex justify-between flex-wrap gap-8">
+              <div class="flex md:flex-col flex-wrap" v-show="works.details.team != ''">
                 <p class="text-base font-semibold">Équipe sur le projet</p>
                 <a
                   :href="works.details.teamLink"
                   target="_blank"
-                  class="flex w-fit items-center gap-2"
+                  class="flex md:w-fit w-max items-center md:gap-2 gap-1"
                   v-for="item in works.details.team"
                   :key="item"
                   >{{ item }}<i class="icon-squareout"></i
@@ -198,7 +205,7 @@ const getPreviousProject = () => {
                 <p class="w-52" v-for="item in works.details.role" :key="item">{{ item }}</p>
               </div>
             </div>
-            <div class="flex justify-between">
+            <div class="flex justify-between flex-wrap gap-8">
               <div>
                 <p class="text-base font-semibold">Logiciels et langages</p>
                 <div class="flex gap-2">
@@ -222,12 +229,48 @@ const getPreviousProject = () => {
     <div v-if="userRoute === 'mapeach'">
       <H2Particle title="Booster notre visibilité" uptitle="Nos Affiches" class="mb-12" />
       <div
-        class="poster-wrapper bg-white-998 rounded-xl flex flex-wrap justify-between p-8 mb-16 h-96"
+        class="poster-wrapper bg-white-998 rounded-xl flex justify-between p-8 mb-16 h-96 md:overflow-x-hidden overflow-x-scroll overflow-y-hidden whitespace-nowrap gap-8"
       >
-        <img src="../assets/works/mapeach/mapeach-poster-2.jpg" class="h-full" />
-        <img src="../assets/works/mapeach/mapeach-poster-3.jpg" class="h-full" />
-        <img src="../assets/works/mapeach/mapeach-poster-1.jpg" class="h-full" />
-        <img src="../assets/works/mapeach/mapeach-poster-4.jpg" class="h-full" />
+        <vue-easy-lightbox
+          :visible="showFirstPoster"
+          :imgs="getImageUrl(firstPoster)"
+          @hide="showFirstPoster = false"
+        />
+        <img
+          src="../assets/works/mapeach/mapeach-poster-2.jpg"
+          class="h-full inline-block cursor-pointer hover:scale-110 transition-transform duration-200"
+          @click="showFirstPoster = true"
+        />
+        <vue-easy-lightbox
+          :visible="showSecondPoster"
+          :imgs="getImageUrl(secondPoster)"
+          @hide="showSecondPoster = false"
+        />
+        <img
+          src="../assets/works/mapeach/mapeach-poster-3.jpg"
+          class="h-full inline-block cursor-pointer hover:scale-110 transition-transform duration-200"
+          @click="showSecondPoster = true"
+        />
+        <vue-easy-lightbox
+          :visible="showThirdPoster"
+          :imgs="getImageUrl(thirdPoster)"
+          @hide="showThirdPoster = false"
+        />
+        <img
+          src="../assets/works/mapeach/mapeach-poster-1.jpg"
+          class="h-full inline-block cursor-pointer hover:scale-110 transition-transform duration-200"
+          @click="showThirdPoster = true"
+        />
+        <vue-easy-lightbox
+          :visible="showFourthPoster"
+          :imgs="getImageUrl(fourthPoster)"
+          @hide="showFourthPoster = false"
+        />
+        <img
+          src="../assets/works/mapeach/mapeach-poster-4.jpg"
+          class="h-full inline-block cursor-pointer hover:scale-110 transition-transform duration-200"
+          @click="showFourthPoster = true"
+        />
       </div>
     </div>
 

@@ -22,7 +22,10 @@ defineProps({
     <div class="flex gap-2">
       <p class="uppercase text-melon-700">{{ uptitle }}</p>
     </div>
-    <h1 v-if="center" class="text-darkOlive-200 font-neueKaine font-extrabold text-4xl text-center">
+    <h1
+      v-if="center"
+      class="text-darkOlive-200 font-neueKaine font-extrabold md:text-4xl text-2xl text-center"
+    >
       {{ title }}
     </h1>
     <h1 v-else class="text-darkOlive-200 font-neueKaine font-extrabold text-4xl">{{ title }}</h1>

@@ -74,7 +74,7 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  height: 700px;
+  height: 860px;
   margin-top: 110px;
 }
 

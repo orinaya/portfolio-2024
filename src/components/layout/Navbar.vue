@@ -31,6 +31,10 @@ const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
 }
 
+const closeMenu = () => {
+  isMenuOpen.value = false
+}
+
 onMounted(() => {
   window.addEventListener("scroll", handleScroll)
 })
@@ -41,67 +45,94 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <nav
-    class="h-24 flex items-center sticky top-0 z-50"
-    :class="router.currentRoute.value.name !== 'accueil' ? 'bg-beige-900' : ''"
-  >
-    <div class="flex flex-1">
-      <RouterLink
-        to="/"
-        class="link logo font-neueKaine font-extrabold text-4xl text-darkOlive-200 w-fit lg:ml-48 ml-5 md:mt-0 mt-5 hover:bg-verdigris-600 focus:bg-verdigris-600 md:h-fit h-14"
-        ><img src="../../assets/img/ori-logo.svg "
-      /></RouterLink>
-    </div>
-
-    <div class="flex flex-1 justify-center items-center m-4 menu" v-show="isMenuOpen">
-      <div class="flex items-center gap-8">
+  <header class="top-0 z-50 sticky h-24">
+    <nav
+      class="h-full flex items-center"
+      :class="router.currentRoute.value.name !== 'accueil' ? 'bg-beige-900' : ''"
+    >
+      <div class="flex flex-1">
         <RouterLink
-          to="/profil"
-          class="link"
-          :class="
-            router.currentRoute.value.name !== 'accueil'
-              ? 'text-darkOlive-200'
-              : 'text-verdigris-900'
-          "
-          >Mon profil</RouterLink
-        >
-        <RouterLink
-          to="/projets"
-          class="link"
-          :class="
-            router.currentRoute.value.name !== 'accueil'
-              ? 'text-darkOlive-200'
-              : 'text-verdigris-900'
-          "
-          >Mes projets</RouterLink
-        >
-        <ExternalLinkParticle
-          href="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=drive_link"
-          target="_blank"
-          title="Télécharger mon CV"
-          :color="router.currentRoute.value.name !== 'accueil' ? 'beige' : 'neutral-verdigris'"
-          iconAfter="download"
-        />
-        <ButtonParticle
-          @click="scrollToBottom"
-          to="/contact"
-          title="Me contacter"
-          :color="router.currentRoute.value.name !== 'accueil' ? 'melon' : 'verdigris'"
-          mailto:orianefrn
-          iconAfter="mail"
-        />
+          to="/"
+          class="link logo font-neueKaine font-extrabold text-4xl text-darkOlive-200 w-fit lg:ml-48 ml-5 md:mt-0 mt-5 hover:bg-verdigris-600 focus:bg-verdigris-600 md:h-fit h-14"
+          ><img src="../../assets/img/ori-logo.svg "
+        /></RouterLink>
       </div>
-    </div>
 
-    <div class="menu-toggle" @click="toggleMenu" :class="{open: isMenuOpen}">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
+      <div class="flex flex-1 justify-center items-center m-4 menu" v-show="isMenuOpen">
+        <ul class="flex items-center gap-8 nav-menu">
+          <li class="nav-item md:hidden visible" @click="closeMenu">
+            <RouterLink
+              to="/"
+              class="link nav-link"
+              :class="
+                router.currentRoute.value.name !== 'accueil'
+                  ? 'text-darkOlive-200'
+                  : 'text-verdigris-900'
+              "
+              >Accueil</RouterLink
+            >
+          </li>
+          <li class="nav-item" @click="closeMenu">
+            <RouterLink
+              to="/profil"
+              class="link nav-link"
+              :class="
+                router.currentRoute.value.name !== 'accueil'
+                  ? 'text-darkOlive-200'
+                  : 'text-verdigris-900'
+              "
+              >Mon profil</RouterLink
+            >
+          </li>
+          <li class="nav-item" @click="closeMenu">
+            <RouterLink
+              to="/projets"
+              class="link nav-link"
+              :class="
+                router.currentRoute.value.name !== 'accueil'
+                  ? 'text-darkOlive-200'
+                  : 'text-verdigris-900'
+              "
+              >Mes projets</RouterLink
+            >
+          </li>
+          <li class="nav-item" @click="closeMenu">
+            <ExternalLinkParticle
+              href="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=drive_link"
+              target="_blank"
+              title="Télécharger mon CV"
+              :color="router.currentRoute.value.name !== 'accueil' ? 'beige' : 'neutral-verdigris'"
+              iconAfter="download"
+              class="nav-link"
+            />
+          </li>
+          <li class="nav-item" @click="closeMenu">
+            <ButtonParticle
+              @click="scrollToBottom"
+              to="/contact"
+              title="Me contacter"
+              :color="router.currentRoute.value.name !== 'accueil' ? 'melon' : 'verdigris'"
+              iconAfter="mail"
+              class="nav-link"
+            />
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-toggle" @click="toggleMenu" :class="{open: isMenuOpen}">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
 </template>
 
 <style scoped>
+li {
+  list-style: none;
+}
+
 .link {
   padding: 6px 12px;
   border-radius: 4px;
@@ -133,11 +164,11 @@ nav[style*="background-color"] {
   transition: height 0.3s ease;
 }
 
-.nav-shrink > div > div > a:nth-child(-n + 2) {
+.nav-shrink > div > ul > li:nth-child(-n + 3) > a {
   color: var(--olive-200);
 }
 
-.nav-shrink > div > div > a:nth-child(-n + 2) {
+.nav-shrink > div > ul > li:nth-child(-n + 2) > a {
   &:active,
   &:focus {
     color: var(--verdigris-900);
@@ -145,6 +176,17 @@ nav[style*="background-color"] {
 }
 
 @media (max-width: 1024px) {
+  .nav-shrink > div > ul > li:nth-child(-n + 2) > a {
+    color: var(--olive-200);
+  }
+
+  .nav-shrink > div > ul > li:nth-child(-n + 2) > a {
+    &:active,
+    &:focus {
+      color: var(--verdigris-900);
+    }
+  }
+
   nav {
     display: block;
   }
@@ -195,8 +237,8 @@ nav[style*="background-color"] {
 
   nav > div:nth-child(2) {
     position: fixed;
-    top: -20px;
-    left: -20px;
+    top: -16px;
+    left: -16px;
     width: 100%;
     height: 100vh;
     background-color: white;
@@ -208,7 +250,7 @@ nav[style*="background-color"] {
     display: flex;
   }
 
-  nav > div:nth-child(2) > div {
+  nav > div:nth-child(2) > ul {
     padding: 20px;
     text-align: center;
     display: flex;

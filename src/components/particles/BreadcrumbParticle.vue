@@ -1,5 +1,5 @@
 <template>
-  <div class="breadcrumb mt-8 text-s">
+  <div class="breadcrumb mt-8 md:text-s text-xs">
     <RouterLink
       class="breadcrumb-previous text-darkOlive-200"
       v-for="page in previousPages"
@@ -40,10 +40,8 @@ defineProps({
   display: flex;
   align-items: center;
   font-weight: 300;
-  /* font-size: 12px; */
 }
 .breadcrumb-previous {
-  /* color: color(brand, 550); */
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -53,12 +51,10 @@ defineProps({
   }
 }
 .breadcrumb-icon {
-  /* color: color(brand, 550); */
   max-width: fit-content;
 }
 
 .breadcrumb-here {
-  /* color: color(brand, 400); */
   font-weight: 700;
   margin: 0;
   padding-left: 2px;
