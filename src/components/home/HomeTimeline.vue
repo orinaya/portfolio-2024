@@ -22,7 +22,7 @@ const handleScroll = () => {
   if (startScrolling.value) {
     const distanceFromTop = scrollTop - (stepsContainerOffsetTop.value - 200)
     const newHeight = Math.max(distanceFromTop * 1, 0)
-    lineHeight.value = Math.min(newHeight, stepsContainerHeight.value)
+    lineHeight.value = Math.min(newHeight, stepsContainerHeight.value - 176)
   }
 }
 
@@ -117,15 +117,6 @@ onUnmounted(() => {
   }
 }
 
-/* @keyframes slide-in {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(50%);
-  }
-} */
-
 .cards-content {
   width: 100%;
   margin-bottom: 0;
@@ -146,8 +137,8 @@ onUnmounted(() => {
 
 @media (min-width: 1280px) {
   .cards-dot {
-    left: 49.8%;
-    top: 146px;
+    left: 49.7%;
+    top: 117px;
     z-index: 3;
   }
 
@@ -189,17 +180,17 @@ img {
   top: 682px;
 }
 .cards:nth-child(4) > .cards-dot {
-  top: 965px;
+  top: 1036px;
 }
 .cards:nth-child(5) > .cards-dot {
-  top: 1235px;
+  top: 1320px;
 }
 .cards:nth-child(6) > .cards-dot {
-  top: 1510px;
+  top: 1580px;
 }
 
 .cards:nth-child(7) > .cards-dot {
-  top: 1724px;
+  top: 1827px;
 }
 
 .cards:nth-child(odd) {
