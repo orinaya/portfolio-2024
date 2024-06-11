@@ -31,7 +31,7 @@ const getProjectDetails = (path) => {
           :description="item.description"
           :image="getImageUrl(item.image)"
           :softwares="item.softwares"
-          @send-project-title="getProjectDetails(item.path)"
+          @send-project-id="getProjectDetails(item.path)"
         />
       </div>
       <LinkParticle
