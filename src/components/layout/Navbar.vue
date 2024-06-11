@@ -48,7 +48,7 @@ onUnmounted(() => {
     <div class="flex flex-1">
       <RouterLink
         to="/"
-        class="link logo font-neueKaine font-extrabold text-4xl text-darkOlive-200 w-fit lg:ml-48 ml-5 md:mt-0 mt-5 hover:bg-verdigris-600 focus:bg-verdigris-600"
+        class="link logo font-neueKaine font-extrabold text-4xl text-darkOlive-200 w-fit lg:ml-48 ml-5 md:mt-0 mt-5 hover:bg-verdigris-600 focus:bg-verdigris-600 md:h-fit h-14"
         ><img src="../../assets/img/ori-logo.svg "
       /></RouterLink>
     </div>
@@ -115,9 +115,14 @@ onUnmounted(() => {
 }
 
 img {
-  height: 70px;
+  height: 40px;
 }
 
+@media (min-width: 768px) {
+  img {
+    height: 70px;
+  }
+}
 nav[style*="background-color"] {
   display: none;
 }

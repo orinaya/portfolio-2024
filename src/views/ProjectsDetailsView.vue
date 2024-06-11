@@ -181,8 +181,8 @@ const getPreviousProject = () => {
         <div class="p-8">
           <H2Particle title="Autour du projet" uptitle="Détails" small />
           <div class="flex flex-col gap-6 mt-5">
-            <div class="flex justify-between">
-              <div class="flex flex-col" v-show="works.details.team != ''">
+            <div class="flex justify-between flex-wrap">
+              <div class="flex md:flex-col flex-none" v-show="works.details.team != ''">
                 <p class="text-base font-semibold">Équipe sur le projet</p>
                 <a
                   :href="works.details.teamLink"
