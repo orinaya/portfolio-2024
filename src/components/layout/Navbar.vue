@@ -32,12 +32,19 @@ const checkScreenSize = () => {
   isMenuOpen.value = screenWidth >= 1024
 }
 
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
+const isMobileOrTablet = () => {
+  const screenWidth = window.innerWidth
+  return screenWidth < 1024
 }
 
 const closeMenu = () => {
-  isMenuOpen.value = false
+  if (isMobileOrTablet()) {
+    isMenuOpen.value = false
+  }
+}
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
 }
 
 onMounted(() => {
