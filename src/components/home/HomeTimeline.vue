@@ -172,6 +172,10 @@ img {
   text-align: right;
 }
 
+.cards:nth-child(1) > .cards-dot {
+  top: 150px;
+}
+
 .cards:nth-child(2) > .cards-dot {
   top: 410px;
 }
@@ -180,10 +184,10 @@ img {
   top: 682px;
 }
 .cards:nth-child(4) > .cards-dot {
-  top: 1036px;
+  top: 980px;
 }
 .cards:nth-child(5) > .cards-dot {
-  top: 1320px;
+  top: 1280px;
 }
 .cards:nth-child(6) > .cards-dot {
   top: 1580px;

@@ -179,11 +179,13 @@ const getPreviousProject = () => {
         @click="showSecondImage = true"
         class="h-96 rounded-xl flex-1 object-cover cursor-pointer hover:scale-105 hover:drop-shadow-xl transition-transform"
       />
+
       <vue-easy-lightbox
         :visible="showSecondImage"
         :imgs="getImageUrl(works.second_image)"
         @hide="showSecondImage = false"
       />
+
       <div class="rounded-xl bg-white-998 flex-1">
         <div class="p-8">
           <H2Particle title="Autour du projet" uptitle="Détails" small />
@@ -192,10 +194,10 @@ const getPreviousProject = () => {
               <div class="flex md:flex-col flex-wrap" v-show="works.details.team != ''">
                 <p class="text-base font-semibold">Équipe sur le projet</p>
                 <a
-                  :href="works.details.teamLink"
+                  :href="works.details.teamLink[index]"
                   target="_blank"
                   class="flex md:w-fit w-max items-center md:gap-2 gap-1"
-                  v-for="item in works.details.team"
+                  v-for="(item, index) in works.details.team"
                   :key="item"
                   >{{ item }}<i class="icon-squareout"></i
                 ></a>
