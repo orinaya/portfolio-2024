@@ -1,10 +1,10 @@
 <script setup>
-import H2Particle from "../particles/H2Particle.vue"
-import InformationsParticle from "../particles/InformationParticle.vue"
-import {persosItems} from "@/services/datas"
+import H2Particle from "../particles/H2Particle.vue";
+import InformationsParticle from "../particles/InformationParticle.vue";
+import {persosItems} from "@/services/datas";
 
 const copy = () => {
-  const emailContent = "contact@orianefrouin.fr"
+  const emailContent = "ori.frouin@gmail.com";
   navigator.clipboard
     .writeText(emailContent)
     .then(() => {
@@ -13,12 +13,12 @@ const copy = () => {
         // summary: "Copié !",
         detail: "Adresse email copiée",
         life: 3000,
-      })
+      });
     })
     .catch((error) => {
-      console.error("Une erreur est survenue lors de la copie du contenu :", error)
-    })
-}
+      console.error("Une erreur est survenue lors de la copie du contenu :", error);
+    });
+};
 </script>
 
 <template>
