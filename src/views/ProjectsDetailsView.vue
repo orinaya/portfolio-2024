@@ -1,43 +1,43 @@
 <script setup>
-import {computed, ref} from "vue"
-import {useRouter} from "vue-router"
-import {worksItems} from "@/services/datas"
-import H1Particle from "@/components/particles/H1Particle.vue"
-import ExternalLinkParticle from "@/components/particles/ExternalLinkParticle.vue"
-import FirstMedia from "@/components/projects/FirstMedia.vue"
-import PdfFrame from "@/components/projects/PdfFrame.vue"
-import BreadcrumbParticle from "@/components/particles/BreadcrumbParticle.vue"
-import H2Particle from "@/components/particles/H2Particle.vue"
-import VueEasyLightbox from "vue-easy-lightbox"
+import { computed, ref } from "vue";
+import { useRouter } from "vue-router";
+import { worksItems } from "@/services/datas";
+import H1Particle from "@/components/particles/H1Particle.vue";
+import ExternalLinkParticle from "@/components/particles/ExternalLinkParticle.vue";
+import FirstMedia from "@/components/projects/FirstMedia.vue";
+import PdfFrame from "@/components/projects/PdfFrame.vue";
+import BreadcrumbParticle from "@/components/particles/BreadcrumbParticle.vue";
+import H2Particle from "@/components/particles/H2Particle.vue";
+import VueEasyLightbox from "vue-easy-lightbox";
 
-const showBanner = ref(false)
-const showFirstImage = ref(false)
-const showSecondImage = ref(false)
-const showFirstPoster = ref(false)
-const showSecondPoster = ref(false)
-const showThirdPoster = ref(false)
-const showFourthPoster = ref(false)
-const firstPoster = "mapeach/mapeach-poster-2.jpg"
-const secondPoster = "mapeach/mapeach-poster-3.jpg"
-const thirdPoster = "mapeach/mapeach-poster-1.jpg"
-const fourthPoster = "mapeach/mapeach-poster-4.jpg"
+const showBanner = ref(false);
+const showFirstImage = ref(false);
+const showSecondImage = ref(false);
+const showFirstPoster = ref(false);
+const showSecondPoster = ref(false);
+const showThirdPoster = ref(false);
+const showFourthPoster = ref(false);
+const firstPoster = "mapeach/mapeach-poster-2.jpg";
+const secondPoster = "mapeach/mapeach-poster-3.jpg";
+const thirdPoster = "mapeach/mapeach-poster-1.jpg";
+const fourthPoster = "mapeach/mapeach-poster-4.jpg";
 
 const getImageUrl = (image) => {
-  return new URL(`/src/assets/works/${image}`, import.meta.url).href
-}
+  return new URL(`/src/assets/works/${image}`, import.meta.url).href;
+};
 
 const getIconUrl = (image) => {
-  return new URL(`/src/assets/icons/${image}`, import.meta.url).href
-}
+  return new URL(`/src/assets/icons/${image}`, import.meta.url).href;
+};
 
 const pdfUrl = (pdf) => {
-  return `/pdf/${pdf}.pdf`
-}
+  return `/pdf/${pdf}.pdf`;
+};
 
-const router = useRouter()
-const userRoute = router.currentRoute.value.params.path
+const router = useRouter();
+const userRoute = router.currentRoute.value.params.path;
 
-const works = worksItems.find((item) => item.path === userRoute)
+const works = worksItems.find((item) => item.path === userRoute);
 
 const previousPages = [
   {
@@ -48,31 +48,31 @@ const previousPages = [
     path: "/projets",
     name: "Projets",
   },
-]
+];
 
 const getNextProjectRoute = () => {
-  const currentIndex = worksItems.findIndex((item) => item.path === userRoute)
-  const nextRoute = currentIndex + 1
-  return nextRoute < worksItems.length ? `/projets/` + worksItems[nextRoute].path : null
-}
+  const currentIndex = worksItems.findIndex((item) => item.path === userRoute);
+  const nextRoute = currentIndex + 1;
+  return nextRoute < worksItems.length ? `/projets/` + worksItems[nextRoute].path : null;
+};
 
 const getPreviousProjectRoute = () => {
-  const currentIndex = worksItems.findIndex((item) => item.path === userRoute)
-  const previousRoute = currentIndex - 1
-  return previousRoute >= 0 ? `/projets/` + worksItems[previousRoute].path : null
-}
+  const currentIndex = worksItems.findIndex((item) => item.path === userRoute);
+  const previousRoute = currentIndex - 1;
+  return previousRoute >= 0 ? `/projets/` + worksItems[previousRoute].path : null;
+};
 
 const getNextProject = () => {
-  const currentIndex = worksItems.findIndex((item) => item.path === userRoute)
-  const nextRoute = currentIndex + 1
-  return nextRoute < worksItems.length ? worksItems[nextRoute] : null
-}
+  const currentIndex = worksItems.findIndex((item) => item.path === userRoute);
+  const nextRoute = currentIndex + 1;
+  return nextRoute < worksItems.length ? worksItems[nextRoute] : null;
+};
 
 const getPreviousProject = () => {
-  const currentIndex = worksItems.findIndex((item) => item.path === userRoute)
-  const previousRoute = currentIndex - 1
-  return previousRoute >= 0 ? worksItems[previousRoute] : null
-}
+  const currentIndex = worksItems.findIndex((item) => item.path === userRoute);
+  const previousRoute = currentIndex - 1;
+  return previousRoute >= 0 ? worksItems[previousRoute] : null;
+};
 </script>
 
 <template>
@@ -89,11 +89,7 @@ const getPreviousProject = () => {
     <p class="text-verdigris-200 md:text-2xl text-lg text-center -mt-1">
       {{ works.description }}
     </p>
-    <vue-easy-lightbox
-      :visible="showBanner"
-      :imgs="getImageUrl(works.banner)"
-      @hide="showBanner = false"
-    />
+    <vue-easy-lightbox :visible="showBanner" :imgs="getImageUrl(works.banner)" @hide="showBanner = false" />
 
     <div
       class="banner w-full bg-bottom bg-no-repeat rounded-xl md:my-16 my-4 md:mt-8 mx-auto relative md:h-96 h-44 cursor-pointer"
@@ -107,11 +103,7 @@ const getPreviousProject = () => {
     <div class="flex flex-col lg:flex-row justify-between my-16 mx-auto gap-16">
       <div class="bg-white-998 h-96 flex-1 rounded-xl">
         <div class="p-8 flex flex-col gap-4">
-          <H2Particle
-            title="Comprendre les enjeux et la finalité"
-            uptitle="Description du projet"
-            small
-          />
+          <H2Particle title="Comprendre les enjeux et la finalité" uptitle="Description du projet" small />
           <p>{{ works.big_description }}</p>
           <div class="flex gap-8">
             <ExternalLinkParticle
@@ -194,7 +186,11 @@ const getPreviousProject = () => {
               <div class="flex md:flex-col flex-wrap" v-show="works.details.team != ''">
                 <p class="text-base font-semibold">Équipe sur le projet</p>
                 <a
-                  :href="works.details.teamLink[index]"
+                  :href="
+                    works.details.teamLink && works.details.teamLink[index]
+                      ? works.details.teamLink[index]
+                      : '#'
+                  "
                   target="_blank"
                   class="flex md:w-fit w-max items-center md:gap-2 gap-1"
                   v-for="(item, index) in works.details.team"
@@ -211,11 +207,7 @@ const getPreviousProject = () => {
               <div>
                 <p class="text-base font-semibold">Logiciels et langages</p>
                 <div class="flex gap-2">
-                  <img
-                    v-for="item in works.details.softwares"
-                    :key="item"
-                    :src="getIconUrl(item)"
-                  />
+                  <img v-for="item in works.details.softwares" :key="item" :src="getIconUrl(item)" />
                 </div>
               </div>
               <div>
@@ -312,10 +304,7 @@ const getPreviousProject = () => {
               iconBefore="arrowbefore"
             />
             <div class="flex justify-between gap-4">
-              <img
-                :src="getImageUrl(getPreviousProject().image)"
-                class="object-cover h-24 w-24 rounded-md"
-              />
+              <img :src="getImageUrl(getPreviousProject().image)" class="object-cover h-24 w-24 rounded-md" />
               <div class="max-w-56 text-left">
                 <h3 class="font-semibold text-lg text-beige-200">
                   {{ getPreviousProject().title }}
@@ -344,10 +333,7 @@ const getPreviousProject = () => {
                 <h3 class="font-semibold text-lg text-beige-200">{{ getNextProject().title }}</h3>
                 <p>{{ getNextProject().description }}</p>
               </div>
-              <img
-                :src="getImageUrl(getNextProject().image)"
-                class="object-cover h-24 w-24 rounded-md"
-              />
+              <img :src="getImageUrl(getNextProject().image)" class="object-cover h-24 w-24 rounded-md" />
             </div>
           </div>
         </a>

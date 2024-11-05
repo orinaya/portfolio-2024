@@ -1,11 +1,12 @@
 <script setup>
-import {computed} from "vue"
+import { computed } from "vue";
 
 const buttons = defineProps({
   title: {
     type: String,
     required: false,
   },
+  routeLink: String,
   color: String,
   type: String,
   iconBefore: {
@@ -16,9 +17,9 @@ const buttons = defineProps({
     type: String,
     required: false,
   },
-})
+});
 
-const colorClass = computed(() => `color-${buttons.color}`)
+const colorClass = computed(() => `color-${buttons.color}`);
 </script>
 
 <template>

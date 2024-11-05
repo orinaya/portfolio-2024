@@ -11,7 +11,7 @@ export const navbarItems = [
     title: "Mes projets",
     link: "/projets",
   },
-]
+];
 
 export const currentItems = [
   {
@@ -26,7 +26,7 @@ export const currentItems = [
     image: "floax-logo.svg",
     date: "Depuis avril 2023",
   },
-]
+];
 
 export const timelineItems = [
   {
@@ -113,7 +113,7 @@ export const timelineItems = [
     date: "2023-2024",
     skills: ["Vue.js", "Sass", "Strapi", "GraphQL", "Angular"],
   },
-]
+];
 
 export const worksItems = [
   //EQUINOX
@@ -206,6 +206,7 @@ export const worksItems = [
       softwares: ["html.svg", "sass.svg", "vue.svg", "typescript.svg"],
       role: ["Intégration web", "Développement front"],
       team: ["Loïc Vanderschooten", "Clara Le Meur", "Vincent Ramaye", "Brice Le Gallo-Tastet"],
+      teamLink: [""],
       school_year: "Bachelor Cycle Web et Multimédia - Année 2",
     },
     buttons: [
@@ -349,7 +350,7 @@ export const worksItems = [
     },
     date: 6,
   },
-]
+];
 
 export const passionItems = [
   {
@@ -382,7 +383,7 @@ export const passionItems = [
     tags: ["One Piece", "Berserk", "Jojo's Bizarre Adventure"],
     color: "color-f1",
   },
-]
+];
 
 export const persosItems = [
   {
@@ -406,7 +407,7 @@ export const persosItems = [
       },
     ],
   },
-]
+];
 
 export const devItems = [
   {
@@ -490,7 +491,7 @@ export const devItems = [
     title: "Typescript",
     inProgress: true,
   },
-]
+];
 
 export const designItems = [
   {
@@ -518,7 +519,7 @@ export const designItems = [
     image: "aseprite.svg",
     title: "Aseprite",
   },
-]
+];
 
 export const othersItems = [
   {
@@ -547,7 +548,7 @@ export const othersItems = [
     image: "office.svg",
     title: "Suite Office",
   },
-]
+];
 
 export const languagesItems = [
   {
@@ -558,4 +559,4 @@ export const languagesItems = [
     color: "#FBD0D7",
     image: "english-flag.svg",
   },
-]
+];

@@ -1,62 +1,62 @@
 <script setup>
-import {onMounted, onUnmounted, ref} from "vue"
-import ExternalLinkParticle from "../particles/ExternalLinkParticle.vue"
-import router from "@/router"
-import ButtonParticle from "../particles/ButtonParticle.vue"
+import { onMounted, onUnmounted, ref } from "vue";
+import ExternalLinkParticle from "../particles/ExternalLinkParticle.vue";
+import router from "@/router";
+import ButtonParticle from "../particles/ButtonParticle.vue";
 
-const navElement = ref(null)
+const navElement = ref(null);
 
 const handleScroll = () => {
   if (!navElement.value) {
-    navElement.value = document.querySelector("nav")
+    navElement.value = document.querySelector("nav");
   }
-  const scrollTop = window.pageYOffset
+  const scrollTop = window.pageYOffset;
   if (scrollTop > 0) {
-    navElement.value.classList.add("nav-shrink")
+    navElement.value.classList.add("nav-shrink");
   } else {
-    navElement.value.classList.remove("nav-shrink")
+    navElement.value.classList.remove("nav-shrink");
   }
-}
+};
 
 const scrollToBottom = () => {
   window.scrollTo({
     top: document.documentElement.scrollHeight,
     behavior: "smooth",
-  })
-}
+  });
+};
 
-const isMenuOpen = ref(false)
+const isMenuOpen = ref(false);
 
 const checkScreenSize = () => {
-  const screenWidth = window.innerWidth
-  isMenuOpen.value = screenWidth >= 1024
-}
+  const screenWidth = window.innerWidth;
+  isMenuOpen.value = screenWidth >= 1024;
+};
 
 const isMobileOrTablet = () => {
-  const screenWidth = window.innerWidth
-  return screenWidth < 1024
-}
+  const screenWidth = window.innerWidth;
+  return screenWidth < 1024;
+};
 
 const closeMenu = () => {
   if (isMobileOrTablet()) {
-    isMenuOpen.value = false
+    isMenuOpen.value = false;
   }
-}
+};
 
 const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
-}
+  isMenuOpen.value = !isMenuOpen.value;
+};
 
 onMounted(() => {
-  window.addEventListener("scroll", handleScroll)
-  window.addEventListener("resize", checkScreenSize)
-  checkScreenSize()
-})
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("resize", checkScreenSize);
+  checkScreenSize();
+});
 
 onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll)
-  window.removeEventListener("resize", checkScreenSize)
-})
+  window.removeEventListener("scroll", handleScroll);
+  window.removeEventListener("resize", checkScreenSize);
+});
 </script>
 
 <template>
@@ -80,9 +80,7 @@ onUnmounted(() => {
               to="/"
               class="link nav-link"
               :class="
-                router.currentRoute.value.name !== 'accueil'
-                  ? 'text-darkOlive-200'
-                  : 'text-verdigris-900'
+                router.currentRoute.value.name !== 'accueil' ? 'text-darkOlive-200' : 'text-verdigris-900'
               "
               >Accueil</RouterLink
             >
@@ -92,9 +90,7 @@ onUnmounted(() => {
               to="/profil"
               class="link nav-link"
               :class="
-                router.currentRoute.value.name !== 'accueil'
-                  ? 'text-darkOlive-200'
-                  : 'text-verdigris-900'
+                router.currentRoute.value.name !== 'accueil' ? 'text-darkOlive-200' : 'text-verdigris-900'
               "
               >Mon profil</RouterLink
             >
@@ -104,16 +100,14 @@ onUnmounted(() => {
               to="/projets"
               class="link nav-link"
               :class="
-                router.currentRoute.value.name !== 'accueil'
-                  ? 'text-darkOlive-200'
-                  : 'text-verdigris-900'
+                router.currentRoute.value.name !== 'accueil' ? 'text-darkOlive-200' : 'text-verdigris-900'
               "
               >Mes projets</RouterLink
             >
           </li>
           <li class="nav-item" @click="closeMenu">
             <ExternalLinkParticle
-              href="https://drive.google.com/file/d/1YtXy8X7ukbiTvv4IdtEydArvsIKVRL3A/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1Q7WK3uSy1N8We5mUMIXeHcWsyHGADH7t/view?usp=sharing"
               target="_blank"
               title="Télécharger mon CV"
               :color="router.currentRoute.value.name !== 'accueil' ? 'beige' : 'neutral-verdigris'"
@@ -134,7 +128,7 @@ onUnmounted(() => {
         </ul>
       </div>
 
-      <div class="menu-toggle" @click="toggleMenu" :class="{open: isMenuOpen}">
+      <div class="menu-toggle" @click="toggleMenu" :class="{ open: isMenuOpen }">
         <span></span>
         <span></span>
         <span></span>
