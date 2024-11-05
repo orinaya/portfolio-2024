@@ -1,5 +1,5 @@
 <script setup>
-import {computed} from "vue"
+import { computed } from "vue";
 
 const buttons = defineProps({
   title: {
@@ -16,12 +16,12 @@ const buttons = defineProps({
     type: String,
     required: false,
   },
-})
+});
 
-const colorClass = computed(() => `color-${buttons.color}`)
+const colorClass = computed(() => `color-${buttons.color}`);
 const getIconUrl = (image) => {
-  return new URL(`/src/assets/icons/${image}`, import.meta.url).href
-}
+  return new URL(`/src/assets/icons/${image}`, import.meta.url).href;
+};
 </script>
 
 <template>
@@ -68,7 +68,7 @@ const getIconUrl = (image) => {
 }
 .btn:hover {
   color: #fff;
-  box-shadow: inset 200px 0 0 0 black;
+  /* box-shadow: inset 200px 0 0 0 black; */
 }
 
 .color-melon {
@@ -120,9 +120,9 @@ const getIconUrl = (image) => {
   color: var(--beige-400);
   background-color: var(--beige-900);
 
-  /* &:hover {
-    color: var(--beige-700);
+  &:hover {
+    color: var(--beige-300);
     box-shadow: inset 200px 0 0 0 var(--beige-800);
-  } */
+  }
 }
 </style>

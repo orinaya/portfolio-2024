@@ -1,27 +1,27 @@
 <script setup>
-import {useRouter} from "vue-router"
-import {worksItems} from "@/services/datas"
-import H1Particle from "@/components/particles/H1Particle.vue"
-import ExternalLinkParticle from "@/components/particles/ExternalLinkParticle.vue"
-import FirstMedia from "@/components/projects/FirstMedia.vue"
-import PdfFrame from "@/components/projects/PdfFrame.vue"
-import Poster from "@/components/projects/Poster.vue"
-import BreadcrumbParticle from "@/components/particles/BreadcrumbParticle.vue"
+import { useRouter } from "vue-router";
+import { worksItems } from "@/services/datas";
+import H1Particle from "@/components/particles/H1Particle.vue";
+import ExternalLinkParticle from "@/components/particles/ExternalLinkParticle.vue";
+import FirstMedia from "@/components/projects/FirstMedia.vue";
+import PdfFrame from "@/components/projects/PdfFrame.vue";
+import Poster from "@/components/projects/Poster.vue";
+import BreadcrumbParticle from "@/components/particles/BreadcrumbParticle.vue";
 
 const getImageUrl = (image) => {
-  return new URL(`/src/assets/works/${image}`, import.meta.url).href
-}
+  return new URL(`/src/assets/works/${image}`, import.meta.url).href;
+};
 
 const getIconUrl = (image) => {
-  return new URL(`/src/assets/icons/${image}`, import.meta.url).href
-}
+  return new URL(`/src/assets/icons/${image}`, import.meta.url).href;
+};
 
-const router = useRouter()
-const userRoute = router.currentRoute.value.params.id.toString()
-console.log(router)
+const router = useRouter();
+const userRoute = router.currentRoute.value.params.id.toString();
+console.log(router);
 
-const works = worksItems[userRoute]
-console.log("works", works.id)
+const works = worksItems[userRoute];
+console.log("works", works.id);
 
 const previousPages = [
   {
@@ -32,17 +32,17 @@ const previousPages = [
     path: "/projets",
     name: "Projets",
   },
-]
+];
 
 const getNextProjectRoute = () => {
-  const nextRoute = parseInt(userRoute) + 1
-  return nextRoute < worksItems.length ? `${nextRoute}` : null
-}
+  const nextRoute = parseInt(userRoute) + 1;
+  return nextRoute < worksItems.length ? `${nextRoute}` : null;
+};
 
 const getPreviousProjectRoute = () => {
-  const previousRoute = parseInt(userRoute) - 1
-  return previousRoute >= 0 ? `${previousRoute}` : null
-}
+  const previousRoute = parseInt(userRoute) - 1;
+  return previousRoute >= 0 ? `${previousRoute}` : null;
+};
 </script>
 
 <template>
@@ -90,9 +90,7 @@ const getPreviousProjectRoute = () => {
       class="banner w-full bg-bottom bg-no-repeat rounded-xl my-16 mx-auto relative"
       :style="'background-image: url(' + getImageUrl(works.banner) + ')'"
     >
-      <span class="rounded-md py-1 px-2 absolute top-4 left-4 font-semibold">{{
-        works.hashtag
-      }}</span>
+      <span class="rounded-md py-1 px-2 absolute top-4 left-4 font-semibold">{{ works.hashtag }}</span>
       <div class="flex gap-8 absolute bottom-12 left-12">
         <ExternalLinkParticle
           v-for="item in works.buttons"
@@ -115,9 +113,7 @@ const getPreviousProjectRoute = () => {
       </div>
       <FirstMedia>
         <template v-slot:equinox v-if="userRoute === '0'">
-          <div
-            class="bg-white-998 flex flex-col gap-2 justify-center items-center h-96 image rounded-xl"
-          >
+          <div class="bg-white-998 flex flex-col gap-2 justify-center items-center h-96 image rounded-xl">
             <video
               controls
               autoplay
@@ -131,9 +127,7 @@ const getPreviousProjectRoute = () => {
           </div>
         </template>
         <template v-slot:mapeach v-if="userRoute === '1'">
-          <div
-            class="bg-white-998 flex flex-col gap-2 justify-center items-center h-96 image rounded-xl"
-          >
+          <div class="bg-white-998 flex flex-col gap-2 justify-center items-center h-96 image rounded-xl">
             <video
               controls
               autoplay
@@ -149,7 +143,7 @@ const getPreviousProjectRoute = () => {
         <template v-slot:simple v-if="userRoute !== '1' && userRoute !== '0'">
           <div
             class="image h-96 bg-cover bg-no-repeat rounded-xl"
-            :style="{backgroundImage: 'url(' + getImageUrl(works.first_image) + ')'}"
+            :style="{ backgroundImage: 'url(' + getImageUrl(works.first_image) + ')' }"
           ></div>
         </template>
       </FirstMedia>
@@ -158,7 +152,7 @@ const getPreviousProjectRoute = () => {
     <div class="flex justify-between my-16 mx-auto">
       <div
         class="image h-96 bg-cover bg-no-repeat rounded-xl"
-        :style="{backgroundImage: 'url(' + getImageUrl(works.second_image) + ')'}"
+        :style="{ backgroundImage: 'url(' + getImageUrl(works.second_image) + ')' }"
       ></div>
       <div class="details rounded-xl p-8 bg-white-998">
         <TitleParticle title="Autour du projet" uptitle="Détails" h2 icon="icon-search.svg" />
@@ -199,16 +193,11 @@ const getPreviousProjectRoute = () => {
     </Poster>
     <PdfFrame class="my-16">
       <template v-slot:equinox v-if="userRoute === '0'">
-        <iframe
-          src="/src/assets/works/equinox/Equinox_Pitch_Deck_Nantes.pdf"
-          width="100%"
-          height="700px"
-        >
+        <iframe src="/src/assets/works/equinox/Equinox_Pitch_Deck_Nantes.pdf" width="100%" height="700px">
         </iframe>
       </template>
       <template v-slot:mapeach v-if="userRoute === '1'">
-        <iframe src="/src/assets/works/mapeach/MaPeach_Pitch.pdf" width="100%" height="700px">
-        </iframe>
+        <iframe src="/src/assets/works/mapeach/MaPeach_Pitch.pdf" width="100%" height="700px"> </iframe>
       </template>
     </PdfFrame>
   </div>
